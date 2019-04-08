@@ -1,4 +1,4 @@
-Ionic 4 Start Theme (v1.0.0)
+Breasthealth app (v1.0.0)
 ==========
 **Ionic 4 start theme** experiencing the best of new features about this new and definitive release: Angular 7 + Ionic 4 final. 
 
@@ -31,36 +31,4 @@ $ npm install
 $ ionic serve -l
 ```
 
-More about here: [Ionic 4 Start Theme (ionictheme.com)](https://ionictheme.com/ionic4-start-theme-free)
 
-___
-
-## Know Ionic 3 Start Theme
-
-* [Ionic 3 Start Theme (Github)](https://github.com/ionictheme/ionic3-start-theme)
-
-## Know Our paid themes
-
-* [foodIonic 2 - Ionic 4 Restaurant and Food Order Theme](https://ionictheme.com/foodionic2-ionic4-restaurant-food-order-theme)
-* [ionBooking 2 - Ionic 4 Hotel Booking Theme](https://ionictheme.com/ionbooking2-ionic4-hotel-booking-theme)
-* [ionBooking - Ionic 3 Hotel Booking Theme](https://ionictheme.com/ionbooking-ionic3-hotel-booking-theme)
-* [ionBooking Lite - Ionic 3 Hotel Booking Theme](https://ionictheme.com/ionbooking-lite-ionic3-hotel-booking-theme)
-* [ionProperty - Ionic 3 Real Estate Properties Theme](https://ionictheme.com/ionproperty-ionic3-realestate-properties-theme)
-* [foodIonic - Ionic 3 Restaurant and Food Order Theme](https://ionictheme.com/foodionic-ionic3-restaurant-food-order-theme)
-* [tripIonic - Ionic 3 flights cruises trains booking theme](https://ionictheme.com/tripionic-ionic3-flights-cruises-trains-booking-theme)
-* [fireIonic - Ionic 3 Firebase Starter Kit](https://ionictheme.com/fireionic-ionic3-firebase-starter-kit)
-* [Travel Bundle - Ionic 3 ionBooking and tripIonic Themes](https://ionictheme.com/travelbundle-ionic3-themes)
-
-
-## Visit our official channels:
-
-**Website:**
-[https://ionictheme.com](https://ionictheme.com)
-<br>
-**Twitter:**
-[https://twitter.com/ionictheme](https://twitter.com/ionictheme)
-<br>
-**Facebook Page:**
-[https://www.facebook.com/ionicthemecom](https://www.facebook.com/ionicthemecom)
-# Breasthealthapp
-# Breasthealthapp
