@@ -38,11 +38,6 @@ export class HomeResultsPage {
     this.menuCtrl.enable(true);
   }
 
-
-  playSound() {
-
-  }
-
   settings() {
     this.navCtrl.navigateForward('settings');
   }

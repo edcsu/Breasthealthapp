@@ -75,12 +75,11 @@
 --ion-color-dark-shade: #190e60;
 --ion-color-dark-tint: #2e256d;
 
-/** mink pink **/
---ion-color-mink: rgb(240, 12, 126);
---ion-color-mink-rgb: 34,34,34;
---ion-color-mink-contrast: #fff;
---ion-color-mink-contrast-rgb: 255,255,255;
---ion-color-mink-shade: #ce1d84;
---ion-color-mink-tint: #a73e7b;
-
+/** red **/
+ --ion-color-red: #fa0878;
+ --ion-color-red-rgb: 250,8,120; 
+ --ion-color-red-contrast: #ffffff; 
+ --ion-color-red-contrast-rgb: 255,255,255; 
+ --ion-color-red-shade: #dc076a; 
+ --ion-color-red-tint: #fb2186;
 }
