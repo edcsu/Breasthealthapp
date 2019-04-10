@@ -1,5 +1,27 @@
 :host {
-  ion-content {
+ /* ion-content {
     --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary))
-  }
+  }*/
+}
+p{
+  font-size: 14px;
+}
+.log{
+  width:100%;
+  height: 100%;
+  --background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  //--background: linear-gradient(10deg, rgb(36,113,39), rgb(31,120,53), rgb(25,127,66), rgb(18,133,80), rgb(7,140,90));
+}
+
+.but{
+  --background: linear-gradient(to right top, #e306bd, #f70094, #fe0069, #f90040, #eb1b12);
+}
+
+h3{
+  margin-top: 20px;
+}
+.jah1{
+  margin-top: 2.5rem;
+
+
 }
