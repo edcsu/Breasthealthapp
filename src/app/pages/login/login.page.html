@@ -3,13 +3,19 @@
   <div class="auth-content">
 
     <!-- Logo -->
-    <div padding-horizontal text-center class="animated fadeInDown">
+    <div>
       <div class="logo"></div>
-      <h4 no-margin>
+      <h6 >
         <ion-text color="light" class="fw700">
-          Ion
+          Use your BreastHealth.com
+          <div>Login</div>
         </ion-text>
-      </h4>
+      </h6>
+    </div>
+    <div>
+      <ion-text class="logged" color="light">
+        Once you're logged in, we'll personalize what you see in your app based on your preferences.
+      </ion-text>
     </div>
 
     <!-- Login form -->
@@ -31,7 +37,11 @@
         <ion-label position="floating">
           <ion-icon name="lock" item-start></ion-icon>
           Password
+          
         </ion-label>
+        <div slot="end">
+          <ion-icon class="eyz" color="light" name="eye"></ion-icon>
+        </div>
         <ion-input color="secondary" type="password" formControlName="password"></ion-input>
       </ion-item>
       <p ion-text color="warning" class="text08" *ngIf="onLoginForm.get('password').touched && onLoginForm.get('password').hasError('required')">
@@ -41,23 +51,50 @@
         </p>
     </form>
 
-    <p text-right tappable (click)="forgotPass()" class="paz">
+
+     <div class="login">
+          <ion-button class="logbtn" icon-left size="medium" expand="full" shape="round" color="dark"
+            (click)="goToHome()"
+            [disabled]="!onLoginForm.valid" tappable>
+            Log in
+          </ion-button>
+    </div>
+
+    <p text-center tappable (click)="forgotPass()" class="paz">
       <ion-text color="light">
-        <strong>Forgot Pass?</strong>
+        Forgot password?
       </ion-text>
     </p>
 
     <div>
-      <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="goToHome()" [disabled]="!onLoginForm.valid" tappable>
-        <ion-icon name="log-in"></ion-icon>
-        Signin
-      </ion-button>
+      
 
       <p text-center>
         <ion-text color="light">
           Or Signin with:
         </ion-text>
       </p>
+
+      <ion-grid class="btn-group">
+        <ion-row>
+          <ion-col size="4">
+            <ion-button shape="round" expand="full" color="secondary">
+              <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button shape="round" expand="full" color="secondary">
+              <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button shape="round" expand="full" color="secondary">
+              <ion-icon slot="icon-only" name="logo-googleplus"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
     </div>
 
     <!-- Other links -->
