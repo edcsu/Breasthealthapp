@@ -63,7 +63,7 @@ ion-item {
 
   .slogan {
     font-size: .8rem;
-    font-weight: 70 !important;
+    font-weight: 100 !important;
   }
   
   .text08 {
@@ -154,7 +154,7 @@ ion-item {
     }
   
     .auth-content {
-      margin: 0 5%;
+      margin: 100 5%;
   
       .logo {
         width: 60px;
@@ -207,7 +207,9 @@ ion-item {
   }
 
   .button-Div{
-    margin-top: 120px;
+    width: 100%;
+    position: fixed;
+    bottom: 5%;
   }
   
   .mto {

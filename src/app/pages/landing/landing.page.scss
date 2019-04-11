@@ -1,17 +1,40 @@
 :host {
-    ion-content {
-        --background: url("/assets/backgrounds/bg (21).jpg") no-repeat;
-    }
+  ion-content {
+    --flex-direction: column;
+    --background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/assets/backgrounds/bg (27).jpg") no-repeat center center / cover;
+  }
 }
-
-.paz {
-    position: relative;
-    z-index: 10;
+.applogo {
+  width: 60px;
+  height: 60px;
+  margin: 100px auto 8px;
+  border-radius: 10%;
+  background: url("/assets/img/ionic4start-ico.png") no-repeat;
+  background-size: 100%;
+}
+.takeTourButton {
+  background: rgba(255,255,255,0);
+  border-color: rgba(250,8,120,1);
+  border-radius: 0.8rem;
+  border-width: 10px;
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255,255,255,0.75);
+  text-align: middle;
+  font-size: 0.6rem;
+  font-weight: bold;
+  font-family: Arial;
+  width: 80px;
+  height: calc(2.5rem + 2px);
+  line-height: 0px;
+  padding: 0px;
 }
 .signUpButton {
   background: rgba(250,8,120,0.8);
   border-color: rgba(255,255,255,0.0);
-  border-radius: 0.8rem;
+  border-radius: 0.6rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -20,7 +43,7 @@
   font-size: 0.8rem;
   font-weight: bold;
   font-family: Arial;
-  width: 100%;
+  width: 80%;
   height: calc(2.5rem + 2px);
   line-height: 0px;
   padding: 0px;
@@ -28,7 +51,7 @@
 .signInButton {
   background: rgba(250,8,120,0.2);
   border-color: rgba(255,255,255,0.0);
-  border-radius: 0.8rem;
+  border-radius: 0.6rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -36,7 +59,7 @@
   text-align: middle;
   font-size: 0.8rem;
   font-weight: bold;
-  width: 100%;
+  width: 80%;
   height: calc(2.5rem + 2px);
   line-height: 0px;
   padding: 0px;

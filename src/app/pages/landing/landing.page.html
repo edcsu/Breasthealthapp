@@ -1,23 +1,22 @@
-<ion-content padding class="animated fadeIn login auth-page">
-  <div class="theme-bg"></div>
-  <div class="auth-content">
-
-    <!-- Logo -->
-    <div padding-horizontal text-center >
-      <div class="logo"></div>
-      <h4>
-        <ion-text color="light" class="fw700">
-          Breast health
+<ion-content>
+    <div class="auth-content">
+      <!-- Logo -->
+      <div padding-horizontal text-center >
+        <div class="applogo"></div>
+        <h4>
+          <ion-text color="light" class="fw700">
+            Breast health
+          </ion-text>
+        </h4>
+        <ion-text color="light" class="slogan">
+            Beast health for all, and some other words better than breast health.
         </ion-text>
-      </h4>
-      <ion-text color="light" class="slogan">
-          Beast health for all
-        </ion-text>
-    </div>
+        <ion-button class="takeTourButton" color="red" fill="outline" (click)="goToTour()" tappable>Take Tour</ion-button>
+      </div>
 
-    <div class="button-Div">
-      <ion-button class="signUpButton" color="red" (click)="goToRegister()" tappable>New member? Sign up </ion-button>
-      <ion-button class="signInButton" color="red" (click)="goToLogin()" tappable> Already a member, Signin</ion-button>
-    </div>
+      <div class="button-Div">
+        <ion-button class="signUpButton" color="red" (click)="goToRegister()" tappable>new? Sign up </ion-button>
+        <ion-button class="signInButton" color="red" (click)="goToLogin()" tappable> Already a user, Sign in</ion-button>
+      </div>
   </div>
 </ion-content>
