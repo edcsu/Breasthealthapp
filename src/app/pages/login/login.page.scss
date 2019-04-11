@@ -1,27 +1,39 @@
 :host {
     ion-content {
-        --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+        --background: #f4f5f8;
     }
 // log in button text 
     .logbtn {
         text-transform: capitalize;
-        
-    }
+        border-radius: 0.6rem;
+       
+      
+     }
+     ion-label{
+         color: var(--ion-color-dark);
+     }
+
+    
 }
 .logged{
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .paz {
     position: relative;
     z-index: 10;
-    font-size: 10px;
+    font-size: 13px;
 }
 //log in button div
 .login{
     margin-top: 1rem;
-
+     
+    
    }
 .eyz{
     margin-top: 2rem;
+}
+
+.phone{
+    margin-top: 10px;
 }
