@@ -1,40 +1,38 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="medium">
     <ion-buttons slot="start">
-      <ion-menu-button color="secondary"></ion-menu-button>
+      <ion-menu-button color="dark"></ion-menu-button>
     </ion-buttons>
     <ion-title >
-        <ion-text color="light">
-          <ion-text color="light" class="fw500"> Breast Health </ion-text>
-        </ion-text>
+          <ion-text color="dark" class="fw500"> Breast Health </ion-text>
     </ion-title>
     <ion-buttons slot="end">
-        <ion-button size="small" shape="round" color="medium" (click)="playSound()">
-            <ion-icon name="volume-high"></ion-icon>
-          </ion-button>
-      <ion-button size="small" shape="round" color="medium" (click)="notifications()">
+        <ion-button size="small" shape="round" color="dark" (click)="playSound()">
+          <img src="assets/img/sound_icon_black.png" >                    
+        </ion-button>
+      <ion-button size="small" shape="round" color="dark" (click)="notifications()">
         <ion-icon name="notifications"></ion-icon>
-        <ion-badge color="dark" slot="end">2</ion-badge>
+        <ion-badge color="danger" slot="end">2</ion-badge>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="background-pink">
+<ion-content>
 
   <ion-card class="main-card">
     <ion-card-header>
-      <ion-card-title color="primary">
+      <ion-card-title color="light">
         "Breast Health for All"
       </ion-card-title>
-      <ion-card-subtitle class="dashboard-subtitle" color="primary">
+      <ion-card-subtitle class="dashboard-subtitle" color="light">
         You can browse four zones: Why it is important to care about breast health, 
         how to do self check, changes to look out for and your personal settings.
       </ion-card-subtitle>
     </ion-card-header>
   </ion-card>
-  <ion-card class="content-card">
-    <!-- <ion-card-content class="home-content"> -->
+  <ion-card class="content-card home-content">
+    <ion-card-content>
       <ion-grid >
           <!-- <ion-row>
               <ion-col size="6">
@@ -62,75 +60,59 @@
               <ion-col size="6">
                   <div class="dashboard-div">
                     <p class="center-text">
-                         Breast Health<br>
-                         Info <br>
-                        
+                         Self <br>
+                         check                  
                     </p>
                   </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button">
-                    <ion-icon size="large" name="hand"></ion-icon>
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button">
+                      <img src="assets/img/handtouch_blue32.png" >
                   </ion-button>
               </ion-col>
               <ion-col size="6">
                   <div class="dashboard-div">
                     <p class="center-text">
-                     Disease <br>
-                       Detection <br>
-                      
+                     Tips
                     </p>
                   </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button" >
-                    <ion-icon size="large" name="hand"></ion-icon>
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" >
+                      <img src="assets/img/handtouch_blue32.png" >
                   </ion-button>
               </ion-col>
-              <ion-col size="6">
-                <div class="dashboard-div">
+          </ion-row>
+          <ion-row>        
+            <ion-col class="center-element" size="">
+                <div class="dashboard-div ">
                   <p class="center-text">
-                     Breast Cancer<br>
-                       Info<br>
-                      
+                     Breast Health <br>
+                       Info                   
                   </p>
                 </div>
-                <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button" >
-                  <ion-icon size="large" name="hand"></ion-icon>
+                <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" >
+                      <img src="assets/img/handtouch_blue32.png" >
                 </ion-button>
             </ion-col>
-            <ion-col size="6">
-              <div class="dashboard-div">
-                <p class="center-text">
-                    Self-check <br>
-                    <br>
-                    
-                </p>
-              </div>
-              <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button" >
-                <ion-icon size="large" name="hand"></ion-icon>
-              </ion-button>
-          </ion-col>
           </ion-row>
           <ion-row>
               <ion-col size="6">
                   <div class="dashboard-div">
                     <p class="center-text">
-                        Tips<br>
-                         <br>
-                        
+                        Join <br>
+                        support <br>
+                        group
                     </p>
                   </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button">
-                    <ion-icon  size="large" name="hand"></ion-icon>
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button">
+                      <img src="assets/img/handtouch_blue32.png" >                    
                   </ion-button>
               </ion-col>
               <ion-col size="6">
                   <div class="dashboard-div">
                     <p class="center-text">
-                        Contact Specialist <br>
-                         <br>
-                        
+                        Contact Specialist 
                     </p>
                   </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button">
-                    <ion-icon size="large" name="hand"></ion-icon>
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button">
+                      <img src="assets/img/handtouch_blue32.png" >                    
                   </ion-button>
               </ion-col>
           </ion-row>
@@ -158,12 +140,15 @@
           </ion-col>
         </ion-row> -->
       </ion-grid>
-    <!-- </ion-card-content> -->
+    </ion-card-content>
   </ion-card>
  
   <!-- <popmenu></popmenu> -->
 
- <ion-footer >
-    (c) The Uganda Cancer Institute 2018
-  </ion-footer>
+<!--  <ion-footer >
+      <img src="assets/img/UCILogo.png" height="64px" width="64px">
+      <ion-text class="footer-text">
+        &copy;   The Uganda Cancer Institute 2018
+      </ion-text>
+  </ion-footer> -->
 </ion-content>
