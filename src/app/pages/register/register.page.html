@@ -5,7 +5,7 @@
     <div padding-horizontal text-center>
       <h3 no-margin>
         <ion-text color="light" class="fw700">
-          <ion-text color="secondary">Register</ion-text>
+          <ion-text color="secondary">SIGN UP</ion-text>
         </ion-text>
       </h3>
     </div>
@@ -14,10 +14,10 @@
     <form [formGroup]="onRegisterForm" class="list-form">
       <ion-item no-padding class="animated fadeInUp">
         <ion-label position="floating">
-          <ion-icon name="person" item-start></ion-icon>
-          Full Name
+          <ion-icon name="person" item-start color="secondary"></ion-icon>
+          Username
         </ion-label>
-        <ion-input color="secondary" type="text" formControlName="fullName"></ion-input>
+        <ion-input color="primary" type="text" formControlName="fullName"></ion-input>
       </ion-item>
       <p ion-text class="text08" *ngIf="onRegisterForm.get('fullName').touched && onRegisterForm.get('fullName').hasError('required')">
         <ion-text color="warning">
@@ -27,10 +27,11 @@
 
       <ion-item no-padding class="animated fadeInUp">
         <ion-label position="floating">
-          <ion-icon name="mail" item-start></ion-icon>
+          <ion-icon name="mail" item-start color="secondary"></ion-icon>
+          <ion-text color="dark"></ion-text>
           Email
         </ion-label>
-        <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+        <ion-input color="medium" type="email" formControlName="email"></ion-input>
       </ion-item>
       <p ion-text class="text08" *ngIf="onRegisterForm.get('email').touched && onRegisterForm.get('email').hasError('required')">
         <ion-text color="warning">
@@ -39,25 +40,25 @@
       </p>
 
       <ion-item no-padding class="animated fadeInUp">
-          <ion-label position="floating">
-            <ion-icon name="call" item-start></ion-icon>
+          <ion-label position="floating" color="dark">
+            <ion-icon name="call" item-start color="secondary"></ion-icon>
             Phone Number
           </ion-label>
-          <ion-input color="secondary" type="phone" formControlName="phone"></ion-input>
+          <ion-input color="medium" type="phone" formControlName="phone"></ion-input>
         </ion-item>
         <p ion-text class="text08" *ngIf="onRegisterForm.get('phone').touched && onRegisterForm.get('email').hasError('required')">
-          <ion-text color="warning">
+          <ion-text color="light-shade">
             This field is required
           </ion-text>
         </p>
 
       <ion-item no-padding class="animated fadeInUp">
         <ion-label position="floating">
-           <ion-icon name="lock" item-start></ion-icon>
-          Password
+           <ion-icon name="lock" item-start color="secondary"></ion-icon>
+           Password
         </ion-label>
         <div class="jah1" slot="end"><ion-icon name="eye" color="light"></ion-icon></div>        
-        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+        <ion-input color="medium" type="password" formControlName="password"></ion-input>
       </ion-item>
       <p ion-text color="warning" class="text08" *ngIf="onRegisterForm.get('password').touched && onRegisterForm.get('password').hasError('required')">
         <ion-text color="warning">
@@ -67,11 +68,11 @@
 
         <ion-item no-padding class="animated fadeInUp">
             <ion-label position="floating">
-              <ion-icon name="lock" item-start></ion-icon>
-              Comfirm password
+              <ion-icon name="lock" item-start color="secondary"></ion-icon>
+              Confirm password
             </ion-label>        
             <div class="jah1" slot="end"><ion-icon name="eye" color="light"></ion-icon></div>        
-            <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+            <ion-input color="primary" type="password" formControlName="password"></ion-input>
           </ion-item>
           <p ion-text color="warning" class="text08" *ngIf="onRegisterForm.get('password').touched && onRegisterForm.get('password').hasError('required')">
             <ion-text color="warning">
@@ -79,41 +80,25 @@
             </ion-text>
           </p>
 
-          <ion-item no-padding class="animated fadeInUp">
-              <ion-label position="floating">
-                <ion-icon name="create" item-start></ion-icon>
-                Age
-              </ion-label>
-              <ion-input color="secondary" type="password" formControlName="password"></ion-input>
-            </ion-item>
-            <p ion-text color="warning" class="text08" *ngIf="onRegisterForm.get('password').touched && onRegisterForm.get('password').hasError('required')">
-              <ion-text color="warning">
-                This field is required
-              </ion-text>
-            </p>
 
-            
+         <!--
 	      <ion-item>
           <ion-label class="fw500" color="dark">Sex</ion-label>
           <ion-select [(ngModel)]="sex">
               <ion-select-option>Male</ion-select-option>
               <ion-select-option>Female</ion-select-option>
       </ion-select>
-    </ion-item>
-
-     <ion-button fill="solid" shape="round" expand="full" color="primary" (click)="selectImage()">
-          <ion-icon slot="start" name="camera"></ion-icon>
-          Select Image</ion-button>
+    </ion-item> -->
     </form>
 
-    <div margin-top class="but">
-      <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="signUp()" [disabled]="!onRegisterForm.valid"
+    <div margin-top>
+      <ion-button icon-left size="medium" color="danger" expand="full" shape="round" (click)="signUp()" [disabled]="!onRegisterForm.valid"
         tappable>
-        signup
+        sign up
       </ion-button>
 
       <p text-center>
-        <ion-text color="light">
+        <ion-text color="dark">
           Or you can signup with
         </ion-text>
       </p>
@@ -121,12 +106,12 @@
       <ion-grid class="btn-group">
         <ion-row>
           <ion-col size="6">
-            <ion-button shape="round" expand="full" fill="outline" color="tertiary">
+            <ion-button shape="round" expand="full" fill="outline" color="secondary">
               <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
             </ion-button>
           </ion-col>
           <ion-col size="6">
-            <ion-button shape="round" expand="full" fill="outline" color="tertiary">
+            <ion-button shape="round" expand="full" fill="outline" color="secondary">
               <ion-icon slot="icon-only" name="logo-googleplus"></ion-icon>
             </ion-button>
           </ion-col>
