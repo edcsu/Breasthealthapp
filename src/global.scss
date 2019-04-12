@@ -141,11 +141,12 @@ ion-item {
     }
   
     .btn-group {
+      margin-bottom: 30px;
       .button-ios,
       .button-md {
         border-radius: 0;
         &:first-of-type {
-          border-radius: 2px 0 0 2px;
+          border-radius: 1px 0 0 1px;
         }
         &:last-of-type {
           border-radius: 0 2px 2px 0;
@@ -182,12 +183,13 @@ ion-item {
           }
   
           ion-label {
-            font-size: 1em;
-            color: var(--ion-color-light);
+            font-size: 16px;
+            color: var(--ion-color-medium-shade);
           }
   
           input {
-            color: var(--ion-color-light);
+            color: var(--ion-color-medium-contrast);
+
           }
         }
       }
@@ -216,3 +218,6 @@ ion-item {
       margin-bottom: -2px;
     }
   }
+  .fw500 {
+    margin-top: 10px;
+}
