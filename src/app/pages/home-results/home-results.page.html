@@ -26,8 +26,9 @@
         "Breast Health for All"
       </ion-card-title>
       <ion-card-subtitle class="dashboard-subtitle" color="light">
-        You can browse four zones: Why it is important to care about breast health, 
-        how to do self check, changes to look out for and your personal settings.
+        You can browse six zones: how to do self check, tips to care for your breasts, 
+         information on breast health, information on breast health, 
+        how to join a support group and how to find a specialist.
       </ion-card-subtitle>
     </ion-card-header>
   </ion-card>
@@ -42,7 +43,7 @@
                          check                  
                     </p>
                   </div>
-                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button">
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToSelfCheck()" >
                       <img src="assets/img/handtouch_blue32.png" >
                   </ion-button>
               </ion-col>
@@ -52,7 +53,7 @@
                      Tips
                     </p>
                   </div>
-                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" >
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToTips()" >
                       <img src="assets/img/handtouch_blue32.png" >
                   </ion-button>
               </ion-col>
@@ -78,7 +79,7 @@
                        Info                   
                   </p>
                 </div>
-                <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" >
+                <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToBreastHealthInfo()" >
                       <img src="assets/img/handtouch_blue32.png" >
                 </ion-button>
               </ion-col>
@@ -89,7 +90,7 @@
                        Info                   
                   </p>
                 </div>
-                <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" >
+                <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToBreastHealthInfo()" >
                       <img src="assets/img/handtouch_blue32.png" >
                 </ion-button>
               </ion-col>
@@ -103,7 +104,7 @@
                         group
                     </p>
                   </div>
-                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button">
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToSupportGroup()" >
                       <img src="assets/img/handtouch_blue32.png" >                    
                   </ion-button>
               </ion-col>
@@ -113,7 +114,7 @@
                         Find Specialist 
                     </p>
                   </div>
-                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button">
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToSpecialist()">
                       <img src="assets/img/handtouch_blue32.png" >                    
                   </ion-button>
               </ion-col>
@@ -144,13 +145,18 @@
       </ion-grid>
     </ion-card-content>
     
-    <ion-footer >
-      <ion-thumbnail>
+    <ion-footer >    
+      <ion-item>
+        <ion-thumbnail slot="start" >
           <img src="assets/img/UCILogo.png" height="" width="">      
-      </ion-thumbnail>
-      <ion-text class="footer-text">
-        &copy;   The Uganda Cancer Institute 2018
-      </ion-text>
+        </ion-thumbnail>
+        <ion-text class="footer-text">
+          &copy;   The Uganda Cancer Institute 2018
+       </ion-text>
+       <!-- <ion-label class="">
+          &copy;   The Uganda Cancer Institute 2018
+       </ion-label> -->
+      </ion-item>      
   </ion-footer> 
   </ion-card>
  

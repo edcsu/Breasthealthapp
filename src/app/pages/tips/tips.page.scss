@@ -1,0 +1,29 @@
+
+:host {
+        .dashboard-div {
+            border-radius: 50% ;
+            font-size: 6pt;
+            font-weight: bold;
+            margin: 0%;
+            padding: 0.5rem;
+            // background-color: #EBEBEB;
+            background: var(--ion-color-primary);
+            color: var(--ion-color-light);
+            width: 78px;
+            height: 78px;
+            font-style: italic;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        }
+
+        .content-card{
+            background: transparent;
+            box-shadow: none;
+            //border-radius: 10px;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+        
+}
+
