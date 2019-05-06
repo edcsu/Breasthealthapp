@@ -1,23 +1,26 @@
 <ion-header>
-  <ion-buttons slot="start">
-    <ion-back-button></ion-back-button>
-  </ion-buttons>
   <ion-toolbar color="medium" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tips"></ion-back-button>
+    </ion-buttons>
     <ion-title class="center-text"> Breast cancer tips</ion-title>
+    <ion-buttons slot="end">
+        <ion-button size="small" shape="round" color="dark" >
+          <img src="assets/img/sound_icon_black.png" >                    
+        </ion-button>
+    </ion-buttons>
   </ion-toolbar>
-  <!-- <ion-buttons slot="end">
-    <ion-button size="small" shape="round" color="dark" (click)="playSound()">
-      <img src="assets/img/sound_icon_black.png">
-    </ion-button> -->
+  
 </ion-header>
 
 <ion-content padding>
-<ion-card >
+<ion-card class="main-card">
+  <ion-img src="assets/backgrounds/bg (14).jpg" alt="Breast cancer tip"></ion-img>
   <ion-card-header>
-    <ion-card-title color="dark">
+    <ion-card-title color="light">
        <h5 margin-bottom>Breast Cancer</h5>
     </ion-card-title>
-    <ion-card-subtitle  color="dark">
+    <ion-card-subtitle  color="light">
      <p margin-bottom> 
           Breast Cancer in sub Saharan Africa is on the rise though it is not as common as it is in developed countries. In developing
           countries, the chances of dying from it is much more than in developed countries. The reasons for this scenario are many;
