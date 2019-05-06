@@ -12,6 +12,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+	<ion-slides pager="true" class="slides">
+		<ion-slide *ngFor="let slide of slider" class="slide">
+			<h2 [innerHTML]="slide.title"class='step'></h2>
+			<p [innerHTML]="slide.content" class='content'></p>
+			<img [src]="slide.img" class='image'/>
+		</ion-slide>
+	</ion-slides>
 </ion-content>
