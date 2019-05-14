@@ -13,26 +13,102 @@
   
 </ion-header>
 
-<ion-content padding>
-<ion-card class="main-card">
-  <ion-img src="assets/backgrounds/bg (14).jpg" alt="Breast cancer tip"></ion-img>
-  <ion-card-header>
-    <ion-card-title color="light">
-       <h5 margin-bottom>Breast Cancer</h5>
-    </ion-card-title>
-    <ion-card-subtitle  color="light">
-     <p margin-bottom> 
-          Breast Cancer in sub Saharan Africa is on the rise though it is not as common as it is in developed countries. In developing
-          countries, the chances of dying from it is much more than in developed countries. The reasons for this scenario are many;
-          they include low awareness, late stage with which women come to hospital, failure to access care.
+<ion-content>
+  <!-- <ion-button  class="button-tips" (click)="showTip1('#tip1')">Tip  </ion-button>
+
+   <div ion-fixed>
+    <div id="tip1" class="hidden" >
+      <div class="text-tips">
+      <p>
+        Breast Cancer in sub Saharan Africa is on the rise though it is not as common
+        as it is in developed countries. In developing countries, the chances of dying
+        from it is much more than in developed countries. The reasons for this
+        scenario are many; they include low awareness, late stage with which
+        women come to hospital, failure to access care.
       </p>
-     <p>
-          Breast Cancer, especially in early stages causes no pain, it flies below radar. Absence of pain is construed as being well,
-          absence of pain does not necessarily mean all is well and the presence of pain does not necessarily mean doom either. The
-          safest way to play is to opt for regular checks at three levels: Level 1 - self-check, Level 2 - Be checked by a trained
-          practitioner, Level 3 - Use Imaging as recommended by a health worker, these include a breast ultrasound scan or a mammogram.
-    </p>
-    </ion-card-subtitle>
-  </ion-card-header>
-</ion-card>
+      </div>
+    </div>
+
+    </div>
+
+  
+      <ion-button class="button-tips" (click)="showTip1('#tip2')">Tip </ion-button>
+    
+      <div ion-fixed>
+        <div id="tip2" class="hidden">
+          <div class="text-tips">
+          <p>
+            <ion-text>
+             Breast Cancer, especially in early stages causes no pain, it flies below radar. Absence of pain is construed as being well,
+            absence of pain does not necessarily mean all is well and the presence of pain does not necessarily mean doom either.
+            </ion-text>
+          </p>
+          </div>
+        </div>
+    
+      </div>
+
+      <ion-button  class="button-tips" (click)="showTip1('#tip3')">Tip </ion-button>
+      
+      <div ion-fixed>
+        <div id="tip3" class="hidden">
+          <div class="text-tips">
+          <p>
+             The safest way to play is to opt for regular checks at three levels: Level 1 - self-check, Level 2 - Be checked by a trained
+            practitioner, Level 3 - Use Imaging as recommended by a health worker, these include a breast ultrasound scan or a mammogram.
+          </p>
+          </div>
+        </div>
+      
+      </div> -->
+
+        <ion-slides pager="true">
+
+          <ion-slide>
+            <div>
+              <h5 margin-bottom>Tip 1: some title here....</h5>
+              <p>
+                <ion-text>
+                  Breast Cancer, especially in early stages causes no pain, it flies below radar. Absence of pain is
+                  construed as being well,
+                  absence of pain does not necessarily mean all is well and the presence of pain does not necessarily
+                  mean doom either.
+                </ion-text>
+              </p>
+            </div>
+          </ion-slide>
+
+          <ion-slide>
+            <div>
+              <h5>Tip 2: some title here.....</h5>
+              <p>
+                <ion-text>
+                  Breast Cancer in sub Saharan Africa is on the rise though it is not as common
+                  as it is in developed countries. In developing countries, the chances of dying
+                  from it is much more than in developed countries. The reasons for this
+                  scenario are many; they include low awareness, late stage with which
+                  women come to hospital, failure to access care.
+                </ion-text>
+              </p>
+            </div>
+          </ion-slide>
+
+          <ion-slide>
+           <div>
+             <h5>tip 3: some title here.....</h5>
+             <p>
+               <ion-text>
+                 The safest way to play is to opt for regular checks at three levels: Level 1 - self-check, Level 2 - Be
+                 checked by a trained
+                 practitioner, Level 3 - Use Imaging as recommended by a health worker, these include a breast
+                 ultrasound scan or a mammogram.
+               </ion-text>
+             </p>
+           </div>
+          </ion-slide>
+        </ion-slides>
+
+
+   
+
 </ion-content>

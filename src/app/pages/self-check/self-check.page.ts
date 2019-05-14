@@ -9,6 +9,7 @@ import {NavController, NavParams} from '@ionic/angular';
 export class SelfCheckPage implements OnInit {
 
   constructor(
+
   	public navCtrl: NavController) {
 
   	}
