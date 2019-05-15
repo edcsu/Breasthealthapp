@@ -14,96 +14,49 @@
 </ion-header>
 
 <ion-content>
-  <!-- <ion-button  class="button-tips" (click)="showTip1('#tip1')">Tip  </ion-button>
-
-   <div ion-fixed>
-    <div id="tip1" class="hidden" >
-      <div class="text-tips">
-      <p>
-        Breast Cancer in sub Saharan Africa is on the rise though it is not as common
-        as it is in developed countries. In developing countries, the chances of dying
-        from it is much more than in developed countries. The reasons for this
-        scenario are many; they include low awareness, late stage with which
-        women come to hospital, failure to access care.
-      </p>
-      </div>
-    </div>
-
-    </div>
-
-  
-      <ion-button class="button-tips" (click)="showTip1('#tip2')">Tip </ion-button>
-    
-      <div ion-fixed>
-        <div id="tip2" class="hidden">
-          <div class="text-tips">
-          <p>
-            <ion-text>
-             Breast Cancer, especially in early stages causes no pain, it flies below radar. Absence of pain is construed as being well,
-            absence of pain does not necessarily mean all is well and the presence of pain does not necessarily mean doom either.
-            </ion-text>
-          </p>
-          </div>
-        </div>
-    
-      </div>
-
-      <ion-button  class="button-tips" (click)="showTip1('#tip3')">Tip </ion-button>
-      
-      <div ion-fixed>
-        <div id="tip3" class="hidden">
-          <div class="text-tips">
-          <p>
-             The safest way to play is to opt for regular checks at three levels: Level 1 - self-check, Level 2 - Be checked by a trained
-            practitioner, Level 3 - Use Imaging as recommended by a health worker, these include a breast ultrasound scan or a mammogram.
-          </p>
-          </div>
-        </div>
-      
-      </div> -->
-
-        <ion-slides pager="true">
+        <ion-slides pager="true" class="slides">
 
           <ion-slide>
-            <div>
-              <h5 margin-bottom>Tip 1: some title here....</h5>
-              <p>
-                <ion-text>
-                  Breast Cancer, especially in early stages causes no pain, it flies below radar. Absence of pain is
-                  construed as being well,
-                  absence of pain does not necessarily mean all is well and the presence of pain does not necessarily
-                  mean doom either.
-                </ion-text>
+            <div class="slide">
+              <div class="color">
+              <h5>Tip 1: some title here....</h5>
+              </div>
+              <div class="content">
+                 <p>
+                 Breast Cancer in sub Saharan Africa is on the rise though it is not as common as it is in developed countries The reasons for this scenario are many;
+                 they include low awareness, late stage with which women come to hospital, failure to access care.
               </p>
+              <ion-img src="assets/backgrounds/bg (10).jpg" alt="breast cancer tips" class="image"></ion-img>
+              </div>
             </div>
           </ion-slide>
 
-          <ion-slide>
+          <ion-slide class="slide">
             <div>
-              <h5>Tip 2: some title here.....</h5>
+              <h5 class="color">Tip 2: some title here.....</h5>
+              <div class="content">
               <p>
-                <ion-text>
-                  Breast Cancer in sub Saharan Africa is on the rise though it is not as common
-                  as it is in developed countries. In developing countries, the chances of dying
-                  from it is much more than in developed countries. The reasons for this
-                  scenario are many; they include low awareness, late stage with which
-                  women come to hospital, failure to access care.
-                </ion-text>
+                Breast Cancer, especially in early stages causes no pain, it flies below radar. Absence of pain is construed as being
+                well, absence of pain does not necessarily mean all is well and the presence of pain does not necessarily mean doom
+                either.
               </p>
+              <ion-img src="assets/backgrounds/bg (10).jpg" alt="breast cancer tips" class="image"></ion-img>
+              </div>
             </div>
           </ion-slide>
 
-          <ion-slide>
+          <ion-slide class="slide">
            <div>
-             <h5>tip 3: some title here.....</h5>
+             <h5 class="color">Tip 3: some title here.....</h5>
+             <div class="content">
              <p>
-               <ion-text>
-                 The safest way to play is to opt for regular checks at three levels: Level 1 - self-check, Level 2 - Be
+                 The safest way to play is to opt for regular checks at three levels: <br>Level 1 - self-check, <br>Level 2 - Be
                  checked by a trained
-                 practitioner, Level 3 - Use Imaging as recommended by a health worker, these include a breast
+                 practitioner, <br> Level 3 - Use Imaging as recommended by a health worker, these include a breast
                  ultrasound scan or a mammogram.
-               </ion-text>
              </p>
+            <ion-img src="assets/backgrounds/bg (10).jpg" alt="breast cancer tips" class="image"></ion-img>
+             </div>
            </div>
           </ion-slide>
         </ion-slides>
