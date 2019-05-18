@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="medium" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home-results"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Tips </ion-title>
+    <ion-buttons slot="end">
+        <ion-button size="small" shape="round" color="dark" >
+          <img src="assets/img/sound_icon_black.png" >                    
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <ion-card class="content-card home-content">
+        <ion-card-content>
+          <ion-grid >
+            <ion-row>
+                  <ion-col size="" offset="2">
+                      <div class="dashboard-div">
+                        <p class="center-text tip-text">
+                            Breast <br>
+                            Cancer                  
+                        </p>
+                      </div>
+                      <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToBreastCancerTips()" >
+                          <img src="assets/img/handtouch_blue32.png" >
+                      </ion-button>
+                  </ion-col>
+            </ion-row>
+            <ion-row>
+                  <ion-col size="" offset="2">
+                      <div class="dashboard-div">
+                        <p class="center-text tip-text">
+                        Nipples
+                        </p>
+                      </div>
+                      <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToNippleTips()" >
+                          <img src="assets/img/handtouch_blue32.png" >
+                      </ion-button>
+                  </ion-col>
+            </ion-row>
+          </ion-grid >
+        </ion-card-content>
+    </ion-card>
+            
+</ion-content>

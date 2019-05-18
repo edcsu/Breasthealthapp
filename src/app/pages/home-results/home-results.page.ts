@@ -38,6 +38,11 @@ export class HomeResultsPage {
     this.menuCtrl.enable(true);
   }
 
+
+  playSound() {
+
+  }
+
   settings() {
     this.navCtrl.navigateForward('settings');
   }
@@ -104,6 +109,30 @@ export class HomeResultsPage {
       showBackdrop: true
     });
     return await popover.present();
+  }
+
+  goToSelfCheck() {
+    this.navCtrl.navigateRoot('/self-check');
+  }
+
+  goToTips() {
+    this.navCtrl.navigateRoot('/tips');
+  }
+
+  /* goToTips() {
+    this.navCtrl.navigateRoot('/tips');
+  } */
+
+  goToBreastHealthInfo() {
+    this.navCtrl.navigateRoot('/breast-health-info');
+  }
+
+  goToSupportGroup() {
+    this.navCtrl.navigateRoot('/support-group');
+  }
+
+  goToSpecialist() {
+    this.navCtrl.navigateRoot('/specialist');
   }
 
 }

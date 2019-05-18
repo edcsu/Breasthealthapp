@@ -9,6 +9,13 @@ const routes: Routes = [
   { path: 'settings', loadChildren: './pages/settings/settings.module#SettingsPageModule' },
   { path: 'edit-profile', loadChildren: './pages/edit-profile/edit-profile.module#EditProfilePageModule' },
   { path: 'home-results', loadChildren: './pages/home-results/home-results.module#HomeResultsPageModule' },
+  { path: 'tips', loadChildren: './pages/tips/tips.module#TipsPageModule' },
+  { path: 'specialist', loadChildren: './pages/specialist/specialist.module#SpecialistPageModule' },
+  { path: 'self-check', loadChildren: './pages/self-check/self-check.module#SelfCheckPageModule' },
+  { path: 'breast-health-info', loadChildren: './pages/breast-health-info/breast-health-info.module#BreastHealthInfoPageModule' },
+  { path: 'support-group', loadChildren: './pages/support-group/support-group.module#SupportGroupPageModule' },
+  { path: 'breast-cancer-tips', loadChildren: './pages/breast-cancer-tips/breast-cancer-tips.module#BreastCancerTipsPageModule' },
+  { path: 'nipples-tips', loadChildren: './pages/nipples-tips/nipples-tips.module#NipplesTipsPageModule' },
 ];
 
 @NgModule({
