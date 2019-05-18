@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nipples-tips.page.html',
   styleUrls: ['./nipples-tips.page.scss'],
 })
+
 export class NipplesTipsPage implements OnInit {
-
-  constructor() { }
-
+  slides = null;
+  constructor() {
+    this.slides = document.querySelector('ion-slides');
+  }
   ngOnInit() {
   }
-
 }

@@ -78,6 +78,10 @@ ion-item {
     font-size: 1.2rem;
   }
 
+  .hidden{
+    display: none;
+  }
+
   .text15 {
     font-size: 1.5rem;
   }
@@ -221,4 +225,8 @@ ion-item {
   }
   .fw500 {
     margin-top: 10px;
+}
+.swiper-pagination-bullet {
+  bottom: 0px !important;
+  position: fixed !important;
 }

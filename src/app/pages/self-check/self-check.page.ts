@@ -10,7 +10,6 @@ export class SelfCheckPage implements OnInit {
 
   constructor(
   	public navCtrl: NavController) {
-
   	}
 
   ngOnInit() {
@@ -19,27 +18,27 @@ export class SelfCheckPage implements OnInit {
   slider = [
   	{
   		title:'Step 1',
-  		content:'Lie down on your back with a pillow under your right shoulder.',
-  		img:'assets/backgrounds/bg (33).jpg'
+  		content:'Hold arms at your side.',
+  		img:'assets/illustrations/Picture1.jpg'
   	},
   	{
   		title:'Step 2',
-  		content:'some staff to read here',
-  		img:'assets/backgrounds/bg (48).jpg'
+  		content:'Hold arms at your side.',
+  		img:'assets/illustrations/Picture2.jpg'
   	},
   	{
   		title:'Step 3',
-  		content:'some staff to read here',
-  		img:'assets/backgrounds/bg (50).jpg'
+  		content:'Press your hands on your hips and tighten your chest muscles',
+  		img:'assets/illustrations/Picture3.jpg'
   	},
   	{
   		title:'Step 4',
   		content:'some staff to read here',
-  		img:'assets/backgrounds/bg (43).jpg'
+  		img:'assets/illustrations/Picture4.jpg'
   	},
   	{
   		title:'Step 5',
-  		content:'some staff to read here',
+  		content:'Check is Complete',
   		img:'assets/backgrounds/bg (12).jpg'
   	}
   ];

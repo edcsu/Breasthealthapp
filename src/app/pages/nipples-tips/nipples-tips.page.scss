@@ -1,10 +1,54 @@
-:host {
-    .center-text{
-        text-align: center;
-        margin-top: 1rem;
-    }
 
-    .main-card{
-        --background: var(--ion-color-primary-tint);
-    }
+.slides {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-size: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-size: 100%;
+    background-color: rgba(250, 8, 120, 0);
+      background-image: linear-gradient(rgba(192,192,192,1), rgba(250,8,120,0.9));
+}
+
+.color {
+    color: rgba(0, 0, 0, 0.75);
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: light;
+    font-family: Arial;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.content {
+    text-align: left;
+    font-size: 0.8rem;
+    font-family: Arial;
+    font-weight: light;
+    width: 80%;
+    line-height: 15px;
+    padding: 0px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+
+}
+
+.image {
+    width: 90%;
+    height: 50%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 0%;
+    background-size: 100%;
 }
