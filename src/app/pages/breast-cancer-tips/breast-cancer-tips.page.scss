@@ -1,3 +1,9 @@
+
+ion-slides {
+    --bullet-background: var(--ion-color-warning);
+    --bullet-background-active:  var(--ion-color-success);
+}
+
 .slides{
     width: 100%;
     height: 100%;
@@ -48,3 +54,4 @@ margin-bottom: 10px;
     border-radius: 0%;
     background-size: 100%;
 }
+

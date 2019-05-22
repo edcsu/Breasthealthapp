@@ -6,9 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./breast-cancer-tips.page.scss']
 })
 export class BreastCancerTipsPage implements OnInit {
-  slides = null;
+
+  slideOpts = {
+    initialSlide: 0,
+    slidesPerView: 1,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction'
+    }
+  };
+
   constructor() {
-    this.slides = document.querySelector('ion-slides');
   }
   ngOnInit() {
   }
