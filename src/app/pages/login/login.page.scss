@@ -5,7 +5,7 @@
 // log in button text 
     .logbtn {
         text-transform: capitalize;
-        border-radius: 0.6rem;
+        border-radius: 0.8rem;
        
       
      }
@@ -17,6 +17,7 @@
 }
 .logged{
     font-size: 12px;
+    line-height: 15px;
 }
 
 .paz {
@@ -36,4 +37,7 @@
 
 .phone{
     margin-top: 10px;
+}
+.logofacebook{
+    border-radius: 0.4rem;
 }
