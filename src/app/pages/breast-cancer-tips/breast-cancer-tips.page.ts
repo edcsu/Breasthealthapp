@@ -11,7 +11,7 @@ export class BreastCancerTipsPage implements OnInit {
   slideOpts = {
     initialSlide: 0,
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     pagination: {
       el: '.swiper-pagination',
       type: 'fraction'
