@@ -1,31 +1,35 @@
 <ion-header>
   <ion-toolbar color="medium" >
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="home-results"></ion-back-button>
-    </ion-buttons>
     <ion-title> Tips </ion-title>
-    <ion-buttons slot="end">
-        <ion-button size="small" shape="round" color="dark" >
-          <img src="assets/img/sound_icon_black.png" >                    
-        </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content padding>
     <ion-card class="content-card home-content">
         <ion-card-content>
           <ion-grid >
             <ion-row>
-                  <ion-col size="" offset="2">
-
-                    <ion-ripple-effect></ion-ripple-effect>
-                      <img src="assets/img/breasthealth_bc_tipbutton.png" (click)="goToBreastCancerTips()"  >
+                  <ion-col size="" offset="1">
+                      <div class="dashboard-div">
+                        <p class="center-text">
+                            Breast <br>
+                            Cancer                  
+                        </p>
+                      </div>
+                      <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToBreastCancerTips()" >
+                          <img src="assets/img/handtouch_blue32.png" >
+                      </ion-button>
                   </ion-col>
-            </ion-row>
-            <ion-row>
+            
                   <ion-col size="" offset="2">
-                    <ion-ripple-effect></ion-ripple-effect>
-                      <img src="assets/img/breasthealth_nipples_button.png" (click)="goToNippleTips()" >
+                      <div class="dashboard-div">
+                        <p class="center-text">
+                        Nipples
+                        </p>
+                      </div>
+                      <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToNippleTips()" >
+                          <img src="assets/img/handtouch_blue32.png" >
+                      </ion-button>
                   </ion-col>
             </ion-row>
           </ion-grid >

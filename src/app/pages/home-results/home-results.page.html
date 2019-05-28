@@ -4,7 +4,7 @@
       <ion-menu-button color="dark"></ion-menu-button>
     </ion-buttons>
     <ion-title >
-          <ion-text color="dark" class="fw500"> My Breast Health </ion-text>
+          <ion-text color="dark" class="fw500"> Breast Health </ion-text>
     </ion-title>
     <ion-buttons slot="end">
         <ion-button size="small" shape="round" color="dark" (click)="playSound()">
@@ -23,7 +23,7 @@
   <ion-card class="main-card">
     <ion-card-header>
       <ion-card-title color="light">
-        "Empowering You to Wellness"
+        "Breast Health for All"
       </ion-card-title>
       <ion-card-subtitle class="dashboard-subtitle" color="light">
         You can browse six zones: how to do self check, tips to care for your breasts, 
@@ -36,35 +36,112 @@
     <ion-card-content>
       <ion-grid >
           <ion-row>
-              <ion-col size="" offset="">
-                <ion-ripple-effect></ion-ripple-effect>
-                    <img src="assets/img/breasthealth_selfcheck_button.png" height="" (click)="goToSelfCheck()">                  
-              </ion-col>
               <ion-col size="" offset="1">
-                <ion-ripple-effect></ion-ripple-effect>
-                  <img src="assets/img/breasthealth_tip_button.png" (click)="goToTips()">                
-            </ion-col>
+                  <div class="dashboard-div">
+                    <p class="center-text">
+                         Self <br>
+                         check                  
+                    </p>
+                  </div>
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToSelfCheck()" >
+                      <img src="assets/img/handtouch_blue32.png" >
+                  </ion-button>
+              </ion-col>
+              <ion-col size="" offset="2">
+                  <div class="dashboard-div">
+                    <p class="center-text">
+                     Tips
+                    </p>
+                  </div>
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToTips()" >
+                      <img src="assets/img/handtouch_blue32.png" >
+                  </ion-button>
+              </ion-col>
           </ion-row>
+          <!-- <ion-row class="" >        
+            <ion-col size="" offset="3">
+                <div class="dashboard-div ">
+                  <p class="center-text">
+                     Breast Health <br>
+                       Info                   
+                  </p>
+                </div>
+                <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" >
+                      <img src="assets/img/handtouch_blue32.png" >
+                </ion-button>
+            </ion-col>
+          </ion-row> -->
           <ion-row>
-              <ion-col size="" offset="">
-                <ion-ripple-effect></ion-ripple-effect>              
-                    <img src="assets/img/breasthealth_info_button.png" (click)="goToBreastHealthInfo()">                  
-              </ion-col>
               <ion-col size="" offset="1">
-                <ion-ripple-effect></ion-ripple-effect>               
-                  <img src="assets/img/breasthealth_info_button.png" (click)="goToBreastHealthInfo()">                
-            </ion-col>
-          </ion-row>
+                <div class="dashboard-div ">
+                  <p class="center-text">
+                     Breast Health <br>
+                       Info                   
+                  </p>
+                </div>
+                <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToBreastHealthInfo()" >
+                      <img src="assets/img/handtouch_blue32.png" >
+                </ion-button>
+              </ion-col>
+              <ion-col size="" offset="2">
+                <div class="dashboard-div ">
+                  <p class="center-text">
+                     Breast Health <br>
+                       Info                   
+                  </p>
+                </div>
+                <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToBreastHealthInfo()" >
+                      <img src="assets/img/handtouch_blue32.png" >
+                </ion-button>
+              </ion-col>
+            </ion-row>
           <ion-row>
-              <ion-col size="" offset="">
-                <ion-ripple-effect></ion-ripple-effect>                
-                    <img src="assets/img/breasthealth_support_group_button.png" (click)="goToSupportGroup()">                  
-              </ion-col>
               <ion-col size="" offset="1">
-                <ion-ripple-effect></ion-ripple-effect>                
-                  <img src="assets/img/breasthealth_specialist_button.png" (click)="goToSpecialist()">                
-            </ion-col>
+                  <div class="dashboard-div">
+                    <p class="center-text">
+                        Join <br>
+                        support <br>
+                        group
+                    </p>
+                  </div>
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToSupportGroup()" >
+                      <img src="assets/img/handtouch_blue32.png" >                    
+                  </ion-button>
+              </ion-col>
+              <ion-col size="" offset="2">
+                  <div class="dashboard-div">
+                    <p class="center-text">
+                        Find Specialist 
+                    </p>
+                  </div>
+                  <ion-button size="" shape="" fill="clear" color="tertiary" class="dashboard-button" (click)="goToSpecialist()">
+                      <img src="assets/img/handtouch_blue32.png" >                    
+                  </ion-button>
+              </ion-col>
           </ion-row>
+        <!-- <ion-row>
+          <ion-col size="6">
+              <ion-card class="dashboard-card">
+                
+                  Learn about <br>
+                  Breast Cancer
+              </ion-card>
+              <ion-button size="" shape="" fill="clear" color="primary" >
+                <ion-icon name="hand"></ion-icon>
+              </ion-button>
+            
+          </ion-col>
+          <ion-col size="6">
+              <ion-card class="dashboard-card">
+                  
+                    Learn about <br>
+                    Breast Cancer
+                </ion-card>
+            <ion-button size="" fill="clear" color="primary" >
+                <ion-icon name="heart"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row> -->
       </ion-grid>
     </ion-card-content>
     
