@@ -1,0 +1,49 @@
+:host {
+	*ion-content {
+	   background-image: linear-gradient(rgba(250,8,120,0.2), rgba(192,192,192,0), rgba(250,8,120,0.2));
+	}
+}
+.self-main-card{
+    // background: transparent;
+     background: rgba(255, 255, 255, 0.1);
+    //--background: var(--ion-color-primary-tint);
+    // border-radius: 10px;
+}
+
+.content-card{
+    background: transparent;
+    box-shadow: none;
+    //border-radius: 10px;
+}
+
+.content {
+  background: rgba(255,255,255,0.1);
+  border-radius: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: 50%;
+  color: rgba(0, 23, 45,0.75);
+  text-align: left;
+  font-size: 0.8rem;
+  font-family: Arial;
+  font-weight: Bold;
+  width: 90%;
+  height: 8%;
+  line-height: 20px;
+  padding: 0px;
+}
+
+.content-title {
+  background: rgba(255,255,255,0.1);
+  display: block;
+  color: rgba(0, 23, 45,0.75);
+  text-align: center;
+  font-size: 0.8rem;
+  font-family: Arial;
+  font-weight: Bold;
+  width: 90%;
+  height: 8%;
+  line-height: 20px;
+  padding: 0px;
+}

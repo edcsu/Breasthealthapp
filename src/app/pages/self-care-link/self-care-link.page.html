@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="medium" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home-results"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Self check</ion-title>
+    <ion-buttons slot="end">
+        <ion-button size="small" shape="round" color="dark" >
+          <img src="assets/img/sound_icon_black.png" >                    
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="self-main-card">
+    <ion-card-header>
+      <ion-card-title color="content-title">
+        This is the Self Check
+      </ion-card-title>
+      <ion-card-subtitle class="content">
+        You can browse four zones: how to do self check, tips to care for your breasts, 
+         information on breast health, information on breast health.
+      </ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <ion-card class="content-card home-content">
+    <ion-card-content>
+      <ion-grid >
+          <ion-row>
+            <ion-col size="" offset="">
+              <ion-ripple-effect></ion-ripple-effect>
+                <img src="assets/img/breasthealth_tips_button.png" height="120" (click)="goToTips()">
+            </ion-col>
+            <ion-col size="" offset="1">
+              <ion-ripple-effect></ion-ripple-effect>
+              <img src="assets/img/breasthealth_selfcheck_button.png" height="120" width="" (click)="goToSelfCheck()">           
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col size="" offset="">
+                <ion-ripple-effect></ion-ripple-effect>              
+                    <img src="assets/img/breasthealth_bhinfo_button.png" height="120">                  
+              </ion-col>
+              <ion-col size="" offset="1">
+                <ion-ripple-effect></ion-ripple-effect>               
+                  <img src="assets/img/breasthealth_bhinfo_button.png" height="120">                
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    
+    <!--<ion-footer >    
+      <ion-item>
+        <ion-thumbnail slot="start" >
+          <img src="assets/img/UCILogo.png" height="" width="">      
+        </ion-thumbnail>
+        <ion-text class="footer-text">
+          &copy;   The Uganda Cancer Institute 2018
+       </ion-text>
+      </ion-item>      
+  </ion-footer> --> 
+  </ion-card>
+ 
+  <!-- <popmenu></popmenu> -->
+
+  
+</ion-content>

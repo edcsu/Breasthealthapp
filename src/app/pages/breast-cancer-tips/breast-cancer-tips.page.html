@@ -14,10 +14,13 @@
 </ion-header>
 
 <ion-content>
-        <ion-slides pager="true" class="slides">  
-       <ion-slide class="slide">
-         <div>
-              <h5 class="color">Tip 1: some title here....</h5>
+        <ion-slides pager="true" class="slides" [options]="slideOpts">  
+
+          <ion-slide class="slide">
+            <div >
+              <div class="color">
+              <h5>Tip 1: some title here....</h5>
+              </div>
               <div class="content">
                  <p>
                  Breast Cancer in sub Saharan Africa is on the rise though it is not as common as it is in developed countries The reasons for this scenario are many;

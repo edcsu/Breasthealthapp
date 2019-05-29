@@ -111,17 +111,13 @@ export class HomeResultsPage {
     return await popover.present();
   }
 
-  goToSelfCheck() {
-    this.navCtrl.navigateRoot('/self-check');
+  goToSelfCareLink() {
+    this.navCtrl.navigateRoot('/self-care-link');
   }
 
   goToTips() {
     this.navCtrl.navigateRoot('/tips');
   }
-
-  /* goToTips() {
-    this.navCtrl.navigateRoot('/tips');
-  } */
 
   goToBreastHealthInfo() {
     this.navCtrl.navigateRoot('/breast-health-info');
