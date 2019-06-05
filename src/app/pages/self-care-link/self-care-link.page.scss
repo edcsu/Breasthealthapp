@@ -1,7 +1,14 @@
 :host {
 	*ion-content {
 	   background-image: linear-gradient(rgba(250,8,120,0.2), rgba(192,192,192,0), rgba(250,8,120,0.2));
-	}
+  }
+  
+  ion-item {
+    --border-style: 0;
+    --border-color: none;
+    --inner-border-width: none;
+}
+
 }
 .self-main-card{
     // background: transparent;

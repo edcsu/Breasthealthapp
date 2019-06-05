@@ -1,8 +1,8 @@
 {
-  "name": "ionic4-start-theme",
-  "description": "Ionic 4 Start Theme",
+  "name": "My Breast health app",
+  "description": "My breast health app is to provide information on breast health",
   "version": "1.0.0",
-  "author": "Ionic Theme",
+  "author": "Uganda Cancer Institute",
   "homepage": "https://ionictheme.com",
   "scripts": {
     "ng": "ng",

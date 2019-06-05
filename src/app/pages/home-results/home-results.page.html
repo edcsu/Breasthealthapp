@@ -35,36 +35,54 @@
   <ion-card class="content-card home-content">
     <ion-card-content>
       <ion-grid >
-          <ion-row>
-              <ion-col size="" offset="">
-                <ion-ripple-effect></ion-ripple-effect>
-                    <img src="assets/img/breasthealth_selfcheck_button.png" height="120" width="" (click)="goToSelfCareLink()">                  
-              </ion-col>
-              <ion-col size="" offset="1">
-                <ion-ripple-effect></ion-ripple-effect>
-                  <img src="assets/img/breasthealth_tips_button.png" height="120" (click)="goToTips()">                
-            </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col size="" offset="">
-                <ion-ripple-effect></ion-ripple-effect>              
-                    <img src="assets/img/breasthealth_bhinfo_button.png" height="120" (click)="goToBreastHealthInfo()">                  
-              </ion-col>
-              <ion-col size="" offset="1">
-                <ion-ripple-effect></ion-ripple-effect>               
-                  <img src="assets/img/breasthealth_bhinfo_button.png" height="120" (click)="goToBreastHealthInfo()">                
-            </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col size="" offset="">
-                <ion-ripple-effect></ion-ripple-effect>                
-                    <img src="assets/img/breasthealth_jsg_button.png" height="120" (click)="goToSupportGroup()">                  
-              </ion-col>
-              <ion-col size="" offset="1">
-                <ion-ripple-effect></ion-ripple-effect>                
-                  <img src="assets/img/breasthealth_specialist_button.png" height="120" (click)="goToSpecialist()">                
-            </ion-col>
-          </ion-row>
+        <ion-row>
+          <ion-col size="" offset="">
+            <ion-item (click)="goToSelfCareLink()" button="true" >
+              <ion-img
+                src="assets/img/breasthealth_selfcheck_button.png" >                  
+              </ion-img>
+            </ion-item>
+          </ion-col>
+          <ion-col size="" offset="1">
+            <ion-item (click)="goToTips()" button="true">
+                <ion-img
+                  src="assets/img/breasthealth_tips_button.png" >
+                </ion-img>
+            </ion-item>                
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="" offset="">
+            <ion-item (click)="goToBreastHealthInfo()" button="true" >
+              <ion-img
+                src="assets/img/breasthealth_bhinfo_button.png" >
+              </ion-img>
+            </ion-item>                  
+          </ion-col>
+          <ion-col size="" offset="1">
+            <ion-item (click)="goToBreastHealthInfo()" button="true" >
+              <ion-img         
+                src="assets/img/breasthealth_bhinfo_button.png" >
+              </ion-img>
+            </ion-item>                
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="" offset="">
+            <ion-item (click)="goToSupportGroup()" button="true" >
+              <ion-img
+                src="assets/img/breasthealth_jsg_button.png" >
+              </ion-img>
+            </ion-item>                    
+          </ion-col>
+          <ion-col size="" offset="1">
+            <ion-item (click)="goToSpecialist()" button="true" >
+              <ion-img               
+                src="assets/img/breasthealth_specialist_button.png" >          
+              </ion-img>
+            </ion-item>
+          </ion-col>
+        </ion-row>
       </ion-grid>
     </ion-card-content>
     
@@ -76,9 +94,6 @@
         <ion-text class="footer-text">
           &copy;   The Uganda Cancer Institute 2018
        </ion-text>
-       <!-- <ion-label class="">
-          &copy;   The Uganda Cancer Institute 2018
-       </ion-label> -->
       </ion-item>      
   </ion-footer> 
   </ion-card>
