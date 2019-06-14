@@ -81,6 +81,10 @@ export class LandingPage implements OnInit {
   }
 
   // // //
+  goToTour() {
+    this.navCtrl.navigateRoot('/register');
+  }
+
   goToRegister() {
     this.navCtrl.navigateRoot('/register');
   }
