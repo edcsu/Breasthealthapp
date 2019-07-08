@@ -8,9 +8,7 @@ import {NavController, NavParams} from '@ionic/angular';
 })
 export class SelfCheckPage implements OnInit {
 
-  constructor(
-  	public navCtrl: NavController) {
-  	}
+  constructor( public navCtrl: NavController) {}
 
   ngOnInit() {
   }
@@ -18,29 +16,23 @@ export class SelfCheckPage implements OnInit {
   slider = [
   	{
   		title:'Step 1',
-  		content:'Hold arms at your side.',
+  		content:'Step 1: Hold arms at your side.',
   		img:'assets/illustrations/Picture1.jpg'
   	},
   	{
   		title:'Step 2',
-  		content:'Hold arms at your side.',
+  		content:'Step 2: Hold arms at your side.',
   		img:'assets/illustrations/Picture2.jpg'
   	},
   	{
   		title:'Step 3',
-  		content:'Press your hands on your hips and tighten your chest muscles',
+  		content:'Step 3: Press your hands on your hips and tighten your chest muscles',
   		img:'assets/illustrations/Picture3.jpg'
   	},
   	{
   		title:'Step 4',
-  		content:'some staff to read here',
+  		content:'Step 4: some staff to read here',
   		img:'assets/illustrations/Picture4.jpg'
-  	},
-  	{
-  		title:'Step 5',
-  		content:'Check is Complete',
-  		img:'assets/backgrounds/bg (12).jpg'
   	}
   ];
-
 }

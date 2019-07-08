@@ -3,11 +3,13 @@
        --background: var(--ion-color-light);
        
     }
+
     
-    ion-item {
-        border-radius: 0;
-        border-bottom: 1px dotted var(--ion-color-medium);
-    }
+ion-item{
+        --border-style: 0;
+        --border-color: none;
+        --inner-border-width: none;
+}
 
     ion-card {
         &.no-radius {
@@ -74,4 +76,3 @@
     
 
 }
-

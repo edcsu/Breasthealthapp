@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class NipplesTipsPage implements OnInit {
-  slides = null;
+
+  slideOpts = {
+    initialSlide: 0,
+    slidesPerView: 1,
+    loop: false,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction'
+    }
+  };
+
   constructor() {
-    this.slides = document.querySelector('ion-slides');
   }
   ngOnInit() {
   }

@@ -1,27 +1,10 @@
 
 :host {
-        .dashboard-div {
-            border-radius: 50% ;
-            font-weight: bold;
-            margin: 0%;
-            padding: 0.5rem;
-            // background-color: #EBEBEB;
-            background: var(--ion-color-primary);
-            color: var(--ion-color-light);
-            width: 160px;
-            height: 160px;
-            font-style: italic;
-            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-        }
 
-        .tip-text {
-            font-size: 1.5rem;
-            margin-top: 25%,
-        }
-
-        .dashboard-button{
-            margin-top: -0.8rem;
-            margin-left: 4rem;
+        ion-item{
+            --border-style: 0;
+            --border-color: none;
+            --inner-border-width: none;
         }
 
         .content-card{
