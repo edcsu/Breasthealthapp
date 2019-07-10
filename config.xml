@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ionictheme.ionic4start" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ugandacancerinstitute.mybreasthealth" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>My Breast health app</name>
     <description>My breast health app is to provide information on breast health</description>
-    <author email="firminoata@gmail.com" href="https://ionictheme.com">Ionic Theme</author>
+    <author email="firminoata@gmail.com" href="https://ionictheme.com"> Uganda Cancer Institute</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
