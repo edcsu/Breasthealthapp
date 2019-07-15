@@ -131,4 +131,16 @@ export class HomeResultsPage {
     this.navCtrl.navigateRoot('/specialist');
   }
 
+  goTosignsAndSymptoms() {
+    this.navCtrl.navigateRoot('/signs-symptoms');
+  }
+
+  goToRiskAssessment() {
+    this.navCtrl.navigateRoot('/risk-assessment');
+  }
+
+  goToUploadMedicalRecords() {
+    this.navCtrl.navigateRoot('/upload-medical-records');
+  }
+
 }

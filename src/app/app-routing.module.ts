@@ -17,6 +17,13 @@ const routes: Routes = [
   { path: 'breast-cancer-tips', loadChildren: './pages/breast-cancer-tips/breast-cancer-tips.module#BreastCancerTipsPageModule' },
   { path: 'nipples-tips', loadChildren: './pages/nipples-tips/nipples-tips.module#NipplesTipsPageModule' },
   { path: 'self-care-link', loadChildren: './pages/self-care-link/self-care-link.module#SelfCareLinkPageModule' },
+  { path: 'signs-symptoms', loadChildren: './pages/signs-symptoms/signs-symptoms.module#SignsSymptomsPageModule' },
+  { path: 'risk-assessment', loadChildren: './pages/risk-assessment/risk-assessment.module#RiskAssessmentPageModule' },
+  { path: 'women', loadChildren: './pages/signs/women/women.module#WomenPageModule' },
+  { path: 'men', loadChildren: './pages/signs/men/men.module#MenPageModule' },
+  { path: 'children', loadChildren: './pages/signs/children/children.module#ChildrenPageModule' },
+  { path: 'non-assigned', loadChildren: './pages/signs/non-assigned/non-assigned.module#NonAssignedPageModule' },
+  { path: 'upload-medical-records', loadChildren: './pages/upload-medical-records/upload-medical-records.module#UploadMedicalRecordsPageModule' },
 ];
 
 @NgModule({

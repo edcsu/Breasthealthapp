@@ -12,7 +12,6 @@
     <ion-card-content class="bg-profile">
       <img src="assets/img/avatar.jpeg">
       <h1 class="fw500">João Firmino</h1>
-      <h2 color="light" margin-bottom>Customer</h2>
       <ion-button icon-left color="secondary">
         <ion-icon name="photos"></ion-icon> 
         Edit / Add Avatar
@@ -25,7 +24,7 @@
 
           <ion-list margin-bottom>
             <ion-list-header color="light">
-              <ion-label class="fw700">Form</ion-label>
+              <ion-label class="fw700">Your Details</ion-label>
             </ion-list-header>
 
             <ion-item>
@@ -39,12 +38,12 @@
             </ion-item>
     
             <ion-item>
-              <ion-label color="dark" position="stacked">Address:</ion-label>
-              <ion-input inputmode="text" placeholder="Ex.: Abey Road 5"></ion-input>
+              <ion-label color="dark" position="stacked">District:</ion-label>
+              <ion-input inputmode="text" placeholder="Ex.: Gulu"></ion-input>
             </ion-item>
     
             <ion-item>
-              <ion-label color="dark">City</ion-label>
+              <ion-label color="dark">Date of Birth</ion-label>
               <ion-select>
                 <ion-select-option value="nes">New York</ion-select-option>
                 <ion-select-option value="n64">Los Angeles</ion-select-option>
@@ -57,39 +56,11 @@
             </ion-item>
     
             <ion-item>
-              <ion-label color="dark">State</ion-label>
+              <ion-label color="dark">Gender</ion-label>
               <ion-select>
-                <ion-select-option value="nes">NY</ion-select-option>
-                <ion-select-option value="n64">CA</ion-select-option>
-                <ion-select-option value="ps">Greater London</ion-select-option>
-                <ion-select-option value="genesis">Paris</ion-select-option>
-                <ion-select-option value="saturn">SP</ion-select-option>
-                <ion-select-option value="snes">Kantō</ion-select-option>
-                <ion-select-option value="snes">Delhi</ion-select-option>
+                <ion-select-option value="m">Male</ion-select-option>
+                <ion-select-option value="f">Female</ion-select-option>
               </ion-select>
-            </ion-item>
-          </ion-list>
-
-          <ion-list>
-            <ion-radio-group>
-              <ion-list-header color="light">
-                <ion-label class="fw700">User Type</ion-label>
-              </ion-list-header>
-          
-              <ion-item>
-                <ion-label color="primary">Customer</ion-label>
-                <ion-radio slot="start" value="customer" checked></ion-radio>
-              </ion-item>
-          
-              <ion-item>
-                <ion-label color="primary">Owner</ion-label>
-                <ion-radio slot="start" value="agent"></ion-radio>
-              </ion-item>
-            </ion-radio-group>
-
-            <ion-item>
-              <ion-label class="text-1x">Checkbox test</ion-label>
-              <ion-checkbox></ion-checkbox>
             </ion-item>
           </ion-list>
   
