@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'support-group', loadChildren: './pages/support-group/support-group.module#SupportGroupPageModule' },
   { path: 'breast-cancer-tips', loadChildren: './pages/breast-cancer-tips/breast-cancer-tips.module#BreastCancerTipsPageModule' },
   { path: 'nipples-tips', loadChildren: './pages/nipples-tips/nipples-tips.module#NipplesTipsPageModule' },
-  { path: 'self-care-link', loadChildren: './pages/self-care-link/self-care-link.module#SelfCareLinkPageModule' },
+  { path: 'self-care-link', loadChildren: './pages/self-care-link/self-care-link.module#SelfCareLinkPageModule' },  { path: 'signs', loadChildren: './signs/signs.module#SignsPageModule' },
+
 ];
 
 @NgModule({
