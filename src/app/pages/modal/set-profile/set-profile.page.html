@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+        <ion-button color="primary" (click)="closePopOver()">
+            <ion-icon name="close" color="light"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>
+    	Set Age & Gender
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-list >
+    <ion-item>
+      <ion-label color="dark" class="fw500">Date of Birth</ion-label>
+        <ion-datetime displayFormat="MM DD YYYY" min="1900" max="2003" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="dark" class="fw500">Gender</ion-label>
+      <ion-select>
+        <ion-select-option value="m">Male</ion-select-option>
+        <ion-select-option value="f">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+      <ion-text color="dark" no-margin>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum odio placeat incidunt nesciunt atque ratione quisquam, fugit
+        omnis maxime adipisci excepturi dignissimos aliquam asperiores itaque unde sequi? Minus, quia, dolore?
+      </ion-text>
+    </div>
+
+	<ion-button expand="full" color="primary" (click)="saveData()"> Save </ion-button>
+
+
+</ion-content>
