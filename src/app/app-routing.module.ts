@@ -26,7 +26,8 @@ const routes: Routes = [
   {
     path: 'upload-medical-records',
     loadChildren: './pages/upload-medical-records/upload-medical-records.module#UploadMedicalRecordsPageModule'
-  }
+  },
+  { path: 'set-profile', loadChildren: './pages/modal/set-profile/set-profile.module#SetProfilePageModule' }
 ];
 
 

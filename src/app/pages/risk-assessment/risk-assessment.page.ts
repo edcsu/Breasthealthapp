@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {  NavController } from '@ionic/angular';
-
+import {  NavController, ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-risk-assessment',
@@ -10,10 +9,12 @@ import {  NavController } from '@ionic/angular';
 })
 export class RiskAssessmentPage implements OnInit {
 
-  constructor( public navCtrl: NavController
+  constructor( public navCtrl: NavController,
+               public modalCtrl: ModalController,
   ) { }
 
   ngOnInit() {
+
   }
 
 }

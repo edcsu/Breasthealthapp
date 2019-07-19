@@ -53,7 +53,7 @@ export class AppComponent {
     }).catch(() => {});
   }
 
-  goToEditProgile() {
+  goToEditProfile() {
     this.navCtrl.navigateForward('edit-profile');
   }
 

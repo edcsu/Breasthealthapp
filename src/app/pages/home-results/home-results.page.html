@@ -32,145 +32,49 @@
     </ion-card-header>
   </ion-card>
   <ion-card class="content-card home-content">
-    <ion-card-content>
       <ion-grid >
-          <!-- <ion-row>
-              <ion-col size="6">
-                  <div class="dashboard-circle">
-                    
-                      Learn  <br>
-                      about
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" >
-                    <ion-icon name="hand"></ion-icon>
-                  </ion-button>
-                
-              </ion-col>
-              <ion-col size="6">
-                  <ion-card class="dashboard-circle">
-                        Learn <br>
-                        about 
-                    </ion-card>
-                <ion-button size="" fill="clear" color="primary" >
-                    <ion-icon name="heart"></ion-icon>
-                </ion-button>
-              </ion-col>
-            </ion-row> -->
-          <ion-row>
-              <ion-col size="6">
-                  <div class="dashboard-div">
-                    <p class="center-text">
-                        Learn about <br>
-                        Breast Cancer <br>
-                        - save lives
-                    </p>
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button">
-                    <ion-icon size="large" name="hand"></ion-icon>
-                  </ion-button>
-              </ion-col>
-              <ion-col size="6">
-                  <div class="dashboard-div">
-                    <p class="center-text">
-                        Learn about <br>
-                        Breast Cancer <br>
-                        - save lives
-                    </p>
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button" >
-                    <ion-icon size="large" name="hand"></ion-icon>
-                  </ion-button>
-              </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col size="6">
-                  <div class="dashboard-div">
-                    <p class="center-text">
-                        Learn about <br>
-                        Breast Cancer <br>
-                        - save lives
-                    </p>
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button">
-                    <ion-icon  size="large" name="hand"></ion-icon>
-                  </ion-button>
-              </ion-col>
-              <ion-col size="6">
-                  <div class="dashboard-div">
-                    <p class="center-text">
-                        Learn about <br>
-                        Breast Cancer <br>
-                        - save lives
-                    </p>
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button">
-                    <ion-icon size="large" name="hand"></ion-icon>
-                  </ion-button>
-              </ion-col>
-          </ion-row>
-        <!-- <ion-row>
-          <ion-col size="6">
-              <ion-card class="dashboard-card">
-                
-                  Learn about <br>
-                  Breast Cancer
-              </ion-card>
-              <ion-button size="" shape="" fill="clear" color="primary" >
-                <ion-icon name="hand"></ion-icon>
-              </ion-button>
-            
+        <ion-row>
+          <ion-col size="4" offset="2">
+            <ion-img (click)="goToRiskAssessment()" button="true"
+              src="assets/button_icons/risk_assmt_bc.png" >
+            </ion-img>
           </ion-col>
-          <ion-col size="" offset="">
-            <ion-item (click)="goToTips()" button="true">
-                <ion-img
-                  src="assets/button_icons/general_bh_tips.png" >
-                </ion-img>
-            </ion-item>                
+          <ion-col size="4" offset="">
+            <ion-img (click)="goToTips()" button="true"
+              src="assets/button_icons/general_bh_tips.png" >
+            </ion-img>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col size="" offset="">
-            <ion-item (click)="goToSpecialist()" button="true" >
-              <ion-img               
+          <ion-col size="4" offset="">
+              <ion-img (click)="goToSpecialist()" button="true"              
                 src="assets/button_icons/specialist_consults.png" >          
               </ion-img>
-            </ion-item>
           </ion-col>
-          <ion-col size="" offset="">
-              <ion-item (click)="goToUploadMedicalRecords()" button="true" >
-                <ion-img               
-                  src="assets/button_icons/upload_medical_records.png" >          
-                </ion-img>
-              </ion-item>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="" offset="3">
-            <ion-item (click)="goToSelfCareLink()" button="true" >
-              <ion-img
-                src="assets/button_icons/breastselfexam.png">                  
+          <ion-col size="4" offset="">
+            <ion-img (click)="goToSelfCareLink()" button="true"
+              src="assets/button_icons/breastselfexam.png">                  
+            </ion-img>
+          </ion-col>
+          <ion-col size="4" offset="">
+              <ion-img (click)="goToUploadMedicalRecords()" button="true"              
+                src="assets/button_icons/upload_medical_records.png" >          
               </ion-img>
-            </ion-item>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col size="" offset="">
-            <ion-item (click)="goTosignsAndSymptoms()" button="true" >
-              <ion-img         
+          <ion-col size="4" offset="2">
+              <ion-img tappable (click)="goTosignsAndSymptoms()" button="true"        
                 src="assets/button_icons/signs_and_symptoms.png" >
               </ion-img>
-            </ion-item>                
           </ion-col>
-          <ion-col size="" offset="">
-            <ion-item (click)="goToSupportGroup()" button="true" >
-              <ion-img
+          <ion-col size="4" offset="">
+              <ion-img (click)="goToSupportGroup()" button="true"
                 src="assets/button_icons/support_groups.png" >
               </ion-img>
-            </ion-item>                    
           </ion-col>
         </ion-row>
       </ion-grid>
-    </ion-card-content>
     
     <ion-footer >    
       <ion-item>
