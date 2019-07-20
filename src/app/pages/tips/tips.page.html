@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="medium" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home-results"></ion-back-button>
+    </ion-buttons>
+    <ion-title> General Tips </ion-title>
+    <ion-buttons slot="end">
+      <ion-button size="small" shape="round" color="dark" >
+        <img src="assets/img/sound_icon_black.png" >                    
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-card class="content-card home-content">
+    <ion-card-content>
+      <ion-grid >
+        <ion-row>
+          <ion-col size="" offset="">
+            <ion-item (click)="goToBreastCancerTips()" button="true" >
+              <ion-img
+                src="assets/button_icons/breasthealth_fbc_button.png" >                  
+              </ion-img>
+            </ion-item>
+          </ion-col>
+          <ion-col size="" offset="">
+            <ion-item (click)="goToNippleTips()" button="true" >
+              <ion-img
+                src="assets/button_icons/breasthealth_fornipples_button.png" >                  
+              </ion-img>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <!-- <ion-row>
+          
+        </ion-row> -->
+      </ion-grid >
+    </ion-card-content>
+  </ion-card>
+</ion-content>

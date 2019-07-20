@@ -3,23 +3,29 @@
   <div class="auth-content">
 
     <!-- Logo -->
-    <div padding-horizontal text-center class="animated fadeInDown">
+    <div>
       <div class="logo"></div>
-      <h4 no-margin>
-        <ion-text color="light" class="fw700">
-          Ionic 4 Start Theme
+      <h6 text-center>
+        <ion-text color="dark" class="fw700">
+          Log In
         </ion-text>
-      </h4>
+      </h6>
+    </div>
+    <div>
+      <ion-text class="logged" color="dark">
+        Once you're logged in, we'll personalize 
+        what you see in your app based on your preferences.
+      </ion-text>
     </div>
 
     <!-- Login form -->
     <form [formGroup]="onLoginForm" class="list-form">
       <ion-item no-padding class="animated fadeInUp">
-        <ion-label position="floating">
-          <ion-icon name="mail" item-start></ion-icon>
-          Email
+        <ion-label color="dark"  position="floating">
+          <!--<ion-icon name="" item-start></ion-icon>-->
+          Email Or Phone
         </ion-label>
-        <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+        <ion-input color="primary" type="email" formControlName="email"></ion-input>
       </ion-item>
       <p ion-text class="text08" *ngIf="onLoginForm.get('email').touched && onLoginForm.get('email').hasError('required')">
         <ion-text color="warning">
@@ -27,12 +33,37 @@
         </ion-text>
       </p>
 
-      <ion-item no-padding class="animated fadeInUp">
-        <ion-label position="floating">
-          <ion-icon name="lock" item-start></ion-icon>
-          Password
+      <!--<div text-center class="phone">
+        <ion-text color="dark">
+          Or
+        </ion-text>
+        </div> -->
+       
+
+     <!--<ion-item no-padding class="animated fadeInUp" >
+        <ion-label color="dark" position="floating">
+          <ion-icon name="call" item-start></ion-icon>
+          Phone
         </ion-label>
-        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+        <ion-input color="primary" type="phone" formControlName="phone"></ion-input>
+      </ion-item>
+      <p ion-text class="text08"
+        *ngIf="onLoginForm.get('email').touched && onLoginForm.get('email').hasError('required')">
+        <ion-text color="warning">
+          Required Field
+        </ion-text>
+      </p> -->
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label color="dark" position="floating">
+          <!--<ion-icon name="" item-start></ion-icon>-->
+          Password
+          
+        </ion-label>
+        <div slot="end">
+          <ion-icon class="eyz" color="dark" name="eye"></ion-icon>
+        </div>
+        <ion-input color="primary" type="password" formControlName="password"></ion-input>
       </ion-item>
       <p ion-text color="warning" class="text08" *ngIf="onLoginForm.get('password').touched && onLoginForm.get('password').hasError('required')">
         <ion-text color="warning">
@@ -41,38 +72,44 @@
         </p>
     </form>
 
-    <p text-right tappable (click)="forgotPass()" class="paz">
-      <ion-text color="light">
-        <strong>Forgot Pass?</strong>
+
+     <div class="login">
+          <ion-button class="logbtn" icon-left size="medium" expand="block" color="primary"
+            (click)="goToHome()"
+            [disabled]="!onLoginForm.valid" tappable>
+            Log in
+          </ion-button>
+    </div>
+
+    <p text-center tappable (click)="forgotPass()" class="paz">
+      <ion-text color="dark">
+        Forgot password?
       </ion-text>
     </p>
 
     <div>
-      <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="goToHome()" [disabled]="!onLoginForm.valid" tappable>
-        <ion-icon name="log-in"></ion-icon>
-        Signin
-      </ion-button>
+      
 
       <p text-center>
-        <ion-text color="light">
-          Or Signin with:
+        <ion-text color="dark">
+          Or Sign in with:
         </ion-text>
       </p>
 
       <ion-grid class="btn-group">
         <ion-row>
           <ion-col size="4">
-            <ion-button shape="round" expand="full" color="secondary">
+            <ion-button class="logofacebook" expand="block" color="primary">
               <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
             </ion-button>
           </ion-col>
           <ion-col size="4">
-            <ion-button shape="round" expand="full" color="secondary">
+            <ion-button class="logofacebook" expand="block" color="primary">
               <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
             </ion-button>
           </ion-col>
           <ion-col size="4">
-            <ion-button shape="round" expand="full" color="secondary">
+            <ion-button class="logofacebook" expand="block" color="primary">
               <ion-icon slot="icon-only" name="logo-googleplus"></ion-icon>
             </ion-button>
           </ion-col>

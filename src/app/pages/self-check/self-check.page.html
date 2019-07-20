@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color="medium" >
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="self-care-link"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Self check</ion-title>
+    <ion-buttons slot="end">
+        <ion-button size="small" shape="round" color="dark" >
+          <img src="assets/img/sound_icon_black.png" >                    
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<!--<h2 class='heading'>Breast Health</h2>-->
+	<ion-slides pager="true" class="slides">
+		<ion-slide *ngFor="let slide of slider" class="slide">
+			<p [innerHTML]="slide.content" class='content'></p>
+			<img [src]="slide.img" class='image'/>
+		</ion-slide>
+	</ion-slides>
+</ion-content>

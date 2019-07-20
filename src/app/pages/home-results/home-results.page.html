@@ -1,145 +1,94 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="medium">
     <ion-buttons slot="start">
-      <ion-menu-button color="secondary"></ion-menu-button>
+      <ion-menu-button color="dark"></ion-menu-button>
     </ion-buttons>
     <ion-title >
-        <ion-text color="light">
-          <ion-text color="light" class="fw500"> Breast Health </ion-text>
-        </ion-text>
+          <ion-text color="dark" class="fw500"> My Breast Health </ion-text>
     </ion-title>
     <ion-buttons slot="end">
-        <ion-button size="small" shape="round" color="medium" (click)="playSound()">
-            <ion-icon name="volume-high"></ion-icon>
-          </ion-button>
-      <ion-button size="small" shape="round" color="medium" (click)="notifications()">
+        <ion-button size="small" shape="round" color="dark" (click)="playSound()">
+          <img src="assets/img/sound_icon_black.png" >                    
+        </ion-button>
+      <ion-button size="small" shape="round" color="dark" (click)="notifications()">
         <ion-icon name="notifications"></ion-icon>
-        <ion-badge color="dark" slot="end">2</ion-badge>
+        <ion-badge color="danger" slot="end">2</ion-badge>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="background-pink">
+<ion-content>
 
   <ion-card class="main-card">
     <ion-card-header>
-      <ion-card-title color="primary">
-        WELCOME
+      <ion-card-title color="light" text-center>
+        You are welcome to <br> <b> MY BREAST HEALTH </b>
       </ion-card-title>
-      <ion-card-subtitle class="dashboard-subtitle" color="primary">
-        You can browse four zones: Why it is important to care about breast cancer, 
-        how to do self check, changes to look out for and your personal settings.
+      <ion-card-subtitle class="dashboard-subtitle" color="light">
+        A powerful high quality easy to navigate app. empowering you to wellness.
+        Right here and right now you can browse any or all of the 7 zones.
       </ion-card-subtitle>
     </ion-card-header>
   </ion-card>
-  <ion-card class="content-card">
-    <!-- <ion-card-content class="home-content"> -->
+  <ion-card class="content-card home-content">
       <ion-grid >
-          <!-- <ion-row>
-              <ion-col size="6">
-                  <div class="dashboard-circle">
-                    
-                      Learn  <br>
-                      about
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" >
-                    <ion-icon name="hand"></ion-icon>
-                  </ion-button>
-                
-              </ion-col>
-              <ion-col size="6">
-                  <ion-card class="dashboard-circle">
-                        Learn <br>
-                        about 
-                    </ion-card>
-                <ion-button size="" fill="clear" color="primary" >
-                    <ion-icon name="heart"></ion-icon>
-                </ion-button>
-              </ion-col>
-            </ion-row> -->
-          <ion-row>
-              <ion-col size="6">
-                  <div class="dashboard-div">
-                    <p class="center-text">
-                        Learn about <br>
-                        Breast Cancer <br>
-                        - save lives
-                    </p>
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button">
-                    <ion-icon size="large" name="hand"></ion-icon>
-                  </ion-button>
-              </ion-col>
-              <ion-col size="6">
-                  <div class="dashboard-div">
-                    <p class="center-text">
-                        Learn about <br>
-                        Breast Cancer <br>
-                        - save lives
-                    </p>
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="secondary" class="dashboard-button" >
-                    <ion-icon size="large" name="hand"></ion-icon>
-                  </ion-button>
-              </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col size="6">
-                  <div class="dashboard-div">
-                    <p class="center-text">
-                        Learn about <br>
-                        Breast Cancer <br>
-                        - save lives
-                    </p>
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button">
-                    <ion-icon  size="large" name="hand"></ion-icon>
-                  </ion-button>
-              </ion-col>
-              <ion-col size="6">
-                  <div class="dashboard-div">
-                    <p class="center-text">
-                        Learn about <br>
-                        Breast Cancer <br>
-                        - save lives
-                    </p>
-                  </div>
-                  <ion-button size="" shape="" fill="clear" color="primary" class="dashboard-button">
-                    <ion-icon size="large" name="hand"></ion-icon>
-                  </ion-button>
-              </ion-col>
-          </ion-row>
-        <!-- <ion-row>
-          <ion-col size="6">
-              <ion-card class="dashboard-card">
-                
-                  Learn about <br>
-                  Breast Cancer
-              </ion-card>
-              <ion-button size="" shape="" fill="clear" color="primary" >
-                <ion-icon name="hand"></ion-icon>
-              </ion-button>
-            
+        <ion-row>
+          <ion-col size="4" offset="2">
+            <ion-img (click)="goToRiskAssessment()" button="true"
+              src="assets/button_icons/risk_assmt_bc.png" >
+            </ion-img>
           </ion-col>
-          <ion-col size="6">
-              <ion-card class="dashboard-card">
-                  
-                    Learn about <br>
-                    Breast Cancer
-                </ion-card>
-            <ion-button size="" fill="clear" color="primary" >
-                <ion-icon name="heart"></ion-icon>
-            </ion-button>
+          <ion-col size="4" offset="">
+            <ion-img (click)="goToTips()" button="true"
+              src="assets/button_icons/general_bh_tips.png" >
+            </ion-img>
           </ion-col>
-        </ion-row> -->
+        </ion-row>
+        <ion-row>
+          <ion-col size="4" offset="">
+              <ion-img (click)="goToSpecialist()" button="true"              
+                src="assets/button_icons/specialist_consults.png" >          
+              </ion-img>
+          </ion-col>
+          <ion-col size="4" offset="">
+            <ion-img (click)="goToSelfCareLink()" button="true"
+              src="assets/button_icons/breastselfexam.png">                  
+            </ion-img>
+          </ion-col>
+          <ion-col size="4" offset="">
+              <ion-img (click)="goToUploadMedicalRecords()" button="true"              
+                src="assets/button_icons/upload_medical_records.png" >          
+              </ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4" offset="2">
+              <ion-img tappable (click)="goTosignsAndSymptoms()" button="true"        
+                src="assets/button_icons/signs_and_symptoms.png" >
+              </ion-img>
+          </ion-col>
+          <ion-col size="4" offset="">
+              <ion-img (click)="goToSupportGroup()" button="true"
+                src="assets/button_icons/support_groups.png" >
+              </ion-img>
+          </ion-col>
+        </ion-row>
       </ion-grid>
-    <!-- </ion-card-content> -->
+    
+    <ion-footer >    
+      <ion-item>
+        <ion-thumbnail slot="start" >
+          <img src="assets/img/UCILogo.png" height="" width="">      
+        </ion-thumbnail>
+        <ion-text class="footer-text">
+          &copy;   The Uganda Cancer Institute 2018
+       </ion-text>
+      </ion-item>      
+  </ion-footer> 
   </ion-card>
  
   <!-- <popmenu></popmenu> -->
 
- <ion-footer >
-    (c) The Uganda Cancer Institute 2018
-  </ion-footer>
+  
 </ion-content>

@@ -1,8 +1,8 @@
 {
-  "name": "ionic4-start-theme",
-  "description": "Ionic 4 Start Theme",
+  "name": "My Breast health app",
+  "description": "My breast health app is to provide information on breast health",
   "version": "1.0.0",
-  "author": "Ionic Theme",
+  "author": "Uganda Cancer Institute",
   "homepage": "https://ionictheme.com",
   "scripts": {
     "ng": "ng",
@@ -28,9 +28,16 @@
     "@ionic/angular": "^4.0.0",
     "@ionic/pro": "2.0.4",
     "cordova-android": "7.0.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.1.3",
+    "cordova-plugin-ionic-webview": "^2.5.0",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "core-js": "^2.5.4",
     "ionicons": "4.5.5",
     "rxjs": "~6.3.3",
+    "rxjs-compat": "^6.5.1",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
@@ -59,5 +66,20 @@
     "ts-node": "~8.0.0",
     "tslint": "~5.12.0",
     "typescript": "~3.1.6"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "cordova-plugin-ionic-keyboard": {}
+    }
   }
 }

@@ -58,7 +58,12 @@ ion-item {
   }
   
   .fw700 {
-      font-weight: 700 !important;
+      font-weight: 70 !important;
+  }
+
+  .slogan {
+    font-size: .8rem;
+    font-weight: 100 !important;
   }
   
   .text08 {
@@ -71,6 +76,10 @@ ion-item {
 
   .text12 {
     font-size: 1.2rem;
+  }
+
+  .hidden{
+    display: none;
   }
 
   .text15 {
@@ -136,11 +145,12 @@ ion-item {
     }
   
     .btn-group {
+      margin-bottom: 30px;
       .button-ios,
       .button-md {
         border-radius: 0;
         &:first-of-type {
-          border-radius: 2px 0 0 2px;
+          border-radius: 1px 0 0 1px;
         }
         &:last-of-type {
           border-radius: 0 2px 2px 0;
@@ -149,14 +159,14 @@ ion-item {
     }
   
     .auth-content {
-      margin: 0 5%;
+      margin: 100 5%;
   
       .logo {
-        width: 60px;
-        height: 60px;
-        margin: 20px auto 8px;
+        width: 70px;
+        height: 70px;
+        margin: 100px auto 8px;
         border-radius: 10%;
-        background: url("/assets/img/ionic4start-ico.png") no-repeat;
+        background: url("/assets/icon/bht.png") no-repeat;
         background-size: 100%;
       }
   
@@ -177,12 +187,12 @@ ion-item {
           }
   
           ion-label {
-            font-size: 1em;
-            color: var(--ion-color-light);
+            font-size: 16px;
+            color: var(--ion-color-medium-shade);
           }
   
           input {
-            color: var(--ion-color-light);
+            color: var(--ion-color-medium-contrast);
           }
         }
       }
@@ -200,6 +210,12 @@ ion-item {
       }
     }
   }
+
+  .button-Div{
+    width: 100%;
+    position: fixed;
+    bottom: 5%;
+  }
   
   .mto {
     margin-top: 12px;
@@ -207,3 +223,10 @@ ion-item {
       margin-bottom: -2px;
     }
   }
+  .fw500 {
+    margin-top: 10px;
+}
+.swiper-pagination-bullet {
+  bottom: 0px !important;
+  position: fixed !important;
+}
