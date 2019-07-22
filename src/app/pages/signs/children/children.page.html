@@ -15,4 +15,39 @@
 </ion-header>
 
 <ion-content padding>
+      <!-- Colors -->
+  <ion-grid>
+    <div *ngIf="isChildren" > 
+      <ion-row>
+        <ion-button color="primary" (click)="showNeonatesOptions()">Neonates</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" (click)="showChildrenfromInfants()">Infants</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="danger" (click)="showfromAdolescents()">Adolescents</ion-button>
+      </ion-row>
+    </div>
+    </ion-grid>
+      <div *ngIf="isNeonates">
+            <!-- neoenates -->
+        <ion-button color="primary" (click)=" showChildrenfromNeonates()">Symptomatic</ion-button>
+        <ion-button color="primary" (click)=" showChildrenfromNeonates()">Mastitis</ion-button>
+        <ion-button color="primary" (click)=" showChildrenfromNeonates()">Breast bud</ion-button>
+        <ion-button color="primary" (click)=" showChildrenfromNeonates()">Breast milk</ion-button>
+      </div>
+
+      <div *ngIf="isInfants">
+        <ion-button color="primary" (click)=" showChildrenfromInfants()">Symptomatic</ion-button>
+      </div>
+
+      <div *ngIf="isAdolescents">
+          <ion-button color="danger" (click)=" showChildrenfromAdolescents()">Asymptomatic</ion-button>
+          <ion-button color="danger" (click)=" showChildrenfromAdolescents()">Symptomatic</ion-button>
+      </div>
+      
+      <div *ngIf="isAsymptomatic">
+        <ion-button color="danger" (click)=" showAsymptomatic()">Defer CBE to after 20yrs if negotiative family history</ion-button>
+        <ion-button color="danger" (click)=" showAsymptomatic()">Do CBE if anxious or want to concious</ion-button>
+    </div>
 </ion-content>

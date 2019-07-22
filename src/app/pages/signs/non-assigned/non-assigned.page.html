@@ -15,5 +15,26 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-grid>
+        <div *ngIf="isNonDiagonsed" > 
+          <ion-row>
+            <ion-button color="primary" (click)="showPremenopausal()">Premenopausal</ion-button>
+          </ion-row>
+          <ion-row>
+            <ion-button color="secondary" (click)="showPostMenopausal()">Post-Menopausal</ion-button>
+          </ion-row>
+        </div>
+
+        <div *ngIf="isPremenopausal" > 
+            <ion-row>
+              <ion-button color="primary" (click)="showBetween()">35 - 50 </ion-button>
+            </ion-row>
+            <ion-row>
+              <ion-button color="secondary" (click)="showLess()">Less than 30</ion-button>
+            </ion-row>
+          </div>
+        
+        
+    </ion-grid>
 
 </ion-content>

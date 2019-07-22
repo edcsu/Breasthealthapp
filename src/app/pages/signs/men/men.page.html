@@ -15,5 +15,110 @@
 </ion-header>
 
 <ion-content padding>
+    <ion-grid>
+        <div *ngIf="isMen" > 
+          <ion-row>
+            <ion-button class="Symptonat" color="primary" (click)="showSymptomatic()">Symptonatic</ion-button>
+          </ion-row>
+          <ion-row>
+            <ion-button  class="Asymptomat" color="secondary" (click)="showAsymptomatic()">Asymptomatic</ion-button>
+          </ion-row>
+        </div>
+        
+        
+        <div *ngIf="isSymptomatic"> 
+              <ion-row>
+                <ion-button color="primary" (click)="showLump()">Lump</ion-button>
+              </ion-row>
+              <ion-row>
+                <ion-button color="secondary" (click)="showNotLump()">Not Lump</ion-button>
+              </ion-row>
+        </div>
+
+        
+        <div *ngIf="isAsymptomatic"> 
+            <ion-row>
+              <ion-button color="primary" (click)="showNotLump()">Nipple Issues</ion-button>
+            </ion-row>
+            <ion-row>
+              <ion-button color="secondary" (click)="showNotLump()">Small</ion-button>
+            </ion-row>
+            <ion-row>
+                <ion-button color="primary" (click)="showNotLump()">Oversized</ion-button>
+              </ion-row>
+              <ion-row>
+                <ion-button color="secondary" (click)="showNotLump()">Pain</ion-button>
+              </ion-row>
+              <ion-row>
+                  <ion-button color="secondary" (click)="showNotLump()">Asymetry</ion-button>
+                </ion-row>
+      </div>
+
+      
+      <div *ngIf="isLump"> 
+          <ion-row>
+            <ion-button color="primary" (click)="showDiscrete()">Discrete</ion-button>
+          </ion-row>
+          <ion-row>
+            <ion-button color="secondary" (click)="showDiffuse()">Diffuse</ion-button>
+          </ion-row>
+    </div>
+
+
+       <div *ngIf="isNotLump"> 
+            <ion-row>
+              <ion-button color="primary" (click)="showUSScan2()">US Scan</ion-button>
+            </ion-row>
+          </div>
+
+          
+       <div *ngIf="isUSScan2"> 
+          <ion-row>
+            <ion-button color="primary" (click)="showPositve()">Positive</ion-button>
+          </ion-row>
+          <ion-row>
+              <ion-button color="primary" (click)="showUSScan2()">Negative</ion-button>
+            </ion-row>
+        </div>
+
+        <div *ngIf="isUSScan2"> 
+            <ion-row>
+              <ion-button color="primary" (click)="showPositve()">Positive</ion-button>
+            </ion-row>
+            <ion-row>
+                <ion-button color="primary" (click)="showUSScan2()">Negative</ion-button>
+              </ion-row>
+          </div>
+
+      <div *ngIf="isDiscrete"> 
+          <ion-row>
+            <ion-button color="primary" (click)="showUSScan()">US Scan</ion-button>
+          </ion-row>
+        </div>
+
+        <div *ngIf="isUSScan"> 
+            <ion-row>
+              <ion-button color="primary" (click)="showPositiveCancer()">Positive Cancer</ion-button>
+            </ion-row>
+            <ion-row>
+                <ion-button color="primary" (click)="showNegativeCancer()">Negative Cancer</ion-button>
+              </ion-row>
+          </div>
+
+          <div *ngIf="isPositiveCancer"> 
+              <ion-row>
+                <ion-button color="primary" (click)="showStaging()">Staging</ion-button>
+              </ion-row>
+              <ion-row>
+                  <ion-button color="primary" (click)="showFollowUp()"> Follow Up 6 to 12Months </ion-button>
+                </ion-row>
+            </div>
+
+            <div *ngIf="isStaging"> 
+                <ion-row>
+                  <ion-button color="primary" (click)="showCare()">Care</ion-button>
+                </ion-row>
+              </div>
+    </ion-grid>
 
 </ion-content>

@@ -1,9 +1,9 @@
 {
-  "name": "My Breast health app",
-  "description": "My breast health app is to provide information on breast health",
+  "name": "breast-health-app",
+  "description": "Breast health awareness app",
   "version": "1.0.0",
-  "author": "Uganda Cancer Institute",
-  "homepage": "https://ionictheme.com",
+  "author": "Lift256 Bootcamp 1",
+  "homepage": "https://lift256.co.ug",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
