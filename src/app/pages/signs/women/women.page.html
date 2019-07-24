@@ -15,31 +15,74 @@
 </ion-header>
 
 <ion-content padding> 
-      <div *ngIf="isWomen" > 
-          <ion-row>
-            <ion-button class="Sympto" color="primary" (click)="showSymptomatic()">Symptomatic</ion-button>
-          </ion-row>
+  <div *ngIf="isWomen" > 
+    <ion-row>
+      <ion-button class="Sympto" color="primary" (click)="showSymptomatic()">Symptomatic</ion-button>
+    </ion-row>
 
-          <ion-row>
-              <ion-button class="Asympto"color="secondary" (click)="showAsymptomatic()">Asymptomatic</ion-button>
-            </ion-row>
-          </div>
+    <ion-row>
+      <ion-button class="Asympto"color="secondary" (click)="showAsymptomatic()">Asymptomatic</ion-button>
+    </ion-row>
+  </div>
     
-    <div *ngIf="isSymptomatic">
-        <ion-button  class="lump" color="primary" (click)=" showChildrenfromSymptomatic()">Lump</ion-button>
-        <ion-button  class="NoLump" color="primary" (click)=" showfromAsymptomatic()">No Lump</ion-button>
-    </div>
-
-    <div *ngIf="isLump">
-      <ion-button color="primary" (click)=" showsLump()">Diagonosed</ion-button>
-      <ion-button color="primary" (click)=" showsNotLump()">Not Diagonosed</ion-button>
+  <div *ngIf="isSymptomatic">
+      <ion-button  class="lump" color="primary" (click)="showsLump()">Lump</ion-button>
+      <ion-button  class="NoLump" color="primary" (click)="showsNotLump()">No Lump</ion-button>
   </div>
 
-    
-    <div *ngIf="isAsymptomatic">
-      <ion-button color="primary" (click)=" showChildrenfromSymptomati()">Screened</ion-button>
-      <ion-button color="primary" (click)=" showfromAsymptomatic()">Not Screened</ion-button>
+  <div *ngIf="isLump">
+    <ion-button color="primary" (click)="showsisLumpTreated()">Diagonosed</ion-button>
+    <ion-button color="primary" >Not Diagonosed</ion-button>
   </div>
 
+  <div *ngIf="isLumpTreated">
+    <ion-button color="primary" (click)="showsisExcisedLump()">Treated</ion-button>
+    <ion-button color="primary" (click)="showsisLumpNotTreated()">Not Treated</ion-button>
+  </div>
+
+  <div *ngIf="isExcisedLump">
+    <ion-button color="primary" >Excised Lump</ion-button>
+  </div>
+
+  <div *ngIf="isLumpNotTreated">
+    <ion-button color="primary" >Cancer</ion-button>
+    <ion-button color="primary" >No cancer</ion-button>
+  </div>
+
+  <div *ngIf="isNoLump">
+    <ion-button color="primary" (click)="showsfromisNoLump()">Diagonosed</ion-button>
+    <ion-button color="primary" >Not Diagonosed</ion-button>
+  </div>
+  
+  <div *ngIf="isNoLumpTreated">
+    <ion-button color="primary" >Treated</ion-button>
+    <ion-button color="primary" >Not Treated</ion-button>
+  </div>
+
+  <div *ngIf="isAsymptomatic">
+    <ion-button color="primary" >Screened</ion-button>
+    <ion-button color="primary" (click)="showfromNotScreened()">Not Screened</ion-button>
+  </div>
+
+  <div *ngIf="isNotScreened">
+    <ion-button color="primary" (click)="showfromCBE()">CBE</ion-button>
+    <ion-button color="primary" (click)="showfromSBE()">SBE</ion-button>
+  </div>
+
+  <div *ngIf="isCBE">
+    <ion-button color="primary" (click)="showEnd(1)"> Positive</ion-button>
+    <ion-button color="primary" (click)="showEnd(1)">Negative</ion-button>
+    <ion-button color="primary" (click)="showEnd(1)">Equivocal</ion-button>
+  </div>
+
+  <div *ngIf="isSBE">
+    <ion-button color="primary" (click)="showEnd(2)">Positive</ion-button>
+    <ion-button color="primary" (click)="showEnd(2)">Negative</ion-button>
+  </div>
+
+  <ion-card *ngIf="isEnd">
+    End of flow
+    <ion-button color="primary" (click)="showStart()">Back to start</ion-button>
+  </ion-card>
 
 </ion-content>
