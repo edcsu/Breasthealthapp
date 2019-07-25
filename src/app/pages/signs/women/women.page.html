@@ -25,6 +25,7 @@
     </ion-row>
   </div>
     
+  <!-- Symptomatic branch-->
   <div *ngIf="isSymptomatic">
       <ion-button  class="lump" color="primary" (click)="showsLump()">Lump</ion-button>
       <ion-button  class="NoLump" color="primary" (click)="showsNotLump()">No Lump</ion-button>
@@ -41,7 +42,50 @@
   </div>
 
   <div *ngIf="isExcisedLump">
-    <ion-button color="primary" >Excised Lump</ion-button>
+    <ion-button color="primary" (click)="showsFromExcisedLump()">Excised Lump</ion-button>
+  </div>
+
+  <div *ngIf="isFromExcisedLump">
+    <ion-button color="primary" (click)="showsFromBenign()">Benign </ion-button>
+    <ion-button color="primary" (click)="showsFromExcisedLumpCancer()">Cancer</ion-button>
+  </div>
+
+  <div *ngIf="isExcisedLumpHealed">
+    <ion-button color="primary" (click)="showsFromHealedCompletely()">Healed completely </ion-button>
+    <ion-button color="primary" (click)="showsFromHealedNotCompletely()">Not healed completely</ion-button>
+  </div>
+
+  <div *ngIf="isHealedCompletely">
+    <ion-button color="primary" >6-12 months reviews</ion-button>
+  </div>
+
+  <div *ngIf="isNotHealedCompletely">
+    <ion-button color="primary" (click)="showsFromScarPain()">Scar pain </ion-button>
+    <ion-button color="primary" (click)="showsFromFeelLumps()">Feel lumps </ion-button>
+  </div>
+
+  <div *ngIf="isFromScarPain">
+    <ion-button color="primary" >Keloids</ion-button>
+    <ion-button color="primary" >Hypertrophic</ion-button>
+  </div>
+
+  <div *ngIf="isFromFeelLumps">
+    <ion-button color="primary" >CBE</ion-button>
+    <ion-button color="primary" >US Scan </ion-button>
+    <ion-button color="primary" >Wait and see </ion-button>
+  </div>
+
+  <div *ngIf="isFromExcisedLumpCancer">
+    <ion-button color="primary" (click)="showsfromMultiMedicalCare()">Multi medical care</ion-button>
+  </div>
+
+  <div *ngIf="isFromMultiMedicalCare">
+    <ion-button color="primary" (click)="showsfromCompletedCare()">Completed care</ion-button>
+    <ion-button color="primary" >Incomplete care</ion-button>
+  </div>
+
+  <div *ngIf="isFromCompletedCare">
+    <ion-button color="primary">Review</ion-button>
   </div>
 
   <div *ngIf="isLumpNotTreated">
@@ -59,6 +103,7 @@
     <ion-button color="primary" >Not Treated</ion-button>
   </div>
 
+  <!-- Symptomatic branch-->
   <div *ngIf="isAsymptomatic">
     <ion-button color="primary" >Screened</ion-button>
     <ion-button color="primary" (click)="showfromNotScreened()">Not Screened</ion-button>

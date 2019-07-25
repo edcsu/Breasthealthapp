@@ -16,6 +16,15 @@ export class WomenPage implements OnInit {
   isLumpTreated = false;
   isNoLumpTreated = false;
   isExcisedLump = false;
+  isFromExcisedLump = false;
+  isExcisedLumpHealed = false;
+  isHealedCompletely = false;
+  isNotHealedCompletely = false;
+  isFromFeelLumps = false;
+  isFromScarPain = false;
+  isFromExcisedLumpCancer = false;
+  isFromMultiMedicalCare = false;
+  isFromCompletedCare = false;
   isNotScreened = false;
   isCBE = false;
   isSBE = false;
@@ -65,6 +74,51 @@ export class WomenPage implements OnInit {
   showsisExcisedLump() {
     this.isLumpTreated = false;
     this.isExcisedLump = true;
+  }
+
+  showsFromExcisedLump() {
+    this.isExcisedLump = false;
+    this.isFromExcisedLump = true;
+  }
+
+  showsFromBenign() {
+    this.isFromExcisedLump = false;
+    this.isExcisedLumpHealed = true;
+  }
+
+  showsFromHealedCompletely() {
+    this.isExcisedLumpHealed = false;
+    this.isHealedCompletely = true;
+  }
+
+  showsFromHealedNotCompletely() {
+    this.isExcisedLumpHealed = false;
+    this.isNotHealedCompletely = true;
+  }
+
+  showsFromScarPain() {
+    this.isNotHealedCompletely = false;
+    this.isFromScarPain = true;
+  }
+
+  showsFromFeelLumps() {
+    this.isNotHealedCompletely = false;
+    this.isFromFeelLumps = true;
+  }
+
+  showsFromExcisedLumpCancer() {
+    this.isFromExcisedLump = false;
+    this.isFromExcisedLumpCancer = true;
+  }
+
+  showsfromMultiMedicalCare() {
+    this.isFromExcisedLumpCancer = false;
+    this.isFromMultiMedicalCare = true;
+  }
+
+  showsfromCompletedCare() {
+    this.isFromMultiMedicalCare = false;
+    this.isFromCompletedCare = true;
   }
 
   showsNotLump() {

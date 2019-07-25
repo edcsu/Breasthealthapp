@@ -1,11 +1,12 @@
+:host {
+    #zone-summary {
+        background-color: turquoise;
+        color: var(--ion-color-dark);
+    }
 
-#zone-summary {
-    background-color: turquoise;
-    color: var(--ion-color-light);
-}
-
-ion-item{
-    --border-style: 0;
-    --border-color: none;
-    --inner-border-width: none;
+    ion-item{
+        --border-style: 0;
+        --border-color: none;
+        --inner-border-width: none;
+    }
 }
