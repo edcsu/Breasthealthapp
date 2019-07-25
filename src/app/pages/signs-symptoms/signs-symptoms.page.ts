@@ -15,19 +15,15 @@ export class SignsSymptomsPage implements OnInit {
   }
 
   goToWomenSigns() {
-    this.navCtrl.navigateRoot('/women');
+    this.navCtrl.navigateForward('/women');
   }
 
   goToMenSigns() {
-    this.navCtrl.navigateRoot('/men');
+    this.navCtrl.navigateForward('/men');
   }
 
   goToChildrenSigns() {
-    this.navCtrl.navigateRoot('/children');
-  }
-
-  goToNonDiagnosed() {
-    this.navCtrl.navigateRoot('/non-assigned');
+    this.navCtrl.navigateForward('/children');
   }
 
 }
