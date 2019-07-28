@@ -42,12 +42,46 @@
       </div>
 
       <div *ngIf="isAdolescents">
-          <ion-button color="danger" (click)=" showChildrenfromAdolescents()">Asymptomatic</ion-button>
-          <ion-button color="danger" (click)=" showChildrenfromAdolescents()">Symptomatic</ion-button>
+          <ion-button color="danger" (click)=" showAsymptomatic()">Asymptomatic</ion-button>
+          <ion-button color="danger" (click)=" showSymptomatic()">Symptomatic</ion-button>
       </div>
       
       <div *ngIf="isAsymptomatic">
-        <ion-button color="danger" (click)=" showAsymptomatic()">Defer CBE to after 20yrs if negotiative family history</ion-button>
-        <ion-button color="danger" (click)=" showAsymptomatic()">Do CBE if anxious or want to concious</ion-button>
+        <ion-button color="danger">Defer CBE to after 20yrs if negative family history</ion-button>
+        <ion-button color="danger" (click)=" showDoCBE()">Do CBE if anxious or want to concious</ion-button>
     </div>
+
+    <div *ngIf="isDoCBE">
+      <ion-button color="danger" >Positive</ion-button>
+      <ion-button color="danger" >Negative</ion-button>
+  </div>
+    
+    <div *ngIf="isSymptomatic">
+      <ion-button color="danger" (click)=" showLump()">Lump</ion-button>
+      <ion-button color="danger" (click)=" showNonLump()">Non Lump</ion-button>
+  </div>
+
+  <div *ngIf="isLump">
+    <ion-button color="danger" (click)=" showFromLumpCBE()">CBE</ion-button>
+</div>
+
+<div *ngIf="isLumpCBE">
+  <ion-button color="danger" (click)=" showFromLumpCBEPositive()">Positive</ion-button>
+  <ion-button color="danger" >Negative</ion-button>
+</div>
+
+<div *ngIf="isLumpCBEPositive">
+  <ion-button color="danger" >Follow up to 5 years</ion-button>
+</div>
+
+<div *ngIf="isNonLump">
+  <ion-button color="danger" (click)=" showFromNonLumpCBE()">CBE</ion-button>
+</div>
+
+<div *ngIf="isNonLumpCBE">
+<ion-button color="danger" >Positive</ion-button>
+<ion-button color="danger" >Negative</ion-button>
+</div>
+
+
 </ion-content>

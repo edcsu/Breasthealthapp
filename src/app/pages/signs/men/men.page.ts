@@ -20,9 +20,18 @@ export class MenPage implements OnInit {
   isFollowUp = false;
   isCare = false;
   isPain = false;
+  isPainUSScan = false;
+  isPositivePainUSScan = false;
   isUSScan2 = false;
   isPositive = false;
   isNegative = false;
+  isHyperplasia = false;
+  isSubCuteMastectomy = false;
+  isScreened = false;
+  isNotScreened = false;
+  isCBE = false;
+  isCBEPositve = false;
+  isFromCBE = false;
 
 
   constructor() { }
@@ -30,80 +39,123 @@ export class MenPage implements OnInit {
   ngOnInit() {
   }
 
-  showSymptomatic(){
+  showSymptomatic() {
     this.isMen = false;
     this.isSymptomatic = true;
   }
 
-  showAsymptomatic(){
+  showAsymptomatic() {
     this.isMen = false;
     this.isAsymptomatic = true;
   }
 
-  showLump(){
-    this.isSymptomatic= false;
+  showLump() {
+    this.isSymptomatic = false;
     this.isLump = true;
   }
 
-  showNotLump(){
-    this.isAsymptomatic= false;
+  showNotLump() {
+    this.isSymptomatic = false;
     this.isNotLump = true;
   }
 
-  showDiscrete(){
-    this.isLump= false;
+  showDiscrete() {
+    this.isLump = false;
     this.isDiscrete = true;
   }
 
-  showDiffuse(){
-    this.isNotLump= false;
+  showDiffuse() {
+    this.isLump = false;
     this.isDiffuse = true;
   }
 
-  showUSScan(){
-    this.isDiscrete= false;
+  showUSScan() {
+    this.isDiscrete = false;
     this.isUSScan = true;
   }
 
-  showPositiveCancer(){
+  showPositiveCancer() {
     this.isUSScan = false;
     this.isPositiveCancer = true;
   }
 
-  showNegativeCancer(){
+  showNegativeCancer() {
     this.isUSScan = false;
     this.isNegativeCancer = true;
   }
 
-  showStaging(){
+  showStaging() {
     this.isPositiveCancer = false;
     this.isStaging = true;
   }
 
-  showFollowUp(){
+  showFollowUp() {
     this.isPositiveCancer = false;
     this.isFollowUp = true;
   }
-  
-  
-  showCare(){
+
+  showCare() {
     this.isStaging = false;
     this.isCare = true;
   }
 
-  showUSScan2(){
-    this.isPain = false;
-    this.isUSScan = true;
+  showUSScan2() {
+    this.isDiffuse = false;
+    this.isUSScan2 = true;
   }
 
-  showPositve(){
+  showPositve() {
     this.isUSScan2 = false;
     this.isPositive = true;
   }
-  
-  showNegtive(){
+
+  showNegtive() {
     this.isUSScan2 = false;
     this.isNegative = true;
   }
 
+  showPain() {
+    this.isNotLump = false;
+    this.isPain = true;
+  }
+
+  showPainUSScan() {
+    this.isPain = false;
+    this.isPainUSScan = true;
+  }
+
+  showPositivePainUSScan() {
+    this.isPainUSScan = false;
+    this.isPositivePainUSScan = true;
+  }
+
+  showPositivePainUSScan2() {
+    this.isUSScan2 = false;
+    this.isHyperplasia = true;
+  }
+
+  showFromHyperplasia() {
+    this.isHyperplasia = false;
+    this.isSubCuteMastectomy = true;
+  }
+
+  showScreened() {
+    this.isAsymptomatic = false;
+    this.isScreened = true;
+  }
+
+  showNotScreened() {
+    this.isAsymptomatic = false;
+    this.isNotScreened = true;
+  }
+
+  showCBE() {
+    this.isNotScreened = false;
+    this.isFromCBE = true;
+  }
+
+  showCBEPositve() {
+    this.isFromCBE = false;
+    this.isCBEPositve = true;
+  }
 }

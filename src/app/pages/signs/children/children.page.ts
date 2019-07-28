@@ -12,8 +12,14 @@ export class ChildrenPage implements OnInit {
   isInfants = false;
   isAdolescents = false;
   isAsymptomatic = false;
-  isDefer_CDE_to_after_20yrs_if_negotiative_family_history = false;
-  
+  isSymptomatic = false;
+  isDoCBE = false;
+  isLump = false;
+  isLumpCBE = false;
+  isLumpCBEPositive = false;
+  isNonLump = false;
+  isNonLumpCBE = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -29,20 +35,56 @@ export class ChildrenPage implements OnInit {
     this.isNeonates = false;
   }
 
-  showChildrenfromInfants(){
+  showChildrenfromInfants() {
     this.isChildren = false;
     this.isInfants = true;
   }
 
-  showfromAdolescents(){ 
+  showfromAdolescents() {
     this.isChildren = false;
     this.isAdolescents = true;
   }
 
-  showAsymptomaticfromDefer_CDE_to_after_20yrs_if_negotiative_family_history(){
-    this.isAsymptomatic = false;
-    this.isDefer_CDE_to_after_20yrs_if_negotiative_family_history = true;
+  showAsymptomatic() {
+    this.isAdolescents = false;
+    this.isAsymptomatic = true;
   }
+
+  showDoCBE() {
+    this.isAsymptomatic = false;
+    this.isDoCBE = true;
+  }
+
+  showSymptomatic() {
+    this.isAdolescents = false;
+    this.isSymptomatic = true;
+  }
+
+  showLump() {
+    this.isSymptomatic = false;
+    this.isLump = true;
+  }
+
+  showFromLumpCBE() {
+    this.isLump = false;
+    this.isLumpCBE = true;
+  }
+
+  showFromLumpCBEPositive() {
+    this.isLumpCBE = false;
+    this.isLumpCBEPositive = true;
+  }
+
+  showNonLump() {
+    this.isSymptomatic = false;
+    this.isNonLump = true;
+  }
+
+  showFromNonLumpCBE() {
+    this.isNonLump = false;
+    this.isNonLumpCBE = true;
+  }
+
 }
 
 
