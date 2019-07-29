@@ -22,4 +22,8 @@ export class SelfCheckPage implements OnInit {
   }
   ngOnInit() {
   }
+
+  goToLogin() {
+
+  }
 }
