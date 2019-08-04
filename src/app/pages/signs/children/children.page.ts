@@ -40,9 +40,19 @@ export class ChildrenPage implements OnInit {
     this.isInfants = true;
   }
 
+  backToChildrenfromInfants() {
+    this.isInfants = false;
+    this.isChildren = true;
+  }
+
   showfromAdolescents() {
     this.isChildren = false;
     this.isAdolescents = true;
+  }
+
+  backToChildrenfromAdolescents() {
+    this.isAdolescents = false;
+    this.isChildren = true;
   }
 
   showAsymptomatic() {
@@ -50,9 +60,19 @@ export class ChildrenPage implements OnInit {
     this.isAsymptomatic = true;
   }
 
+  backToAdolescentsfromAsymptomatic() {
+    this.isAsymptomatic = false;
+    this.isAdolescents = true;
+  }
+
   showDoCBE() {
     this.isAsymptomatic = false;
     this.isDoCBE = true;
+  }
+
+  backToAsymptomatic() {
+    this.isDoCBE = false;
+    this.isAsymptomatic = true;
   }
 
   showSymptomatic() {
@@ -60,9 +80,19 @@ export class ChildrenPage implements OnInit {
     this.isSymptomatic = true;
   }
 
+  backToAdolescentsfromSymptomatic() {
+    this.isSymptomatic = false;
+    this.isAdolescents = true;
+  }
+
   showLump() {
     this.isSymptomatic = false;
     this.isLump = true;
+  }
+
+  backToshowLump() {
+    this.isLump = false;
+    this.isSymptomatic = true;
   }
 
   showFromLumpCBE() {
@@ -70,9 +100,19 @@ export class ChildrenPage implements OnInit {
     this.isLumpCBE = true;
   }
 
+  backToLumpCBE() {
+    this.isLumpCBE = false;
+    this.isLump = true;
+  }
+
   showFromLumpCBEPositive() {
     this.isLumpCBE = false;
     this.isLumpCBEPositive = true;
+  }
+
+  backToLumpCBEResult() {
+    this.isLumpCBEPositive = false;
+    this.isLumpCBE = true;
   }
 
   showNonLump() {
@@ -80,9 +120,19 @@ export class ChildrenPage implements OnInit {
     this.isNonLump = true;
   }
 
+  backToshowNonLump() {
+    this.isNonLump = false;
+    this.isSymptomatic = true;
+  }
+
   showFromNonLumpCBE() {
     this.isNonLump = false;
     this.isNonLumpCBE = true;
+  }
+
+  backToNonLumpCBE() {
+    this.isNonLumpCBE = false;
+    this.isNonLump = true;
   }
 
 }
