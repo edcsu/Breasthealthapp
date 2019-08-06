@@ -44,9 +44,19 @@ export class MenPage implements OnInit {
     this.isSymptomatic = true;
   }
 
+  backToStartFromSymptomatic() {
+    this.isSymptomatic = false;
+    this.isMen = true;
+  }
+
   showAsymptomatic() {
     this.isMen = false;
     this.isAsymptomatic = true;
+  }
+
+  backToStartFromAsymptomatic() {
+    this.isAsymptomatic = false;
+    this.isMen = true;
   }
 
   showLump() {
@@ -54,9 +64,19 @@ export class MenPage implements OnInit {
     this.isLump = true;
   }
 
+  backToSymptomatic() {
+    this.isLump = false;
+    this.isSymptomatic = true;
+  }
+
   showNotLump() {
     this.isSymptomatic = false;
     this.isNotLump = true;
+  }
+
+  backToSymptomaticFromNotLump() {
+    this.isNotLump = false;
+    this.isSymptomatic = true;
   }
 
   showDiscrete() {
@@ -69,9 +89,24 @@ export class MenPage implements OnInit {
     this.isDiffuse = true;
   }
 
+  backFromDiffuse() {
+    this.isDiffuse = false;
+    this.isLump = true;
+  }
+
+  backFromDiscrete() {
+    this.isDiscrete = false;
+    this.isLump = true;
+  }
+
   showUSScan() {
     this.isDiscrete = false;
     this.isUSScan = true;
+  }
+
+  backToUSScan() {
+    this.isUSScan = false;
+    this.isDiscrete = true;
   }
 
   showPositiveCancer() {
@@ -79,9 +114,19 @@ export class MenPage implements OnInit {
     this.isPositiveCancer = true;
   }
 
+  backToResultFromPositiveCancer() {
+    this.isPositiveCancer = false;
+    this.isUSScan = true;
+  }
+
   showNegativeCancer() {
     this.isUSScan = false;
     this.isNegativeCancer = true;
+  }
+
+  backToResultFromNegtiveCancer(){
+    this.isNegativeCancer = false;
+    this.isUSScan = true;
   }
 
   showStaging() {
@@ -99,9 +144,19 @@ export class MenPage implements OnInit {
     this.isCare = true;
   }
 
+  backtoStaging() {
+    this.isStaging = false;
+    this.isPositiveCancer = true;
+  }
+
   showUSScan2() {
     this.isDiffuse = false;
     this.isUSScan2 = true;
+  }
+
+  backToUSScan2() {
+    this.isUSScan2 = false;
+    this.isDiffuse = true;
   }
 
   showPositve() {
@@ -119,9 +174,19 @@ export class MenPage implements OnInit {
     this.isPain = true;
   }
 
+  backToPain() {
+    this.isPain = false;
+    this.isNotLump = true;
+  }
+
   showPainUSScan() {
     this.isPain = false;
     this.isPainUSScan = true;
+  }
+
+  backToPainUSScan() {
+    this.isPainUSScan = false;
+    this.isPain = true;
   }
 
   showPositivePainUSScan() {
@@ -129,14 +194,34 @@ export class MenPage implements OnInit {
     this.isPositivePainUSScan = true;
   }
 
+  backToPainUSScanResult() {
+    this.isPositivePainUSScan = false;
+    this.isPainUSScan = true;
+  }
+
   showPositivePainUSScan2() {
     this.isUSScan2 = false;
     this.isHyperplasia = true;
   }
 
+  backToPositivePainUSScan2() {
+    this.isHyperplasia = false;
+    this.isUSScan2 = true;
+  }
+
   showFromHyperplasia() {
     this.isHyperplasia = false;
     this.isSubCuteMastectomy = true;
+  }
+
+  backToHyperplasia() {
+    this.isSubCuteMastectomy = false;
+    this.isHyperplasia = true;
+  }
+
+  backToScreened() {
+    this.isScreened = false;
+    this.isAsymptomatic = true;
   }
 
   showScreened() {
@@ -154,8 +239,18 @@ export class MenPage implements OnInit {
     this.isFromCBE = true;
   }
 
+  backToNotScreened() {
+    this.isFromCBE = false;
+    this.isNotScreened = true;
+  }
+
   showCBEPositve() {
     this.isFromCBE = false;
     this.isCBEPositve = true;
+  }
+
+  backToCBEPositive() {
+    this.isCBEPositve = false;
+    this.isFromCBE = true;
   }
 }

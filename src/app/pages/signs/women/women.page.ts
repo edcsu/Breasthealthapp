@@ -64,6 +64,11 @@ export class WomenPage implements OnInit {
     this.isSymptomatic = true;
   }
 
+  backFromSymptomatic() {
+    this.isSymptomatic = false;
+    this.isWomen = true;
+  }
+
   showAsymptomatic() {
     this.isWomen = false;
     this.isAsymptomatic = true;
@@ -72,6 +77,16 @@ export class WomenPage implements OnInit {
   showDiagonosed() {
     this.isLump = false;
     this.isDiagonosed = true;
+  }
+
+  backToLump() {
+    this.isLump = false;
+    this.isSymptomatic = true;
+  }
+
+  backToDiagonosedFromLump() {
+    this.isLumpTreated = false;
+    this.isLump = true;
   }
 
   showNonDiagonosed() {
@@ -97,6 +112,11 @@ export class WomenPage implements OnInit {
   showsisExcisedLump() {
     this.isLumpTreated = false;
     this.isExcisedLump = true;
+  }
+
+  backToTreatedFromExcisedLump() {
+    this.isExcisedLump = false;
+    this.isLumpTreated = true;
   }
 
   showsFromExcisedLump() {
