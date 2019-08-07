@@ -239,6 +239,11 @@ export class MenPage implements OnInit {
     this.isFromCBE = true;
   }
 
+  backToScreenedFromNot(){
+    this.isNotScreened = false;
+    this.isAsymptomatic = true;
+  }
+
   backToNotScreened() {
     this.isFromCBE = false;
     this.isNotScreened = true;

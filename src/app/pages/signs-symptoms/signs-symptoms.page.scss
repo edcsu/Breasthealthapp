@@ -1,7 +1,6 @@
 :host {
     #zone-summary {
-        background-color: turquoise;
-        color: var(--ion-color-dark);
+        --background: linear-gradient(50deg, rgb(236, 18, 189), rgb(255, 0, 98));
     }
 
     ion-item{
