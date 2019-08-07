@@ -1,9 +1,9 @@
 {
-  "name": "ionic4-start-theme",
-  "description": "Ionic 4 Start Theme",
+  "name": "breast-health-app",
+  "description": "Breast health awareness app",
   "version": "1.0.0",
-  "author": "Ionic Theme",
-  "homepage": "https://ionictheme.com",
+  "author": "Lift256 Bootcamp 1",
+  "homepage": "https://lift256.co.ug",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
