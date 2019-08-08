@@ -46,6 +46,7 @@ export class WomenPage implements OnInit {
   isFromFeelLumps = false;
   isFromScarPain = false;
   isFromExcisedLumpCancer = false;
+  issMultiMedicalCare = false;
   isFromMultiMedicalCare = false;
   isFromCompletedCare = false;
   isNotScreened = false;
@@ -119,9 +120,19 @@ export class WomenPage implements OnInit {
     this.isLumpTreated = true;
   }
 
+  backToIsLumpTreatedFromNot(){
+    this.isLumpNotTreated = false;
+    this.isLumpTreated = true;
+  }
+
   showsFromExcisedLump() {
     this.isExcisedLump = false;
     this.isFromExcisedLump = true;
+  }
+
+  showsBackToExcisedLump() {
+    this.isFromExcisedLump = false;
+    this.isExcisedLump = true;
   }
 
   showsFromBenign() {
@@ -129,9 +140,19 @@ export class WomenPage implements OnInit {
     this.isExcisedLumpHealed = true;
   }
 
+  showsBackToBenign() {
+    this.isExcisedLumpHealed = false;
+    this.isFromExcisedLump = true;
+  }
+
   showsFromHealedCompletely() {
     this.isExcisedLumpHealed = false;
     this.isHealedCompletely = true;
+  }
+
+  showsBackToHealedFromReview() {
+    this.isHealedCompletely = false;
+    this.isExcisedLumpHealed = true;
   }
 
   showsFromHealedNotCompletely() {
@@ -139,9 +160,19 @@ export class WomenPage implements OnInit {
     this.isNotHealedCompletely = true;
   }
 
+  showsBackToHealedFromNot() {
+    this.isNotHealedCompletely = false;
+    this.isExcisedLumpHealed = true;
+  }
+
   showsFromScarPain() {
     this.isNotHealedCompletely = false;
     this.isFromScarPain = true;
+  }
+
+  showsBackToScarPain() {
+    this.isFromScarPain = false;
+    this.isNotHealedCompletely = true;
   }
 
   showsFromFeelLumps() {
@@ -149,14 +180,34 @@ export class WomenPage implements OnInit {
     this.isFromFeelLumps = true;
   }
 
+  showsBackToFeelLumps() {
+    this.isFromFeelLumps = false;
+    this.isNotHealedCompletely = true;
+  }
+
   showsFromExcisedLumpCancer() {
     this.isFromExcisedLump = false;
     this.isFromExcisedLumpCancer = true;
   }
 
+  showsMultiMedicalCare() {
+    this.isFromExcisedLump = false;
+    this.issMultiMedicalCare = true;
+  }
+
+  showsExcisedLumpCancer() {
+    this.issMultiMedicalCare = false;
+    this.isFromExcisedLump = true;
+  }
+
   showsfromMultiMedicalCare() {
-    this.isFromExcisedLumpCancer = false;
+    this.issMultiMedicalCare = false;
     this.isFromMultiMedicalCare = true;
+  }
+
+  showsBackToMultiMedicalCare() {
+    this.isFromMultiMedicalCare = false;
+    this.issMultiMedicalCare = true;
   }
 
   showsfromCompletedCare() {
@@ -164,14 +215,29 @@ export class WomenPage implements OnInit {
     this.isFromCompletedCare = true;
   }
 
+  showsBackToCareType() {
+    this.isFromCompletedCare = false;
+    this.isFromMultiMedicalCare = true;
+  }
+
   showsNotLump() {
     this.isSymptomatic = false;
     this.isNoLump = true;
   }
 
+  backToLumpStatusFromNoLump() {
+    this.isNoLump = false;
+    this.isSymptomatic = true;
+  }
+
   showsfromisNoLump() {
     this.isNoLump = false;
     this.isNoLumpTreated = true;
+  }
+
+  backToDiagonosedStatusFromNoLump() {
+    this.isNoLumpTreated = false;
+    this.isNoLump = true;
   }
 
   showsfromisNotDiagonosedLump() {
@@ -184,9 +250,19 @@ export class WomenPage implements OnInit {
     this.isFromPostmenopausal = true;
   }
 
+  backToPostmenopausal() {
+    this.isFromPostmenopausal = false;
+    this.isNotDiagonosedLump = true;
+  }
+
   showsfromNeverDoneMammo() {
     this.isFromPostmenopausal = false;
     this.isFromNeverDoneMammo = true;
+  }
+
+  backToNeverDoneMamo() {
+    this.isFromNeverDoneMammo = false;
+    this.isFromPostmenopausal = true;
   }
 
   showsfromNeverDoneMammoDo() {
@@ -194,9 +270,24 @@ export class WomenPage implements OnInit {
     this.isFromNeverDoneMammoDo = true;
   }
 
+  backToDoMamo() {
+    this.isFromNeverDoneMammoDo = false;
+    this.isFromNeverDoneMammo = true;
+  }
+
+  backToNoLumpSymp() {
+    this.isNotDiagonosedLump = false;
+    this.isNoLump = true;
+  }
+
   showsfromPremenopausal() {
-    this.isFromNeverDoneMammo = false;
-    this.isFromNeverDoneMammoDo = true;
+    this.isNotDiagonosedLump = false;
+    this.isFromPremenopausal = true;
+  }
+
+  showsNotDiagnosednFromPre() {
+    this.isFromPremenopausal = false;
+    this.isNotDiagonosedLump = true;
   }
 
   showsfromEverDoneMammo() {
@@ -204,9 +295,19 @@ export class WomenPage implements OnInit {
     this.isFromEverDoneMammoDo = true;
   }
 
+  showsPostmenopausalfromEverDoneMammo() {
+    this.isFromEverDoneMammoDo = false;
+    this.isFromPostmenopausal = true;
+  }
+
   showsfromLessthan1Year() {
     this.isFromEverDoneMammoDo = false;
     this.isFromLessthan1Year = true;
+  }
+
+  showsEverDoneMammo() {
+    this.isFromLessthan1Year = false;
+    this.isFromEverDoneMammoDo = true;
   }
 
   showsfromGreaterthan1Year() {
@@ -214,9 +315,19 @@ export class WomenPage implements OnInit {
     this.isFromGreaterthan1Year = true;
   }
 
+  showsEverDoneMammoAgain() {
+    this.isFromGreaterthan1Year = false;
+    this.isFromEverDoneMammoDo = true;
+  }
+
   showsfromPositiveForMass() {
     this.isFromLessthan1Year = false;
     this.IsFromPositiveForMass = true;
+  }
+
+  BackToMassStatusFromPositive() {
+    this.IsFromPositiveForMass = false;
+    this.isFromLessthan1Year = true;
   }
 
   showsfromNegativeForMass() {
@@ -224,9 +335,19 @@ export class WomenPage implements OnInit {
     this.isFromNegativeForMass = true;
   }
 
+  BackToMassStatusFromNegative() {
+    this.isFromNegativeForMass = false;
+    this.isFromLessthan1Year = true;
+  }
+
   showsfrom3050() {
     this.isFromPremenopausal = false;
     this.isFrom3050 = true;
+  }
+
+  showsFromPreFrom3050() {
+    this.isFrom3050 = false;
+    this.isFromPremenopausal = true;
   }
 
   showsfrom3050Negative() {
@@ -234,9 +355,19 @@ export class WomenPage implements OnInit {
     this.isFrom3050Negative = true;
   }
 
+  shows3050From3050Negative() {
+    this.isFrom3050Negative = false;
+    this.isFrom3050 = true;
+  }
+
   showsfrom3050NegativeSurgery() {
     this.isFrom3050Negative = false;
     this.isFrom3050NegativeSurgery = true;
+  }
+
+  showsSurgery() {
+    this.isFrom3050Negative = true;
+    this.isFrom3050NegativeSurgery = false;
   }
 
   showsfromlessThan30() {
