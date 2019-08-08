@@ -375,6 +375,11 @@ export class WomenPage implements OnInit {
     this.isFromLessThan30 = true;
   }
 
+  showsPrefromlessThan30() {
+    this.isFromLessThan30 = false;
+    this.isFromPremenopausal = true   ;
+  }
+
   showsfromLessthan30UsScan() {
     this.isFromLessThan30 = false;
     this.isFromLessThan30UsScan = true;

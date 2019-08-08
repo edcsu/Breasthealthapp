@@ -439,7 +439,15 @@
   </ion-card>
 
   <ion-card *ngIf="isFromLessThan30" class="orange-grad">
-    <ion-button color="primary" class="Symptonat" (click)="showsfromLessthan30UsScan()">US Scan </ion-button>
+    <ion-card-header>
+      <ion-card-title>And </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfromLessthan30UsScan()">US Scan </ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsSurgery()">Back</ion-button>      
+    </ion-card-content>
   </ion-card>
 
   <ion-card *ngIf="isFromLessThan30UsScan" class="orange-grad">
