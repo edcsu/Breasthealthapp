@@ -18,7 +18,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="tipscolor">
 
   <ion-card class="main-card">
     <ion-card-header>
@@ -35,7 +35,7 @@
       <ion-grid >
         <ion-row>
           <ion-col size="" offset="">
-            <ion-card>
+            <ion-card color="light">
                 <ion-card-content>
                   <ion-img (click)="goToSelfCareLink()" button="true"
                     src="assets/button_icons/breastselfexam.png">                  
@@ -44,7 +44,7 @@
             </ion-card>
           </ion-col>
           <ion-col size="" offset="">
-            <ion-card>
+            <ion-card color="light">
               <ion-card-content>
                 <ion-img (click)="goToTips()" button="true"
                   src="assets/button_icons/general_bh_tips.png" >
@@ -55,7 +55,7 @@
         </ion-row>
         <ion-row>
         <ion-col size="" offset="">
-          <ion-card>
+          <ion-card color="light">
               <ion-card-content>
                 <ion-img tappable (click)="goTosignsAndSymptoms()" button="true"        
                   src="assets/button_icons/signs_and_symptoms.png" >
@@ -64,7 +64,7 @@
           </ion-card>
           </ion-col>
           <ion-col size="" offset="">
-            <ion-card>
+            <ion-card color="light">
               <ion-card-content>
                 <ion-img (click)="goToSupportGroup()" button="true"
                   src="assets/button_icons/support_groups.png" >
@@ -75,7 +75,7 @@
         </ion-row>
         <ion-row>
           <ion-col button="true" size="" offset="" >
-            <ion-card >
+            <ion-card color="light">
               <ion-card-content>
                 <ion-img (click)="goToUploadMedicalRecords()"               
                   src="assets/button_icons/upload_medical_records.png" >          
@@ -84,7 +84,7 @@
             </ion-card>
           </ion-col>
           <ion-col size="" offset="">
-            <ion-card>
+            <ion-card color="light">
               <ion-card-content>
                 <ion-img (click)="goToSpecialist()" button="true"              
                   src="assets/button_icons/specialist_consults.png" >          
@@ -95,7 +95,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="6" offset="3">
-              <ion-card>
+              <ion-card color="light">
                 <ion-card-content>
                   <ion-img (click)="goToRiskAssessment()" button="true"
                     src="assets/button_icons/risk_assmt_bc.png" >
@@ -107,12 +107,12 @@
       </ion-grid>
     
     <ion-footer >    
-      <ion-item>
+      <ion-item color="light">
         <ion-thumbnail slot="start" >
           <img src="assets/img/UCILogo.png" height="" width="">      
         </ion-thumbnail>
         <ion-text class="footer-text">
-          &copy;   The Uganda Cancer Institute 2018
+          &copy;   The Uganda Cancer Institute 2019
        </ion-text>
       </ion-item>      
   </ion-footer> 

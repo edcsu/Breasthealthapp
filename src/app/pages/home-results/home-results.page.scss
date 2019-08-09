@@ -1,7 +1,7 @@
 :host {
-    *ion-content {
+    /* *ion-content {
        --background: var(--ion-color-light);
-    }
+    } */
 
     
 ion-item{
@@ -23,6 +23,10 @@ ion-item{
 
     .footer-text {
         margin-top: 2rem;
+    }
+
+    .dash-card{
+        --background: linear-gradient(-45deg,#21E8AC, #376DF6);
     }
 
     .main-card{

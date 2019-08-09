@@ -377,7 +377,7 @@ export class WomenPage implements OnInit {
 
   showsPrefromlessThan30() {
     this.isFromLessThan30 = false;
-    this.isFromPremenopausal = true   ;
+    this.isFromPremenopausal = true;
   }
 
   showsfromLessthan30UsScan() {
@@ -385,9 +385,19 @@ export class WomenPage implements OnInit {
     this.isFromLessThan30UsScan = true;
   }
 
+  showsUSscanfromLessThan30Result() {
+    this.isFromLessThan30UsScan = false;
+    this.isFromLessThan30 = true;
+  }
+
   showsfromLessThan30UsScanNegative() {
     this.isFromLessThan30UsScan = false;
     this.isFromLessThan30UsScanNegative = true;
+  }
+
+  showsUSscanResultFromRepeat() {
+    this.isFromLessThan30UsScanNegative = false;
+    this.isFromLessThan30UsScan = true;
   }
 
   showsfromLessThan30UsScanNegativeRepeat() {
@@ -395,9 +405,19 @@ export class WomenPage implements OnInit {
     this.isFromRepeat3Months = true;
   }
 
+  showsRepeatFromSecondOpinion() {
+    this.isFromRepeat3Months = false;
+    this.isFromLessThan30UsScanNegative = true;
+  }
+
   showsfromLikelyCancer() {
     this.isFromLessThan30UsScan = false;
     this.isLikelyCancer = true;
+  }
+
+  showsUSscanResultFromPostiveResult() {
+    this.isFromLessThan30UsScan = true;
+    this.isLikelyCancer = false;
   }
 
   showsfromUnlikelyCancer() {
@@ -405,9 +425,19 @@ export class WomenPage implements OnInit {
     this.isFromUnlikelyCancer = true;
   }
 
+  showsCancerStatus() {
+    this.isFromUnlikelyCancer = false;
+    this.isLikelyCancer = true;
+  }
+
   showsfromGreaterthan4cm() {
     this.isFromUnlikelyCancer = false;
     this.isFromGreaterthan4cm = true;
+  }
+
+  showsSizeFromGreaterThan4() {
+    this.isFromGreaterthan4cm = false;
+    this.isFromUnlikelyCancer = true;
   }
 
   showsfromLessthan4cm() {
@@ -415,14 +445,29 @@ export class WomenPage implements OnInit {
     this.isFromLessthan4cm = true;
   }
 
+  showsUnlikelyCancerFromLessThan4() {
+    this.isFromLessthan4cm = false;
+    this.isFromUnlikelyCancer = true;
+  }
+
   showsfromRemoveMass() {
     this.isFromGreaterthan4cm = false;
     this.isFromRemoveMass = true;
   }
 
+  showsRemoveMassFromGreaterThan4() {
+    this.isFromRemoveMass = false;
+    this.isFromGreaterthan4cm = true;
+  }
+
   showsfromRemoveMassHistology() {
     this.isFromRemoveMass = false;
     this.isFromRemoveMassHistology = true;
+  }
+
+  showsHistologyfromResultGreaterThan4() {
+    this.isFromRemoveMassHistology = false;
+    this.isFromRemoveMass = true;
   }
 
   showfromNotScreened() {

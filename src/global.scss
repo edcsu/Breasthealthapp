@@ -293,3 +293,8 @@ ion-item {
   line-height: 0px;
   padding: 0px;
 }
+
+// background gradient color
+.tipscolor {
+  --background: linear-gradient(#f0e7e7, rgba(182, 120, 161, 0.9)) !important;
+}
