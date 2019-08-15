@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, MenuController, ToastController, AlertController, LoadingController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -16,7 +17,8 @@ export class LandingPage implements OnInit {
     public toastCtrl: ToastController,
     public alertCtrl: AlertController,
     public loadingCtrl: LoadingController,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) { }
 
   ionViewWillEnter() {
@@ -82,14 +84,14 @@ export class LandingPage implements OnInit {
 
   // // //
   goToTour() {
-    this.navCtrl.navigateRoot('/register');
+    this.router.navigate(['register']);
   }
 
   goToRegister() {
-    this.navCtrl.navigateRoot('/register');
+    this.router.navigate(['register']);
   }
   goToLogin() {
-    this.navCtrl.navigateRoot('/login');
+    this.router.navigate(['login']);
   }
 
 }

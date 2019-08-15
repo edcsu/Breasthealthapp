@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import {
-  NavController,
+  // NavController,
+  Platform,
   AlertController,
   MenuController,
   ToastController,
   PopoverController,
   LoadingController,
   ModalController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 // Modals
 import { SearchFilterPage } from '../../pages/modal/search-filter/search-filter.page';
@@ -20,26 +22,40 @@ import { NotificationsComponent } from './../../components/notifications/notific
   templateUrl: './home-results.page.html',
   styleUrls: ['./home-results.page.scss']
 })
-export class HomeResultsPage  implements OnInit {
+export class HomeResultsPage  implements OnInit, OnDestroy, AfterViewInit {
   searchKey = '';
   myProfile = false;
   yourLocation = '123 Test Street';
   themeCover = 'assets/img/ionic4-Start-Theme-cover.jpg';
+  backButtonSubscription;
+  // for storing the returned subscription
 
   constructor(
-    public navCtrl: NavController,
+    // public navCtrl: NavController,
     public menuCtrl: MenuController,
     public popoverCtrl: PopoverController,
     public alertCtrl: AlertController,
     public modalCtrl: ModalController,
     public loadingCtrl: LoadingController,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    private router: Router,
+    private platform: Platform
   ) {
 
   }
 
   ngOnInit() {
     this.SetProfile();
+  }
+
+  ngAfterViewInit() {
+    this.backButtonSubscription = this.platform.backButton.subscribe(() => {
+      navigator['app'].exitApp();
+    });
+  }
+ 
+  ngOnDestroy() {
+    this.backButtonSubscription.unsubscribe();
   }
 
   ionViewWillEnter() {
@@ -52,7 +68,8 @@ export class HomeResultsPage  implements OnInit {
   }
 
   settings() {
-    this.navCtrl.navigateForward('settings');
+  //  this.navCtrl.navigateForward('settings');
+    this.router.navigate(['settings']);
   }
 
   async alertLocation() {
@@ -147,40 +164,49 @@ export class HomeResultsPage  implements OnInit {
       });
 
       toast.present();
-      this.navCtrl.navigateForward('/home-results');
+     // this.navCtrl.navigateForward('/home-results');
+      this.router.navigate(['home-results']);
     });
   }
 
   goToSelfCareLink() {
-    this.navCtrl.navigateForward('/self-care-link');
+    // this.navCtrl.navigateForward('/self-care-link');
+    this.router.navigate(['self-care-link']);
   }
 
   goToTips() {
-    this.navCtrl.navigateForward('/tips');
+    // this.navCtrl.navigateForward('/tips');
+    this.router.navigate(['tips']);
   }
 
   goToBreastHealthInfo() {
-    this.navCtrl.navigateForward('/breast-health-info');
+    // this.navCtrl.navigateForward('/breast-health-info');
+    this.router.navigate(['breast-health-info']);
   }
 
   goToSupportGroup() {
-    this.navCtrl.navigateForward('/support-group');
+    // this.navCtrl.navigateForward('/support-group');
+    this.router.navigate(['support-group']);
   }
 
   goToSpecialist() {
-    this.navCtrl.navigateForward('/specialist');
+    // this.navCtrl.navigateForward('/specialist');
+    this.router.navigate(['specialist']);
   }
 
   goTosignsAndSymptoms() {
-    this.navCtrl.navigateForward('/signs-symptoms');
+    // this.navCtrl.navigateForward('/signs-symptoms');
+    this.router.navigate(['signs-symptoms']);
   }
 
   goToRiskAssessment() {
-    this.navCtrl.navigateForward('/risk-assessment');
+    // this.navCtrl.navigateForward('/risk-assessment');
+    this.router.navigate(['risk-assessment']);
   }
 
   goToUploadMedicalRecords() {
-    this.navCtrl.navigateForward('/upload-medical-records');
+    // this.navCtrl.navigateForward('/upload-medical-records');
+    this.router.navigate(['upload-medical-records']);
   }
 
 }

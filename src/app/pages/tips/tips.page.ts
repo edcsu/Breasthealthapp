@@ -6,6 +6,7 @@ import {
   ToastController,
   PopoverController,
   ModalController } from '@ionic/angular';
+  import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tips',
@@ -15,7 +16,7 @@ import {
 export class TipsPage implements OnInit {
 
   constructor(
-    public navCtrl: NavController,
+    private router: Router,
     public menuCtrl: MenuController,
     public popoverCtrl: PopoverController,
     public alertCtrl: AlertController,
@@ -27,11 +28,11 @@ export class TipsPage implements OnInit {
   }
 
   goToBreastCancerTips() {
-    this.navCtrl.navigateRoot('/breast-cancer-tips');
+    this.router.navigate(['breast-cancer-tips']);
   }
 
   goToNippleTips() {
-    this.navCtrl.navigateRoot('/nipples-tips');
+    this.router.navigate(['nipples-tips']);
   }
 
 }
