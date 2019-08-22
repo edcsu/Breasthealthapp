@@ -4,6 +4,9 @@ import { RouteReuseStrategy } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// Import Ionic storage
+import { IonicStorageModule } from '@ionic/storage';
+
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -30,7 +33,8 @@ import { NotificationsComponent } from './components/notifications/notifications
     HttpClientModule,
     ImagePageModule,
     SearchFilterPageModule,
-    SetProfilePageModule
+    SetProfilePageModule,
+    IonicStorageModule.forRoot()
   ],
   entryComponents: [NotificationsComponent],
   providers: [
