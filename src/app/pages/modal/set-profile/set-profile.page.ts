@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NavController, LoadingController, ToastController, PopoverController } from '@ionic/angular';
+import { NavController, LoadingController, ToastController, PopoverController, NavParams } from '@ionic/angular';
+
+// Get Persons info
+import { Person, StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-set-profile',
@@ -9,17 +12,39 @@ import { NavController, LoadingController, ToastController, PopoverController } 
 })
 export class SetProfilePage implements OnInit {
 
+  myProfile: Person;
+  yourDob = null;
+  yourGender = null;
+
   constructor(
     public navCtrl: NavController,
     public loadingCtrl: LoadingController,
     public popoverCtrl: PopoverController,
-    public toastCtrl: ToastController) { }
+    public toastCtrl: ToastController,
+    public navParams: NavParams,
+    private storageService: StorageService
+    ) { }
 
   ngOnInit() {
+    this.loadProfile();
   }
 
   closePopOver() {
-    this.popoverCtrl.dismiss();
+    this.popoverCtrl.dismiss(this.myProfile);
+  }
+
+  loadProfile() {
+    console.log(this.navParams);
+    this.myProfile = this.navParams.data.Profile;
+  }
+
+  // update gender and age
+  updatePerson(person: Person) {
+    person.dob = this.yourDob;
+    person.gender = this.yourGender;
+    this.storageService.updatePerson(person).then(() => {
+      console.log('updated');
+    });
   }
 
   async saveData() {
@@ -28,6 +53,7 @@ export class SetProfilePage implements OnInit {
     });
 
     loader.present();
+    this.updatePerson(this.myProfile);
     loader.onWillDismiss().then(async l => {
       const toast = await this.toastCtrl.create({
         showCloseButton: true,
@@ -41,5 +67,5 @@ export class SetProfilePage implements OnInit {
     });
     this.closePopOver();
   }
-
 }
+

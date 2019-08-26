@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnChanges, OnDestroy, AfterViewInit } from '@angular/core';
 import {
   // NavController,
   Platform,
@@ -17,17 +17,25 @@ import { ImagePage } from './../modal/image/image.page';
 // Call notifications test by Popover and Custom Component.
 import { NotificationsComponent } from './../../components/notifications/notifications.component';
 
+// Get Persons info
+import { Person, StorageService } from 'src/app/services/storage.service';
+
 @Component({
   selector: 'app-home-results',
   templateUrl: './home-results.page.html',
   styleUrls: ['./home-results.page.scss']
 })
-export class HomeResultsPage  implements OnInit, OnDestroy, AfterViewInit {
+export class HomeResultsPage  implements OnInit, OnChanges, OnDestroy, AfterViewInit {
   searchKey = '';
   myProfile = false;
   yourLocation = '123 Test Street';
   themeCover = 'assets/img/ionic4-Start-Theme-cover.jpg';
   backButtonSubscription;
+  yoProfile: Person;
+  age = null;
+  birthYear = null;
+  currentDate = null;
+  currentYear = null;
   // for storing the returned subscription
 
   constructor(
@@ -39,21 +47,28 @@ export class HomeResultsPage  implements OnInit, OnDestroy, AfterViewInit {
     public loadingCtrl: LoadingController,
     public toastCtrl: ToastController,
     private router: Router,
-    private platform: Platform
+    private platform: Platform,
+    private storageService: StorageService
   ) {
 
   }
 
   ngOnInit() {
-    this.SetProfile();
+    this.loadProfile();
+  }
+
+  ngOnChanges() {
+    this.loadProfile();
   }
 
   ngAfterViewInit() {
+    this.SetProfile();
+    this.loadProfile();
     this.backButtonSubscription = this.platform.backButton.subscribe(() => {
       navigator['app'].exitApp();
     });
   }
- 
+
   ngOnDestroy() {
     this.backButtonSubscription.unsubscribe();
   }
@@ -62,6 +77,21 @@ export class HomeResultsPage  implements OnInit, OnDestroy, AfterViewInit {
     this.menuCtrl.enable(true);
   }
 
+  loadProfile() {
+    this.storageService.getPerson().then( person => {
+    this.yoProfile = person[0];
+    this.getAge();
+    });
+  }
+
+  getAge() {
+    // get birth year
+    this.birthYear = this.yoProfile.dob.toString().substr(0, 4);
+    this.currentDate = new Date();
+    this.currentYear = this.currentDate.getFullYear();
+    this.age = this.currentYear - this.birthYear;
+    console.log('Age: ' + this.age);
+  }
 
   playSound() {
 
@@ -119,13 +149,20 @@ export class HomeResultsPage  implements OnInit, OnDestroy, AfterViewInit {
   }
 
   async SetProfile () {
-    if ( this.myProfile === false) {
+    if ( this.yoProfile.dob === null || this.yoProfile.gender === null) {
       const popover = await this.popoverCtrl.create({
         component: SetProfilePage,
+        componentProps: {
+          Profile : this.yoProfile
+        },
         animated: true,
         showBackdrop: true
       });
-      this.myProfile = true;
+
+      popover.onDidDismiss().then((data) => {
+        console.log(data);
+      });
+
       return await popover.present();
     }
   }
