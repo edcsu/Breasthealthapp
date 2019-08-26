@@ -42,3 +42,9 @@ ionic cordova plugin add cordova-plugin-ionic-webview
 ionic cordova plugin add cordova-sqlite-storage
 ionic cordova plugin add cordova-plugin-filepath
 ```
+# Build (prepare + compile) an Ionic project for android
+------------
+
+```
+ionic cordova build android
+```
