@@ -13,14 +13,16 @@ export interface Person {
 }
 
 const PERSONS_KEY = 'my-profile';
-
+const PHOTO_KEY = 'profile-photo';
 @Injectable({
   providedIn: 'root'
 })
 
 export class StorageService {
 
-  constructor(private storage: Storage) { }
+  constructor(
+              private storage: Storage,
+  ) { }
 
   // create person
   addPerson(person: Person): Promise<any> {
@@ -78,4 +80,15 @@ export class StorageService {
         return this.storage.set(PERSONS_KEY, toKeep);
     });
   }
+
+  // load images
+  loadStoredImage() {
+    return this.storage.get(PHOTO_KEY);
+  }
+
+  // set images
+  updateStoredImage(images) {
+    this.storage.set(PHOTO_KEY, JSON.stringify(images));
+  }
+
 }

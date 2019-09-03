@@ -40,7 +40,7 @@ import { NotificationsComponent } from './components/notifications/notifications
     ImagePageModule,
     SearchFilterPageModule,
     SetProfilePageModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
   ],
   entryComponents: [NotificationsComponent],
   providers: [

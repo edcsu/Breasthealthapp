@@ -48,3 +48,10 @@ ionic cordova plugin add cordova-plugin-filepath
 ```
 ionic cordova build android
 ```
+
+# Build (prepare + compile) an Ionic project for android
+------------
+
+```
+ionic cordova emulate android
+```

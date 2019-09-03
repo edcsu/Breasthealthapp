@@ -10,9 +10,10 @@
 <ion-content class="profile">
   <ion-card no-margin>
     <ion-card-content class="bg-profile">
-      <img src="assets/img/avatar.jpg">
+      <!-- <img *ngIf="images.length == 0" src="assets/img/avatar.jpg"> -->
+      <img [src]="profile_pic">
       <h1 class="fw500"> {{yoProfile.fullName}} </h1>
-      <ion-button icon-left color="secondary">
+      <ion-button icon-left color="secondary" (click)="selectImage()">
         <ion-icon name="photos"></ion-icon> 
         Edit / Add Avatar
       </ion-button>
