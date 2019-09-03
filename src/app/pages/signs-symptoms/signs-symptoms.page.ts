@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import {  NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signs-symptoms',
@@ -9,25 +8,21 @@ import {  NavController } from '@ionic/angular';
 })
 export class SignsSymptomsPage implements OnInit {
 
-  constructor( public navCtrl: NavController ) { }
+  constructor( private router: Router ) { }
 
   ngOnInit() {
   }
 
   goToWomenSigns() {
-    this.navCtrl.navigateRoot('/women');
+    this.router.navigate(['women']);
   }
 
   goToMenSigns() {
-    this.navCtrl.navigateRoot('/men');
+    this.router.navigate(['men']);
   }
 
   goToChildrenSigns() {
-    this.navCtrl.navigateRoot('/children');
-  }
-
-  goToNonDiagnosed() {
-    this.navCtrl.navigateRoot('/non-assigned');
+    this.router.navigate(['children']);
   }
 
 }

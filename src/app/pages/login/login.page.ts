@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController, MenuController, ToastController, AlertController, LoadingController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginPage implements OnInit {
     public toastCtrl: ToastController,
     public alertCtrl: AlertController,
     public loadingCtrl: LoadingController,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router
   ) { }
 
   ionViewWillEnter() {
@@ -80,13 +82,12 @@ export class LoginPage implements OnInit {
     await alert.present();
   }
 
-  // // //
   goToRegister() {
-    this.navCtrl.navigateRoot('/register');
+    this.router.navigate(['register']);
   }
 
   goToHome() {
-    this.navCtrl.navigateRoot('/home-results');
+    this.router.navigate(['home-results']);
   }
 
 }

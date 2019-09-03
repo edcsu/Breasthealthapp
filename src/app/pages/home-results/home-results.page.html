@@ -10,7 +10,7 @@
         <ion-button size="small" shape="round" color="dark" (click)="playSound()">
           <img src="assets/img/sound_icon_black.png" >                    
         </ion-button>
-      <ion-button size="small" shape="round" color="dark" (click)="notifications()">
+      <ion-button size="small" shape="round" color="dark" (click)="notifications(1)">
         <ion-icon name="notifications"></ion-icon>
         <ion-badge color="danger" slot="end">2</ion-badge>
       </ion-button>
@@ -18,71 +18,122 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="tipscolor">
 
   <ion-card class="main-card">
     <ion-card-header>
-      <ion-card-title color="light">
-        You are welcome to <br> <b> MY BREAST HEALTH </b>
+      <ion-card-title color="light" text-center>
+        You are welcome {{ yoProfile.fullName }} {{ age}} to <br> <b> MY BREAST HEALTH </b>
       </ion-card-title>
       <ion-card-subtitle class="dashboard-subtitle" color="light">
         A powerful high quality easy to navigate app. empowering you to wellness.
-        Right here and right now you can browse any or all of the 7 zones.
+        Right here and now you can browse any or all of the 7 zones.
       </ion-card-subtitle>
     </ion-card-header>
   </ion-card>
   <ion-card class="content-card home-content">
       <ion-grid >
         <ion-row>
-          <ion-col size="4" offset="2">
-            <ion-img (click)="goToRiskAssessment()" button="true"
-              src="assets/button_icons/risk_assmt_bc.png" >
-            </ion-img>
+          <ion-card color="light" >
+            <ion-card-content>
+                <ion-row>
+                  <ion-col size="6" offset="">
+                    Here you can do a self check.
+                    Do a step by step check to find out your status.
+                    Click the icon on the right. 
+                  </ion-col>
+                  <ion-col size="6" offset="">
+                    <ion-item (click)="goToSelfCareLink()" button="true" >
+                      <ion-img
+                        src="assets/button_icons/breastselfexam.png">                  
+                      </ion-img>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </ion-row>
+        <ion-row>
+          <ion-col size="" offset="">
+            <ion-card color="light" class="dash-icon">
+              <ion-card-content>
+                <ion-item (click)="goToTips()" button="true" >
+                  <ion-img
+                    src="assets/button_icons/general_bh_tips.png" >
+                  </ion-img>
+                </ion-item>
+              </ion-card-content>
+            </ion-card>
           </ion-col>
-          <ion-col size="4" offset="">
-            <ion-img (click)="goToTips()" button="true"
-              src="assets/button_icons/general_bh_tips.png" >
-            </ion-img>
+          <ion-col size="" offset="">
+            <ion-card color="light" class="dash-icon">
+              <ion-card-content>                
+                <ion-item (click)="goTosignsAndSymptoms()" button="true" >
+                  <ion-img      
+                    src="assets/button_icons/signs_and_symptoms.png" >
+                  </ion-img>
+                </ion-item>                  
+              </ion-card-content>
+            </ion-card>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col size="4" offset="">
-              <ion-img (click)="goToSpecialist()" button="true"              
-                src="assets/button_icons/specialist_consults.png" >          
-              </ion-img>
+          <ion-col size="" offset="">
+              <ion-card color="light" class="dash-icon">
+                <ion-card-content>
+                  <ion-item (click)="goToRiskAssessment()" button="true" >
+                    <ion-img
+                      src="assets/button_icons/risk_assmt_bc.png" >
+                    </ion-img>
+                  </ion-item>                   
+                </ion-card-content>
+              </ion-card>
           </ion-col>
-          <ion-col size="4" offset="">
-            <ion-img (click)="goToSelfCareLink()" button="true"
-              src="assets/button_icons/breastselfexam.png">                  
-            </ion-img>
-          </ion-col>
-          <ion-col size="4" offset="">
-              <ion-img (click)="goToUploadMedicalRecords()" button="true"              
-                src="assets/button_icons/upload_medical_records.png" >          
-              </ion-img>
+          <ion-col size="" offset="">
+            <ion-card color="light" class="dash-icon">
+              <ion-card-content>
+                <ion-item (click)="goToSupportGroup()" button="true" >
+                  <ion-img 
+                    src="assets/button_icons/support_groups.png" >
+                  </ion-img>
+                </ion-item>                  
+              </ion-card-content>
+            </ion-card>
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col size="4" offset="2">
-              <ion-img tappable (click)="goTosignsAndSymptoms()" button="true"        
-                src="assets/button_icons/signs_and_symptoms.png" >
-              </ion-img>
+          <ion-col size="" offset="">
+            <ion-card color="light" class="dash-icon">
+              <ion-card-content>
+                <ion-item (click)="goToSpecialist()" button="true" >  
+                  <ion-img              
+                    src="assets/button_icons/specialist_consults.png" >          
+                  </ion-img>                
+                </ion-item>                  
+              </ion-card-content>
+            </ion-card>
           </ion-col>
-          <ion-col size="4" offset="">
-              <ion-img (click)="goToSupportGroup()" button="true"
-                src="assets/button_icons/support_groups.png" >
-              </ion-img>
+          <ion-col button="true" size="" offset="" >
+              <ion-card color="light" class="dash-icon">
+                <ion-card-content>
+                  <ion-item (click)="goToUploadMedicalRecords()" button="true" >
+                    <ion-img               
+                      src="assets/button_icons/upload_medical_records.png" >          
+                    </ion-img>                
+                  </ion-item>                  
+                </ion-card-content>
+              </ion-card>
           </ion-col>
         </ion-row>
       </ion-grid>
     
     <ion-footer >    
-      <ion-item>
+      <ion-item color="light">
         <ion-thumbnail slot="start" >
           <img src="assets/img/UCILogo.png" height="" width="">      
         </ion-thumbnail>
         <ion-text class="footer-text">
-          &copy;   The Uganda Cancer Institute 2018
+          &copy;   The Uganda Cancer Institute 2019
        </ion-text>
       </ion-item>      
   </ion-footer> 

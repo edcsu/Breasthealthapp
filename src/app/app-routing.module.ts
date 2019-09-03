@@ -22,7 +22,6 @@ const routes: Routes = [
   { path: 'women', loadChildren: './pages/signs/women/women.module#WomenPageModule' },
   { path: 'men', loadChildren: './pages/signs/men/men.module#MenPageModule' },
   { path: 'children', loadChildren: './pages/signs/children/children.module#ChildrenPageModule' },
-  { path: 'non-assigned', loadChildren: './pages/signs/non-assigned/non-assigned.module#NonAssignedPageModule' },
   {
     path: 'upload-medical-records',
     loadChildren: './pages/upload-medical-records/upload-medical-records.module#UploadMedicalRecordsPageModule'

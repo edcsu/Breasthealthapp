@@ -1,8 +1,7 @@
 :host {
-    *ion-content {
+    /* *ion-content {
        --background: var(--ion-color-light);
-       
-    }
+    } */
 
     
 ion-item{
@@ -24,6 +23,11 @@ ion-item{
 
     .footer-text {
         margin-top: 2rem;
+    }
+
+    .dash-icon {
+        height: 7rem;
+        width: 9rem;
     }
 
     .main-card{
@@ -59,12 +63,10 @@ ion-item{
         padding: 0.5rem;
         // width: 50%;
     }
-    
 
     .dashboard-subtitle {
         text-transform: none;
     }
-    
     
     .center-text {
         text-align: center;
@@ -74,5 +76,4 @@ ion-item{
         margin: 0%;
     }
     
-
 }

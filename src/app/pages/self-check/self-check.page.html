@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar color="medium" >
+  <ion-toolbar color="medium">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="self-care-link"></ion-back-button>
+      <ion-back-button defaultHref="tips"></ion-back-button>
     </ion-buttons>
-    <ion-title> Self check</ion-title>
+    <ion-title class="center-text"> Self Check </ion-title>
     <ion-buttons slot="end">
         <ion-button size="small" shape="round" color="dark" >
           <img src="assets/img/sound_icon_black.png" >                    
@@ -13,11 +13,109 @@
 </ion-header>
 
 <ion-content>
-	<!--<h2 class='heading'>Breast Health</h2>-->
-	<ion-slides pager="true" class="slides">
-		<ion-slide *ngFor="let slide of slider" class="slide">
-			<p [innerHTML]="slide.content" class='content'></p>
-			<img [src]="slide.img" class='image'/>
-		</ion-slide>
-	</ion-slides>
+ <ion-slides pager="true" class="slides" [options]="slideOpts">
+    <ion-slide class="slide">
+      <div >
+        <h5 class="color">Step 1</h5>
+        <div class="content">
+      <p>
+         Stand in front of the mirror and hold arms at your side. 
+      </p>
+      <p>
+        Look for change in your breast size or shape, Thickening of the skin in the breast or underarm area, swelling, warmth, redness, or darkening of the breasts, dimpling or puckering of the breast skin,an itchy, scaly sore or rash on the nipple and pain in one part of the breast.
+      </p>
+      <ion-avatar class="selfCheckAvatar">
+        <ion-img src="assets/illustrations/GIFs/gif1.gif" alt="self check step 1" class=""></ion-img>
+      </ion-avatar>
+      </div>
+        </div>
+    </ion-slide>
+
+    <ion-slide class="slide">
+      <div >
+        <h5 class="color">Step 2</h5>
+      <div class="content">
+        <p>
+          Now raise your hands and look under breasts for the same changes as shown in step 1. 
+        </p>
+        <p>
+          Also feel for lumps or hardness in this area.
+        </p>
+       <ion-avatar class="selfCheckAvatar">
+        <ion-img src="assets/illustrations/GIFs/gif2.gif" alt="self check step 2" class=""></ion-img>
+       </ion-avatar>
+      </div>
+    </div>
+    </ion-slide>
+
+    <ion-slide class="slide">
+      <div >
+    <h5 class="color">Step 3</h5>
+    <div class="content">
+      <p>
+         Next, sheck your nipples for any discharge or fluid secretion.
+      </p>
+      <p>
+        Nipple discharge maybe watery, milky, yellowish or even tinshed with blood.
+      </p>
+      <ion-avatar class="selfCheckAvatar">
+      <ion-img src="assets/illustrations/GIFs/gif3.gif" alt="self check step 3" class=""></ion-img>
+      </ion-avatar>
+      </div>
+    </div>
+    </ion-slide>
+
+    <ion-slide class="slide">
+        <div >
+       <h5 class="color">Step 4</h5>
+       <div class="content">
+      <p>
+        Lie down on a firm surface on your back, and using slow circular motions feel your breasts for any kind of lump. Follow a pattern to be sure you cover the whole breast.
+      </p>
+      <p>
+        You can begin at the nipple and move to larger circles until you reach the outer edge of the breast. Check the inner part of your armpit as well. Always use opposite hands to check the breast.
+      </p>
+      <ion-avatar class="selfCheckAvatar">
+      <ion-img src="assets/illustrations/GIFs/gif4.gif" alt="self check step 4" class=""></ion-img>
+      </ion-avatar>
+      </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="slide">
+        <div >
+       <h5 class="color">Step 5</h5>
+       <div class="content">
+      <p>
+        Stand up, and repeat the same circular motions across each breast as shown in step 4 while standing.
+      </p>
+      <ion-avatar class="selfCheckAvatar">
+      <ion-img src="assets/illustrations/GIFs/gif5.gif" alt="self check step 5" class=""></ion-img>
+      </ion-avatar>
+      </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide class="slide">
+      <div >
+        <h5 class="color">Take Action</h5>
+        <div class="content">
+          <p>
+            Did you notice any thing that worried you or you were not certain about in the self check (yes or no or Not sure). 
+          </p>
+          <p>
+            If yes or Not sure, Go for a clinical breast exam to your regular health practitioner or check out recommended practitioners below.
+          </p>
+          <p>
+            If No, set a date for your next self check.
+          </p>
+
+          <div class="selfCheckButton-Div">
+            <ion-button class="practitionerButton" color="red" (click)="goToLogin()" tappable>RECOMMENDED PRACTITIONER</ion-button>
+            <ion-button class="setDateButton" color="red" (click)="goToLogin()" tappable> Set next Date</ion-button>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
 </ion-content>
