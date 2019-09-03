@@ -30,16 +30,4 @@
         <ion-button  class="NoLump" color="primary" (click)=" showfromAsymptomatic()">No Lump</ion-button>
     </div>
 
-    <div *ngIf="isLump">
-      <ion-button color="primary" (click)=" showsLump()">Diagonosed</ion-button>
-      <ion-button color="primary" (click)=" showsNotLump()">Not Diagonosed</ion-button>
-  </div>
-
-    
-    <div *ngIf="isAsymptomatic">
-      <ion-button color="primary" (click)=" showChildrenfromSymptomati()">Screened</ion-button>
-      <ion-button color="primary" (click)=" showfromAsymptomatic()">Not Screened</ion-button>
-  </div>
-
-
 </ion-content>
