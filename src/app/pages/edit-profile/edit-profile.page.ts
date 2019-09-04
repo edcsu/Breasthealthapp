@@ -51,10 +51,10 @@ export class EditProfilePage implements OnInit {
   loadPhoto() {
       // load photos
       this.storageService.loadStoredImage().then(image => {
-        if (image) {
+        /* if (image) {
           let convertedImg = JSON.parse(image);
           this.profile_pic = convertedImg;
-        }
+        } */
           this.profile_pic = 'assets/img/avatar.jpg';
       });
     }
@@ -240,7 +240,7 @@ export class EditProfilePage implements OnInit {
           * FILE_URI: 1 (number)- Return image file URI,
           * NATIVE_URI: 2 (number)- Return image native URI
         */
-        destinationType: this.camera.DestinationType.DATA_URL,
+        destinationType: this.camera.DestinationType.NATIVE_URI,
         /**here is the returned image file format
          *default format is JPEG
           * JPEG:0 (number),
@@ -254,7 +254,7 @@ export class EditProfilePage implements OnInit {
           *SAVEDPHOTOALBUM : 2
         */
         sourceType: sourceType,
-        saveToPhotoAlbum: false,
+        saveToPhotoAlbum: true,
         correctOrientation: true
     };
 
