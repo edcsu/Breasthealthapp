@@ -21,7 +21,7 @@
   </ion-button>
   <ion-card class="main-card">
     <ion-card-content *ngIf="document_selected">
-      <img [src]="document_selected">
+      <ion-img [src]="document_selected"> </ion-img>
       <ion-button color="danger" (click)="resetDocument()">
           <ion-icon name="photos"></ion-icon>     
           Delete document

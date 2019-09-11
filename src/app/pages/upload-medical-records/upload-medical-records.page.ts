@@ -1,6 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { NavController, LoadingController, ToastController, ActionSheetController, Platform } from '@ionic/angular';
-import { Person, StorageService } from 'src/app/services/storage.service';
+import { StorageService } from 'src/app/services/storage.service';
 import { Camera, CameraOptions, PictureSourceType } from '@ionic-native/Camera/ngx';
 import { File } from '@ionic-native/File/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
@@ -70,7 +70,7 @@ export class UploadMedicalRecordsPage implements OnInit {
   }
 
   takePicture(sourceType: PictureSourceType) {
-    let base64ImageData;
+    // let base64ImageData;
     let options: CameraOptions = {
         // here is the picture quality in range 0-100 default value 50. Optional field
         quality: 100,
@@ -80,7 +80,7 @@ export class UploadMedicalRecordsPage implements OnInit {
           * FILE_URI: 1 (number)- Return image file URI,
           * NATIVE_URI: 2 (number)- Return image native URI
         */
-        destinationType: this.camera.DestinationType.NATIVE_URI,
+        destinationType: this.camera.DestinationType.FILE_URI,
         /**here is the returned image file format
          *default format is JPEG
           * JPEG:0 (number),
@@ -94,7 +94,7 @@ export class UploadMedicalRecordsPage implements OnInit {
           *SAVEDPHOTOALBUM : 2
         */
         sourceType: sourceType,
-        saveToPhotoAlbum: true,
+        saveToPhotoAlbum: false,
         correctOrientation: true
     };
 
@@ -102,16 +102,16 @@ export class UploadMedicalRecordsPage implements OnInit {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64 (DATA_URL):
       // alert(imageData)
-      this.document_selected = (<any>window).Ionic.WebView.convertFileSrc(imageData);
-      this.storageService.updateStoredImage(this.document_selected);
-      //  here converting a normal image data to base64 image data.
-      base64ImageData = 'data:image/jpeg;base64,' + imageData;
-      /**here passing three arguments to method
-      *Base64 Data
-      *Folder Name
-      *File Name
-      */
-      // this.writeFile(base64ImageData, 'My Picture', 'profile_photo.jpeg');
+      // this.document_selected = (<any>window).Ionic.WebView.convertFileSrc(imageData);
+      const tempFilename = imageData.substr(imageData.lastIndexOf('/') + 1);
+      const tempBaseFilesystemPath = imageData.substr(0, imageData.lastIndexOf('/') + 1);
+
+      const newBaseFilesystemPath = this.file.dataDirectory;
+
+      this.file.copyFile(tempBaseFilesystemPath, tempFilename, newBaseFilesystemPath, tempFilename);
+
+      const storedPhoto = newBaseFilesystemPath + tempFilename;
+      this.document_selected = this.webview.convertFileSrc(storedPhoto);
      }, (err) => {
       // Handle error
       this.presentToast('Error ' + JSON.stringify(err));
