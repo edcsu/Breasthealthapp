@@ -27,6 +27,7 @@ import { SetProfilePageModule } from './pages/modal/set-profile/set-profile.modu
 
 // Components
 import { NotificationsComponent } from './components/notifications/notifications.component';
+import { Calendar } from '@ionic-native/calendar/ngx';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { NotificationsComponent } from './components/notifications/notifications
     Camera,
     File,
     WebView,
-    FilePath
+    FilePath,
+    Calendar
   ],
   bootstrap: [AppComponent]
 })
