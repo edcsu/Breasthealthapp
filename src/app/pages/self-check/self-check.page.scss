@@ -1,0 +1,113 @@
+
+.slides {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-size: 100%;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-size: 100%;
+    background-color: rgba(250, 8, 120, 0);
+      background-image: linear-gradient(rgb(240, 231, 231), rgba(182, 120, 161, 0.9));
+}
+
+.color {
+    color: rgba(236, 14, 207, 0.75);
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: light;
+    font-family: Arial;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.content {
+    text-align: left;
+    font-size: 0.9rem;
+    font-family: Arial;
+    font-weight: light;
+    width: 80%;
+    line-height: 20px;
+    padding: 0px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.image {
+    width: 90%;
+    height: 90%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 0%;
+    background-size: 100%;
+}
+.selfCheckAvatar {
+    border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    background-size: 0%;
+    display: block;
+}
+.avatar3 {
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    display: block;
+    padding-bottom: 30px;
+}
+
+.practitionerButton {
+  background: rgba(250,8,120,0.8);
+  border-color: rgba(255,255,255,0.0);
+  border-radius: 0.6rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255,255,255,0.75);
+  text-align: middle;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: Arial;
+  width: 80%;
+  height: calc(2.5rem + 2px);
+  line-height: 0px;
+  padding: 0px;
+}
+.setDateButton {
+  background: rgba(250,8,120,0.4);
+  border-color: rgba(255,255,255,0.0);
+  border-radius: 0.6rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255,255,255,0.75);
+  text-align: middle;
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 80%;
+  height: calc(2.5rem + 2px);
+  line-height: 0px;
+  padding: 0px;
+}
+.selfCheckButton-Div {
+    width: 100%;
+    bottom: 5%;
+    position: fixed;
+    margin-left: -7%;
+}

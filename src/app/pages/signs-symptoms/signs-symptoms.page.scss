@@ -1,0 +1,11 @@
+:host {
+    #zone-summary {
+        --background: linear-gradient(50deg, rgb(236, 18, 189), rgb(255, 0, 98));
+    }
+
+    ion-item{
+        --border-style: 0;
+        --border-color: none;
+        --inner-border-width: none;
+    }
+}

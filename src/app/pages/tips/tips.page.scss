@@ -1,0 +1,21 @@
+
+:host {
+
+        ion-item{
+            --border-style: 0;
+            --border-color: none;
+            --inner-border-width: none;
+        }
+
+        .content-card{
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+        
+        
+}
+

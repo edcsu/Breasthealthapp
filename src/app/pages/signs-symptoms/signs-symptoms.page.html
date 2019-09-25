@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home-results"></ion-back-button>
+    </ion-buttons>
+    <ion-title >
+          <ion-text color="dark" class="fw500"> Making sense of <br> signs and symptoms </ion-text>
+    </ion-title>
+    <ion-buttons slot="end">
+        <ion-button size="small" shape="round" color="dark" >
+          <img src="assets/img/sound_icon_black.png" >                    
+        </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  
+  <ion-content padding class="tipscolor">
+    <ion-card color="primary">
+      <ion-card-content id="zone-summary" >
+        Medical students, non-specialist doctors and other health practitioners should find useful.
+        You can navigate through this and get guidance on what to do in case the scenarios indicated occur.
+      </ion-card-content>
+    </ion-card>
+    <ion-grid >
+      <ion-row>
+        <ion-col size="" offset="3">
+            <ion-item (click)="goToWomenSigns()" button="true" >
+              <ion-img
+                src="assets/button_icons/women.png" >
+              </ion-img>
+            </ion-item>                  
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="" offset="">
+          <ion-item (click)="goToMenSigns()" button="true">
+              <ion-img
+                src="assets/button_icons/men.png" >
+              </ion-img>
+          </ion-item>                
+        </ion-col>
+        <ion-col size="" offset="1">
+          <ion-item (click)="goToChildrenSigns()" button="true" >
+            <ion-img               
+              src="assets/button_icons/children.png" >          
+            </ion-img>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

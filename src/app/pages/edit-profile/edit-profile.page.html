@@ -10,10 +10,10 @@
 <ion-content class="profile">
   <ion-card no-margin>
     <ion-card-content class="bg-profile">
-      <img src="assets/img/avatar.jpeg">
-      <h1 class="fw500">João Firmino</h1>
-      <h2 color="light" margin-bottom>Customer</h2>
-      <ion-button icon-left color="secondary">
+      <!-- <img *ngIf="images.length == 0" src="assets/img/avatar.jpg"> -->
+      <img [src]="profile_pic">
+      <h1 class="fw500"> {{yoProfile.fullName}} </h1>
+      <ion-button icon-left color="secondary" (click)="selectImage()">
         <ion-icon name="photos"></ion-icon> 
         Edit / Add Avatar
       </ion-button>
@@ -25,71 +25,40 @@
 
           <ion-list margin-bottom>
             <ion-list-header color="light">
-              <ion-label class="fw700">Form</ion-label>
+              <ion-label class="fw700">Your Details</ion-label>
             </ion-list-header>
 
             <ion-item>
               <ion-label color="dark" position="stacked">Full Name:</ion-label>
-              <ion-input inputmode="text" placeholder="Ex..: Joe Doe" value="João Firmino"></ion-input>
+              <ion-input [(ngModel)]="yoProfile.fullName" inputmode="text" placeholder="Ex..: Joe Doe" ></ion-input>
             </ion-item>
     
+            <ion-item>
+              <ion-label color="dark" position="stacked">Username:</ion-label>
+              <ion-input [(ngModel)]="yoProfile.userName" inputmode="text" placeholder="Ex..: Joe Doe" ></ion-input>
+            </ion-item>
+
             <ion-item>
               <ion-label color="dark" position="stacked">Email:</ion-label>
-              <ion-input inputmode="email" placeholder="Ex.: joe@doe.com" value="firminoata@gmail.com"></ion-input>
+              <ion-input [(ngModel)]="yoProfile.email" inputmode="email" placeholder="Ex.: joe@doe.com"></ion-input>
             </ion-item>
     
             <ion-item>
-              <ion-label color="dark" position="stacked">Address:</ion-label>
-              <ion-input inputmode="text" placeholder="Ex.: Abey Road 5"></ion-input>
+              <ion-label color="dark" position="stacked">District:</ion-label>
+              <ion-input [(ngModel)]="yoProfile.district" inputmode="text" placeholder="Ex.: Gulu"></ion-input>
             </ion-item>
     
             <ion-item>
-              <ion-label color="dark">City</ion-label>
-              <ion-select>
-                <ion-select-option value="nes">New York</ion-select-option>
-                <ion-select-option value="n64">Los Angeles</ion-select-option>
-                <ion-select-option value="ps">London</ion-select-option>
-                <ion-select-option value="genesis">Paris</ion-select-option>
-                <ion-select-option value="saturn">São Paulo</ion-select-option>
-                <ion-select-option value="snes">Tokyo</ion-select-option>
-                <ion-select-option value="snes">New Delhi</ion-select-option>
+              <ion-label color="dark">Date of Birth</ion-label>
+                <ion-datetime [(ngModel)]="yoProfile.dob" displayFormat="MM DD YYYY" placeholder="Select Date"></ion-datetime>
+            </ion-item>
+    
+            <ion-item>
+              <ion-label color="dark">Gender</ion-label>
+              <ion-select [(ngModel)]="yoProfile.gender">
+                <ion-select-option value="m">Male</ion-select-option>
+                <ion-select-option value="f">Female</ion-select-option>
               </ion-select>
-            </ion-item>
-    
-            <ion-item>
-              <ion-label color="dark">State</ion-label>
-              <ion-select>
-                <ion-select-option value="nes">NY</ion-select-option>
-                <ion-select-option value="n64">CA</ion-select-option>
-                <ion-select-option value="ps">Greater London</ion-select-option>
-                <ion-select-option value="genesis">Paris</ion-select-option>
-                <ion-select-option value="saturn">SP</ion-select-option>
-                <ion-select-option value="snes">Kantō</ion-select-option>
-                <ion-select-option value="snes">Delhi</ion-select-option>
-              </ion-select>
-            </ion-item>
-          </ion-list>
-
-          <ion-list>
-            <ion-radio-group>
-              <ion-list-header color="light">
-                <ion-label class="fw700">User Type</ion-label>
-              </ion-list-header>
-          
-              <ion-item>
-                <ion-label color="primary">Customer</ion-label>
-                <ion-radio slot="start" value="customer" checked></ion-radio>
-              </ion-item>
-          
-              <ion-item>
-                <ion-label color="primary">Owner</ion-label>
-                <ion-radio slot="start" value="agent"></ion-radio>
-              </ion-item>
-            </ion-radio-group>
-
-            <ion-item>
-              <ion-label class="text-1x">Checkbox test</ion-label>
-              <ion-checkbox></ion-checkbox>
             </ion-item>
           </ion-list>
   

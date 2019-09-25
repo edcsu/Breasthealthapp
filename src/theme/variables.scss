@@ -4,13 +4,12 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #2f32a0;
-  --ion-color-primary-rgb: 47, 50, 160;
-  --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #272983;
-  --ion-color-primary-tint: #5457B1;
-
+   --ion-color-primary: #e700ff;
+   --ion-color-primary-rgb: 231,0,255;
+   --ion-color-primary-contrast: #ffffff;
+   --ion-color-primary-contrast-rgb: 255,255,255;
+   --ion-color-primary-shade: #cb00e0;
+  --ion-color-primary-tint: #e91aff;
   /** secondary **/
   --ion-color-secondary: #5b5fde;
   --ion-color-secondary-rgb: 91, 95, 222;
@@ -20,12 +19,7 @@
   --ion-color-secondary-tint: #787CE4;
 
 /** tertiary **/
---ion-color-tertiary: #f4a942;
---ion-color-tertiary-rgb: 244,169,66;
---ion-color-tertiary-contrast: #fff;
---ion-color-tertiary-contrast-rgb: 255,255,255;
---ion-color-tertiary-shade: #d7953a;
---ion-color-tertiary-tint: #f5b255;
+ 
 
 /** success **/
 --ion-color-success: #10dc60;
@@ -44,12 +38,12 @@
 --ion-color-warning-tint: #ffd31a;
 
 /** danger **/
---ion-color-danger: #f53d3d;
---ion-color-danger-rgb: 245,61,61;
---ion-color-danger-contrast: #fff;
+--ion-color-danger: #fb2186;
+--ion-color-danger-rgb: 250,8,120;
+--ion-color-danger-contrast: #ffffff;
 --ion-color-danger-contrast-rgb: 255,255,255;
---ion-color-danger-shade: #d83636;
---ion-color-danger-tint: #f65050;
+--ion-color-danger-shade: #dc076a;
+--ion-color-danger-tint: #fb2186;
 
 /** light **/
 --ion-color-light: #f4f4f4;
@@ -75,12 +69,11 @@
 --ion-color-dark-shade: #190e60;
 --ion-color-dark-tint: #2e256d;
 
-/** mink pink **/
---ion-color-mink: rgb(240, 12, 126);
---ion-color-mink-rgb: 34,34,34;
---ion-color-mink-contrast: #fff;
---ion-color-mink-contrast-rgb: 255,255,255;
---ion-color-mink-shade: #ce1d84;
---ion-color-mink-tint: #a73e7b;
-
+/** red **/
+ --ion-color-jonah: #fb2186;
+ --ion-color-jonah-rgb: 250,8,120; 
+ --ion-color-jonah-contrast: #ffffff; 
+ --ion-color-jonah-contrast-rgb: 255,255,255; 
+ --ion-color-jonah-shade: #dc076a; 
+ --ion-color-jonah-tint: #fb2186;
 }
