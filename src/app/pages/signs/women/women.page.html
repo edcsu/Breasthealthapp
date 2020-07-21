@@ -13,7 +13,588 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+ 
+  <ion-content padding class="tipscolor"> 
+  <ion-card *ngIf="isWomen" class="orange-grad"> 
+    <ion-card-header>
+      <ion-card-title>Is she </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button class="Symptonat" color="primary" (click)="showSymptomatic()">Symptomatic</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button class="Symptonat" color="secondary" (click)="showAsymptomatic()">Asymptomatic</ion-button>
+      </ion-row>
+    </ion-card-content>    
+  </ion-card>
+    
+  <!-- Symptomatic branch-->
+  <ion-card *ngIf="isSymptomatic" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is she</ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button class="Symptonat"  color="primary" (click)="showsLump()">Lump</ion-button>
+      </ion-row>
+      <ion-row>      
+        <ion-button class="Symptonat"  color="secondary" (click)="showsNotLump()">No Lump</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="backFromSymptomatic()">Back</ion-button>         
+    </ion-card-content>          
+  </ion-card>
 
-<ion-content padding>
+  <ion-card *ngIf="isLump" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is she </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsisLumpTreated()">Diagonosed</ion-button>
+      </ion-row>
+      <ion-row>    
+        <ion-button color="secondary" class="Symptonat" >Not Diagonosed</ion-button>
+      </ion-row>    
+      <ion-button color="danger" class="option-button" (click)="backToLump()">Back</ion-button>      
+    </ion-card-content>    
+  </ion-card>
+
+  <ion-card *ngIf="isLumpTreated" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is she </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsisExcisedLump()">Treated</ion-button>
+      </ion-row>
+      <ion-row>      
+        <ion-button color="secondary" class="Symptonat" (click)="showsisLumpNotTreated()">Not Treated</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="backToDiagonosedFromLump()">Back</ion-button>      
+    </ion-card-content>    
+  </ion-card>
+    
+  <ion-card *ngIf="isExcisedLump" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Does she have an</ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+      <ion-button color="primary" class="Symptonat" (click)="showsFromExcisedLump()">Excised Lump</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="backToTreatedFromExcisedLump()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromExcisedLump" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is the excised lump</ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsFromBenign()">Benign </ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat" (click)="showsMultiMedicalCare()">Cancer</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsBackToExcisedLump()">Back</ion-button>      
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isExcisedLumpHealed" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is it </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsFromHealedCompletely()">Healed completely </ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat" (click)="showsFromHealedNotCompletely()">Not healed completely</ion-button>
+      </ion-row>
+    <ion-button color="danger" class="option-button" (click)="showsBackToBenign()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isHealedCompletely" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>So do </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat">6-12 months reviews</ion-button>
+      </ion-row>
+    <ion-button color="danger" class="option-button" (click)="showsBackToHealedFromReview()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isNotHealedCompletely" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Does she </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsFromScarPain()">Have Scar pain </ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat" (click)="showsFromFeelLumps()">Feel lumps </ion-button>
+      </ion-row>
+    <ion-button color="danger" class="option-button" (click)="showsBackToHealedFromNot()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromScarPain" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Are they </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat">Keloids</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat">Hypertrophic</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsBackToScarPain()">Back</ion-button>      
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromFeelLumps" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Do </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat">CBE</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat">US Scan </ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="light" class="Symptonat">Wait and see </ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsBackToFeelLumps()">Back</ion-button>      
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="issMultiMedicalCare" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>If its cancer then </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfromMultiMedicalCare()">Multi medical care</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsExcisedLumpCancer()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromMultiMedicalCare" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Does she need </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfromCompletedCare()">Completed care</ion-button>
+      </ion-row>
+      <ion-row>      
+        <ion-button color="secondary" class="Symptonat" >Incomplete care</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsBackToMultiMedicalCare()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromCompletedCare" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>She needs a </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat">Review</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsBackToCareType()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isLumpNotTreated" class="orange-grad">
+    <ion-card-header>
+        <ion-card-title>Does she have </ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <ion-row>
+          <ion-button color="primary" class="Symptonat">Cancer</ion-button>          
+        </ion-row>
+        <ion-row>
+          <ion-button color="secondary" class="Symptonat">No cancer</ion-button>
+        </ion-row>
+        <ion-button color="danger" class="option-button" (click)="backToIsLumpTreatedFromNot()">Back</ion-button>      
+      </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isNoLump" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is she </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfromisNoLump()">Diagonosed</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat" (click)="showsfromisNotDiagonosedLump()">Not Diagonosed</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="backToLumpStatusFromNoLump()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card *ngIf="isNoLumpTreated" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Has she been</ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>    
+        <ion-button color="primary" class="Symptonat">Treated</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat">Not Treated</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="backToDiagonosedStatusFromNoLump()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isNotDiagonosedLump" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is she </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+          <ion-button color="primary" class="Symptonat" (click)="showsfromPremenopausal()">Premenopausal</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat" (click)="showsfromPostmenopausal()">Postmenopausal</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="backToNoLumpSymp()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromPostmenopausal" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Has she </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>  
+        <ion-button color="primary" class="Symptonat" (click)="showsfromNeverDoneMammo()">Never done mammo</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat" (click)="showsfromEverDoneMammo()">Ever done mammo</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="backToPostmenopausal()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromNeverDoneMammo" class="orange-grad">
+    <ion-card-header>
+        <ion-card-title> She has to</ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row> 
+        <ion-button color="primary" class="Symptonat" (click)="showsfromNeverDoneMammoDo()">Do mammo</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="backToNeverDoneMamo()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromNeverDoneMammoDo" class="orange-grad">
+    <ion-card-header>
+        <ion-card-title> The result is</ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row> 
+        <ion-button color="danger" class="Symptonat">Positive</ion-button>
+      </ion-row>
+      <ion-row>       
+        <ion-button color="success" class="Symptonat">Negative</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="backToDoMamo()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromEverDoneMammoDo" class="orange-grad">
+      <ion-card-header>
+          <ion-card-title> The last time she did was</ion-card-title>
+      </ion-card-header> 
+      <ion-card-content>
+        <ion-row>   
+        <ion-button color="primary" class="Symptonat" (click)="showsfromLessthan1Year()">Less than 1 year ago</ion-button>
+      </ion-row>
+      <ion-row>       
+        <ion-button color="secondary" class="Symptonat" (click)="showsfromGreaterthan1Year()">More than 1 year ago</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsPostmenopausalfromEverDoneMammo()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromLessthan1Year" class="orange-grad">
+    <ion-card-header>
+        <ion-card-title>Was is it</ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row> 
+        <ion-button color="danger" class="Symptonat" (click)="showsfromPositiveForMass()">Positive for mass</ion-button>
+      </ion-row>
+      <ion-row>         
+        <ion-button color="success" class="Symptonat" (click)="showsfromNegativeForMass()">Negative for mass</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsEverDoneMammo()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="IsFromPositiveForMass" class="orange-grad">
+    <ion-card-header>
+        <ion-card-title>Do</ion-card-title>
+    </ion-card-header> 
+      <ion-card-content>
+            <ion-row>
+        <ion-button color="primary" class="Symptonat">FNAC</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="BackToMassStatusFromPositive()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromNegativeForMass" class="orange-grad">
+    <ion-card-header>
+        <ion-card-title>Do</ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat">US Scan</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="BackToMassStatusFromNegative()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromGreaterthan1Year" class="orange-grad"> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat">Do mammo</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsEverDoneMammoAgain()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromPremenopausal" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is it</ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfrom3050()"> between 30 and 50</ion-button>
+      </ion-row>
+      <ion-row>        
+        <ion-button color="secondary" class="Symptonat" (click)="showsfromlessThan30()">Less than 30</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsNotDiagnosednFromPre()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFrom3050" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is it </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+          <ion-button color="danger" class="Symptonat" >Positive</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="success" class="Symptonat" (click)="showsfrom3050Negative()">Negative</ion-button>
+        </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsFromPreFrom3050()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFrom3050Negative" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>This requires </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfrom3050NegativeSurgery()">Surgery</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat" >Wait and see</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="shows3050From3050Negative()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFrom3050NegativeSurgery" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>And </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" >Histology </ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsSurgery()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromLessThan30" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Do </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfromLessthan30UsScan()">US Scan </ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsPrefromlessThan30()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromLessThan30UsScan" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>If the result is </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="danger" class="Symptonat" (click)="showsfromLikelyCancer()">Positive</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="success" class="Symptonat" (click)="showsfromLessThan30UsScanNegative()">Negative</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsUSscanfromLessThan30Result()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromLessThan30UsScanNegative" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Do </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+          <ion-button color="primary" class="Symptonat" (click)="showsfromLessThan30UsScanNegativeRepeat()">Repeat in 3 months</ion-button>
+        </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsUSscanResultFromRepeat()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromRepeat3Months" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Follow up with a </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat">Second Opinion </ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsRepeatFromSecondOpinion()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isLikelyCancer" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>This is </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="danger" class="Symptonat">Likely cancer</ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="success" class="Symptonat" (click)="showsfromUnlikelyCancer()">Unlikely cancer</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsUSscanResultFromPostiveResult()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromUnlikelyCancer" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is it </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfromGreaterthan4cm()">Greater than 4cm </ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="secondary" class="Symptonat" (click)="showsfromLessthan4cm()">Less than 4cm</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsCancerStatus()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromGreaterthan4cm" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>There is need to </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfromRemoveMass()">Remove mass </ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsSizeFromGreaterThan4()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromRemoveMass" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Follow up with a </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat" (click)="showsfromRemoveMassHistology()">Histology </ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsRemoveMassFromGreaterThan4()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromRemoveMassHistology" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is it </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="danger" class="Symptonat">Cancer </ion-button>
+      </ion-row>
+      <ion-row>
+        <ion-button color="success" class="Symptonat">Benign</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsHistologyfromResultGreaterThan4()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFromLessthan4cm" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>So </ion-card-title>
+    </ion-card-header> 
+    <ion-card-content>
+      <ion-row>
+        <ion-button color="primary" class="Symptonat">Repeat scan in 6 months</ion-button>
+      </ion-row>
+      <ion-button color="danger" class="option-button" (click)="showsUnlikelyCancerFromLessThan4()">Back</ion-button>      
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Symptomatic branch-->
+  <ion-card *ngIf="isAsymptomatic" class="orange-grad">
+    <ion-button color="primary" class="Symptonat" >Screened</ion-button>
+    <ion-button color="secondary" class="Symptonat" (click)="showfromNotScreened()">Not Screened</ion-button>
+  </ion-card>
+
+  <ion-card *ngIf="isNotScreened" class="orange-grad">
+    <ion-button color="primary" class="Symptonat"(click)="showfromCBE()">CBE</ion-button>
+    <ion-button color="secondary" class="Symptonat" (click)="showfromSBE()">SBE</ion-button>
+  </ion-card>
+
+  <ion-card *ngIf="isCBE" class="orange-grad">
+    <ion-button color="primary" class="Symptonat" (click)="showEnd(1)"> Positive</ion-button>
+    <ion-button color="secondary" class="Symptonat" (click)="showEnd(1)">Negative</ion-button>
+    <ion-button color="light" class="Symptonat" (click)="showEnd(1)">Equivocal</ion-button>
+  </ion-card>
+
+  <ion-card *ngIf="isSBE" class="orange-grad">
+    <ion-button color="primary" class="Symptonat" (click)="showEnd(2)">Positive</ion-button>
+    <ion-button color="secondary" class="Symptonat" (click)="showEnd(2)">Negative</ion-button>
+  </ion-card>
+
+  <ion-card *ngIf="isEnd" class="orange-grad">
+    End of flow
+    <ion-button color="primary" (click)="showStart()">Back to start</ion-button>
+  </ion-card>
 
 </ion-content>

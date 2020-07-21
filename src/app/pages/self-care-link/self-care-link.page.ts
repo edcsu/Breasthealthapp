@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import {
-  NavController,
   AlertController,
   MenuController,
   ToastController,
@@ -16,7 +16,7 @@ import {
 export class SelfCareLinkPage implements OnInit {
 
   constructor(
-    public navCtrl: NavController,
+    private router: Router,
     public menuCtrl: MenuController,
     public popoverCtrl: PopoverController,
     public alertCtrl: AlertController,
@@ -31,23 +31,23 @@ export class SelfCareLinkPage implements OnInit {
 
   // go to SelfCheck page
   goToSelfCheck() {
-    this.navCtrl.navigateRoot('/self-check');
+    this.router.navigate(['self-check']);
   }
 
   goToTips() {
-    this.navCtrl.navigateRoot('/tips');
+    this.router.navigate(['tips']);
   }
 
   goToBreastHealthInfo() {
-    this.navCtrl.navigateRoot('/breast-health-info');
+    this.router.navigate(['breast-health-info']);
   }
 
   goToSupportGroup() {
-    this.navCtrl.navigateRoot('/support-group');
+    this.router.navigate(['support-group']);
   }
 
   goToSpecialist() {
-    this.navCtrl.navigateRoot('/specialist');
+    this.router.navigate(['specialist']);
   }
 
 

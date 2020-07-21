@@ -14,5 +14,207 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="tipscolor">
+      <!-- Colors -->
+  <ion-grid>
+    <ion-card *ngIf="isChildren" class="orange-grad">
+      <ion-card-header>
+        <ion-card-title>Select category of the child </ion-card-title>
+        <ion-card-subtitle color="dark">Each will have corresponding signs and symptoms</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+              <ion-button color="primary" expand="full"  (click)="showNeonatesOptions()">Neonates</ion-button>
+              <ion-button color="secondary" class="option-button" expand="full" (click)="showChildrenfromInfants()">Infants</ion-button>
+              <ion-button color="danger" expand="full" (click)="showfromAdolescents()">Adolescents</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card *ngIf="isNeonates"  class="orange-grad">
+      <ion-card-header>
+          <ion-card-title> Neonates are </ion-card-title>
+        </ion-card-header>    
+      <ion-card-content >
+          <!-- neoenates -->
+          <ion-card color="success" >      
+            <ion-card-content >
+              Symptomatic
+            </ion-card-content>
+          </ion-card>
+          <ion-card color="light">      
+            <ion-card-content >
+              Mastitis
+            </ion-card-content>
+          </ion-card>
+          <ion-card color="dark" >      
+            <ion-card-content>
+              Breast bud
+            </ion-card-content>
+          </ion-card>
+          <ion-card color="primary">      
+            <ion-card-content>
+              Breast milk
+            </ion-card-content>
+          </ion-card>
+          <ion-button color="danger" class="option-button" (click)="showChildrenfromNeonates()">Back</ion-button>          
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card *ngIf="isInfants" class="orange-grad">
+      <ion-card-header>
+        <ion-card-title>Infants can be</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-card color="secondary">      
+            <ion-card-content>
+              Symptomatic
+            </ion-card-content>
+          </ion-card>
+        <ion-button color="danger" class="option-button" (click)="backToChildrenfromInfants()">Back</ion-button>        
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="isAdolescents" class="orange-grad">
+      <ion-card-header>
+        <ion-card-title> Is the Adolescent </ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-button color="danger" expand="full" (click)="showAsymptomatic()">Asymptomatic</ion-button>
+        <ion-button color="secondary" expand="full" class="option-button" (click)="showSymptomatic()">Symptomatic</ion-button>
+        <ion-button color="success" class="option-button" (click)="backToChildrenfromAdolescents()">Back</ion-button>        
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card *ngIf="isAsymptomatic" class="orange-grad">
+      <ion-card-header>
+        <ion-card-title>if Asymptomatic</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-card color="primary">
+          <ion-card-content>
+            Defer CBE to after 20yrs if negative family history
+          </ion-card-content>
+        </ion-card>
+        <ion-card color="success">
+          <ion-card-content (click)=" showDoCBE()">
+            Do CBE if anxious or want to concious
+          </ion-card-content>
+        </ion-card>
+        <ion-button color="danger" class="option-button" (click)="backToAdolescentsfromAsymptomatic()">Back</ion-button>        
+      </ion-card-content>
+    </ion-card>
+
+  <ion-card *ngIf="isDoCBE" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Results from CBE</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card color="danger">      
+        <ion-card-content>
+          Positive
+        </ion-card-content>
+      </ion-card>
+      <ion-card color="success">      
+        <ion-card-content>
+          Negative
+        </ion-card-content>
+      </ion-card>
+      <ion-button color="danger" (click)="backToAsymptomatic()">Back</ion-button>
+    </ion-card-content>
+  </ion-card>
+    
+  <ion-card *ngIf="isSymptomatic" class="orange-grad">
+    <ion-card-header>
+      <ion-card-title>Is there</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card color="primary" (click)="showLump()">      
+        <ion-card-content>
+          A Lump
+        </ion-card-content>
+      </ion-card>
+      <ion-card color="success" (click)="showNonLump()">      
+        <ion-card-content>
+          No Lump
+        </ion-card-content>
+      </ion-card>
+      <ion-button color="danger" (click)="backToAdolescentsfromSymptomatic()">Back</ion-button>
+    </ion-card-content>    
+  </ion-card>
+
+<ion-card *ngIf="isLump" class="orange-grad">
+  <ion-card-content>
+    <ion-card color="primary">
+      <ion-card-content (click)="showFromLumpCBE()">
+        Perform CBE
+      </ion-card-content>
+    </ion-card>
+    <ion-button color="danger" (click)="backToshowLump()" class="option-button">Back</ion-button>
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="isLumpCBE" class="orange-grad">
+  <ion-card-header>
+    <ion-card-title>Results from CBE</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-card color="danger" (click)=" showFromLumpCBEPositive()">      
+      <ion-card-content>
+        Positive
+      </ion-card-content>
+    </ion-card>
+    <ion-card color="success">      
+      <ion-card-content>
+        Negative
+      </ion-card-content>
+    </ion-card>
+    <ion-button color="danger" (click)="backToLumpCBE()">Back</ion-button>
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="isLumpCBEPositive" class="orange-grad">
+  <ion-card-content>
+    <ion-card color="success">      
+      <ion-card-content>
+        Follow up to 5 years
+      </ion-card-content>
+    </ion-card>
+    <ion-button color="danger" (click)="backToLumpCBEResult()">Back</ion-button>
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="isNonLump" class="orange-grad">
+  <ion-card-content>
+    <ion-card color="primary">
+      <ion-card-content (click)="showFromNonLumpCBE()">
+        Perform CBE
+      </ion-card-content>
+    </ion-card>
+    <ion-button color="danger" (click)="backToshowLump()" class="option-button">Back</ion-button>
+  </ion-card-content>
+</ion-card>
+
+<ion-card *ngIf="isNonLumpCBE" class="orange-grad">
+  <ion-card-header>
+    <ion-card-title>Results from CBE</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-card color="danger">      
+      <ion-card-content>
+        Positive
+      </ion-card-content>
+    </ion-card>
+    <ion-card color="success">      
+      <ion-card-content>
+        Negative
+      </ion-card-content>
+    </ion-card>
+    <ion-button color="danger" (click)="backToNonLumpCBE()">Back</ion-button>
+  </ion-card-content>
+</ion-card>
+
+</ion-grid>
+
 </ion-content>

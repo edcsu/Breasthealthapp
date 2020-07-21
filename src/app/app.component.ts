@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
-import { Platform, NavController } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -14,12 +15,11 @@ import { Pages } from './interfaces/pages';
 export class AppComponent {
 
   public appPages: Array<Pages>;
-
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    public navCtrl: NavController
+    private router: Router
   ) {
     this.appPages = [
       {
@@ -54,10 +54,11 @@ export class AppComponent {
   }
 
   goToEditProfile() {
-    this.navCtrl.navigateForward('edit-profile');
+    this.router.navigate(['edit-profile']);
   }
 
   logout() {
-    this.navCtrl.navigateRoot('/');
+    this.router.navigate(['/']);
   }
+
 }

@@ -14,12 +14,12 @@
   <ion-list >
     <ion-item>
       <ion-label color="dark" class="fw500">Date of Birth</ion-label>
-        <ion-datetime displayFormat="MM DD YYYY" min="1900" max="2003" placeholder="Select Date"></ion-datetime>
+        <ion-datetime [(ngModel)]="yourDob" displayFormat="MM DD YYYY" min="1900" max="2003" placeholder="Select Date"></ion-datetime>
     </ion-item>
 
     <ion-item>
       <ion-label color="dark" class="fw500">Gender</ion-label>
-      <ion-select>
+      <ion-select [(ngModel)]="yourGender">
         <ion-select-option value="m">Male</ion-select-option>
         <ion-select-option value="f">Female</ion-select-option>
       </ion-select>

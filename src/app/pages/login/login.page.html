@@ -5,16 +5,16 @@
     <!-- Logo -->
     <div>
       <div class="logo"></div>
-      <h6 text-center>
-        <ion-text color="dark" class="fw700">
-          Log In
+      <h6 >
+        <ion-text color="light" class="fw700">
+          Use your BreastHealth.com
+          <div>Login</div>
         </ion-text>
       </h6>
     </div>
     <div>
-      <ion-text class="logged" color="dark">
-        Once you're logged in, we'll personalize 
-        what you see in your app based on your preferences.
+      <ion-text class="logged" color="light">
+        Once you're logged in, we'll personalize what you see in your app based on your preferences.
       </ion-text>
     </div>
 
@@ -61,9 +61,9 @@
           
         </ion-label>
         <div slot="end">
-          <ion-icon class="eyz" color="dark" name="eye"></ion-icon>
+          <ion-icon class="eyz" color="light" name="eye"></ion-icon>
         </div>
-        <ion-input color="primary" type="password" formControlName="password"></ion-input>
+        <ion-input color="secondary" type="password" formControlName="password"></ion-input>
       </ion-item>
       <p ion-text color="warning" class="text08" *ngIf="onLoginForm.get('password').touched && onLoginForm.get('password').hasError('required')">
         <ion-text color="warning">
@@ -74,7 +74,7 @@
 
 
      <div class="login">
-          <ion-button class="logbtn" icon-left size="medium" expand="block" color="primary"
+          <ion-button class="logbtn" icon-left size="medium" expand="full" shape="round" color="dark"
             (click)="goToHome()"
             [disabled]="!onLoginForm.valid" tappable>
             Log in
@@ -82,7 +82,7 @@
     </div>
 
     <p text-center tappable (click)="forgotPass()" class="paz">
-      <ion-text color="dark">
+      <ion-text color="light">
         Forgot password?
       </ion-text>
     </p>
